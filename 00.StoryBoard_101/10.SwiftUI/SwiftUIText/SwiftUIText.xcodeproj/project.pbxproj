@@ -22,6 +22,7 @@
 		59EF78D029CA04DB0051ACF6 /* SwiftUIFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EF78CF29CA04DB0051ACF6 /* SwiftUIFrame.swift */; };
 		59EF78D229CA08810051ACF6 /* BackgroundAndOverlaySwitfUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EF78D129CA08810051ACF6 /* BackgroundAndOverlaySwitfUI.swift */; };
 		59EF78D429CA1C9E0051ACF6 /* SwiftUIStacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EF78D329CA1C9E0051ACF6 /* SwiftUIStacks.swift */; };
+		59EF78D629CA219F0051ACF6 /* MICard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EF78D529CA219F0051ACF6 /* MICard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		59EF78CF29CA04DB0051ACF6 /* SwiftUIFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIFrame.swift; sourceTree = "<group>"; };
 		59EF78D129CA08810051ACF6 /* BackgroundAndOverlaySwitfUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundAndOverlaySwitfUI.swift; sourceTree = "<group>"; };
 		59EF78D329CA1C9E0051ACF6 /* SwiftUIStacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIStacks.swift; sourceTree = "<group>"; };
+		59EF78D529CA219F0051ACF6 /* MICard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MICard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				59EF78CF29CA04DB0051ACF6 /* SwiftUIFrame.swift */,
 				59EF78D129CA08810051ACF6 /* BackgroundAndOverlaySwitfUI.swift */,
 				59EF78D329CA1C9E0051ACF6 /* SwiftUIStacks.swift */,
+				59EF78D529CA219F0051ACF6 /* MICard.swift */,
 			);
 			path = SwiftUIText;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				59CC117D29C770D900FD65BA /* Icon_SystemIcons.swift in Sources */,
 				59EF78D029CA04DB0051ACF6 /* SwiftUIFrame.swift in Sources */,
 				59CC117929C7656600FD65BA /* Colors.swift in Sources */,
+				59EF78D629CA219F0051ACF6 /* MICard.swift in Sources */,
 				59CC117F29C7858A00FD65BA /* SwiftUI_Images.swift in Sources */,
 				59CC114D29C74A8F00FD65BA /* SwiftUITextApp.swift in Sources */,
 				59EF78D229CA08810051ACF6 /* BackgroundAndOverlaySwitfUI.swift in Sources */,
