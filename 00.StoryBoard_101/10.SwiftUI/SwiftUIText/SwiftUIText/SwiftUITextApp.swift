@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftUITextApp: App {
     var body: some Scene {
         WindowGroup {
-            MICard()
+            ScrollViewSwiftUI2()
         }
     }
 }
