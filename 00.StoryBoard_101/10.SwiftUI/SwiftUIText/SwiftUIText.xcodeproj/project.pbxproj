@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5925218129CA8A540044AE3C /* SpacerSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5925218029CA8A540044AE3C /* SpacerSwiftUI.swift */; };
+		5925218329CA8D7C0044AE3C /* SwiftUIInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5925218229CA8D7C0044AE3C /* SwiftUIInitializer.swift */; };
 		59CC114D29C74A8F00FD65BA /* SwiftUITextApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CC114C29C74A8F00FD65BA /* SwiftUITextApp.swift */; };
 		59CC114F29C74A8F00FD65BA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CC114E29C74A8F00FD65BA /* ContentView.swift */; };
 		59CC115129C74A9000FD65BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59CC115029C74A9000FD65BA /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		5925218029CA8A540044AE3C /* SpacerSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacerSwiftUI.swift; sourceTree = "<group>"; };
+		5925218229CA8D7C0044AE3C /* SwiftUIInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIInitializer.swift; sourceTree = "<group>"; };
 		59CC114929C74A8F00FD65BA /* SwiftUIText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59CC114C29C74A8F00FD65BA /* SwiftUITextApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITextApp.swift; sourceTree = "<group>"; };
 		59CC114E29C74A8F00FD65BA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				59EF78D329CA1C9E0051ACF6 /* SwiftUIStacks.swift */,
 				59EF78D529CA219F0051ACF6 /* MICard.swift */,
 				5925218029CA8A540044AE3C /* SpacerSwiftUI.swift */,
+				5925218229CA8D7C0044AE3C /* SwiftUIInitializer.swift */,
 			);
 			path = SwiftUIText;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				59CC117B29C76B9F00FD65BA /* Gradient.swift in Sources */,
 				59CC114F29C74A8F00FD65BA /* ContentView.swift in Sources */,
 				59CC117D29C770D900FD65BA /* Icon_SystemIcons.swift in Sources */,
+				5925218329CA8D7C0044AE3C /* SwiftUIInitializer.swift in Sources */,
 				59EF78D029CA04DB0051ACF6 /* SwiftUIFrame.swift in Sources */,
 				59CC117929C7656600FD65BA /* Colors.swift in Sources */,
 				59EF78D629CA219F0051ACF6 /* MICard.swift in Sources */,
