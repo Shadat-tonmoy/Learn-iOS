@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5925218129CA8A540044AE3C /* SpacerSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5925218029CA8A540044AE3C /* SpacerSwiftUI.swift */; };
 		5925218329CA8D7C0044AE3C /* SwiftUIInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5925218229CA8D7C0044AE3C /* SwiftUIInitializer.swift */; };
+		59B61F4D29CEEBA7001FF8C8 /* SwiftUIExtractingSubViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B61F4C29CEEBA7001FF8C8 /* SwiftUIExtractingSubViews.swift */; };
 		59C1E5D129CB5746004F64D9 /* ForEachSwitfUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C1E5D029CB5746004F64D9 /* ForEachSwitfUI.swift */; };
 		59C1E5D329CB5B6E004F64D9 /* ScrollViewSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C1E5D229CB5B6E004F64D9 /* ScrollViewSwiftUI.swift */; };
 		59C1E5D729CB5F8D004F64D9 /* ScrollViewSwiftUI2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C1E5D629CB5F8D004F64D9 /* ScrollViewSwiftUI2.swift */; };
@@ -56,6 +57,7 @@
 /* Begin PBXFileReference section */
 		5925218029CA8A540044AE3C /* SpacerSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacerSwiftUI.swift; sourceTree = "<group>"; };
 		5925218229CA8D7C0044AE3C /* SwiftUIInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIInitializer.swift; sourceTree = "<group>"; };
+		59B61F4C29CEEBA7001FF8C8 /* SwiftUIExtractingSubViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIExtractingSubViews.swift; sourceTree = "<group>"; };
 		59C1E5D029CB5746004F64D9 /* ForEachSwitfUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForEachSwitfUI.swift; sourceTree = "<group>"; };
 		59C1E5D229CB5B6E004F64D9 /* ScrollViewSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewSwiftUI.swift; sourceTree = "<group>"; };
 		59C1E5D629CB5F8D004F64D9 /* ScrollViewSwiftUI2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewSwiftUI2.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				59F0451B29CEB58700EF4EA9 /* SafeAreaSwiftUI.swift */,
 				59F0451D29CEB7F400EF4EA9 /* SwiftUIButton.swift */,
 				59F0451F29CEBF3F00EF4EA9 /* SwiftUIState.swift */,
+				59B61F4C29CEEBA7001FF8C8 /* SwiftUIExtractingSubViews.swift */,
 			);
 			path = SwiftUIText;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				59CC114D29C74A8F00FD65BA /* SwiftUITextApp.swift in Sources */,
 				59EF78D229CA08810051ACF6 /* BackgroundAndOverlaySwitfUI.swift in Sources */,
 				59EF78D429CA1C9E0051ACF6 /* SwiftUIStacks.swift in Sources */,
+				59B61F4D29CEEBA7001FF8C8 /* SwiftUIExtractingSubViews.swift in Sources */,
 				59CC117729C74DF800FD65BA /* Shapes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

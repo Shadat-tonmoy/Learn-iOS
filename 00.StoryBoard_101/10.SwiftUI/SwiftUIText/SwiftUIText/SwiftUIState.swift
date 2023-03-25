@@ -22,13 +22,33 @@ struct SwiftUIState: View {
                 
                 countText
                 
-                incrementButton
+//                incrementButton
                 
-                decrementButton
+                MyButton(title: "Tap to increase", foregroundColor: backgroundColors[colorIndex], callBack: {
+                    incrementCount()
+                    
+                })
+                
+                MyButton(title: "Tap to decrease", foregroundColor: backgroundColors[colorIndex], callBack: {
+                    decrementCount()
+                })
+                
+//                decrementButton
                 
                 changeColorButton
             }
             
+        }
+    }
+    
+    func incrementCount(){
+        self.countValue += 1
+    }
+    
+    func decrementCount(){
+        self.countValue -= 1
+        if(countValue <= 0) {
+            countValue = 0
         }
     }
     
@@ -104,6 +124,32 @@ struct SwiftUIState: View {
             .padding()
             .font(.title)
     }
+}
+
+struct MyButton : View{
+    
+    let title : String
+    let foregroundColor : Color
+    let callBack : () -> Void
+    
+    var body: some View{
+        Button(action: {
+            callBack()
+        }, label: {
+            Text(title)
+                .padding()
+                .foregroundColor(foregroundColor)
+                .background(
+                    RoundedRectangle(cornerRadius: 15)
+                        .fill(.white)
+                        .shadow(radius: 5)
+                 )
+        })
+    }
+    
+    
+    
+    
 }
 
 struct SwiftUIState_Previews: PreviewProvider {
