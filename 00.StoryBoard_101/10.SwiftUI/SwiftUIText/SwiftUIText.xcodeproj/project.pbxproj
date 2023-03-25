@@ -12,6 +12,7 @@
 		59C1E5D129CB5746004F64D9 /* ForEachSwitfUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C1E5D029CB5746004F64D9 /* ForEachSwitfUI.swift */; };
 		59C1E5D329CB5B6E004F64D9 /* ScrollViewSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C1E5D229CB5B6E004F64D9 /* ScrollViewSwiftUI.swift */; };
 		59C1E5D729CB5F8D004F64D9 /* ScrollViewSwiftUI2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C1E5D629CB5F8D004F64D9 /* ScrollViewSwiftUI2.swift */; };
+		59C1E5D929CB6E8A004F64D9 /* GridSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C1E5D829CB6E8A004F64D9 /* GridSwiftUI.swift */; };
 		59CC114D29C74A8F00FD65BA /* SwiftUITextApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CC114C29C74A8F00FD65BA /* SwiftUITextApp.swift */; };
 		59CC114F29C74A8F00FD65BA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CC114E29C74A8F00FD65BA /* ContentView.swift */; };
 		59CC115129C74A9000FD65BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59CC115029C74A9000FD65BA /* Assets.xcassets */; };
@@ -28,6 +29,11 @@
 		59EF78D229CA08810051ACF6 /* BackgroundAndOverlaySwitfUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EF78D129CA08810051ACF6 /* BackgroundAndOverlaySwitfUI.swift */; };
 		59EF78D429CA1C9E0051ACF6 /* SwiftUIStacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EF78D329CA1C9E0051ACF6 /* SwiftUIStacks.swift */; };
 		59EF78D629CA219F0051ACF6 /* MICard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EF78D529CA219F0051ACF6 /* MICard.swift */; };
+		59F0451829CEAA3100EF4EA9 /* GridSwiftUIWithTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F0451729CEAA3100EF4EA9 /* GridSwiftUIWithTop.swift */; };
+		59F0451A29CEAE2900EF4EA9 /* GridSwiftUIWithSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F0451929CEAE2900EF4EA9 /* GridSwiftUIWithSection.swift */; };
+		59F0451C29CEB58700EF4EA9 /* SafeAreaSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F0451B29CEB58700EF4EA9 /* SafeAreaSwiftUI.swift */; };
+		59F0451E29CEB7F400EF4EA9 /* SwiftUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F0451D29CEB7F400EF4EA9 /* SwiftUIButton.swift */; };
+		59F0452029CEBF3F00EF4EA9 /* SwiftUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F0451F29CEBF3F00EF4EA9 /* SwiftUIState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,7 @@
 		59C1E5D029CB5746004F64D9 /* ForEachSwitfUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForEachSwitfUI.swift; sourceTree = "<group>"; };
 		59C1E5D229CB5B6E004F64D9 /* ScrollViewSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewSwiftUI.swift; sourceTree = "<group>"; };
 		59C1E5D629CB5F8D004F64D9 /* ScrollViewSwiftUI2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewSwiftUI2.swift; sourceTree = "<group>"; };
+		59C1E5D829CB6E8A004F64D9 /* GridSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridSwiftUI.swift; sourceTree = "<group>"; };
 		59CC114929C74A8F00FD65BA /* SwiftUIText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59CC114C29C74A8F00FD65BA /* SwiftUITextApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITextApp.swift; sourceTree = "<group>"; };
 		59CC114E29C74A8F00FD65BA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +79,11 @@
 		59EF78D129CA08810051ACF6 /* BackgroundAndOverlaySwitfUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundAndOverlaySwitfUI.swift; sourceTree = "<group>"; };
 		59EF78D329CA1C9E0051ACF6 /* SwiftUIStacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIStacks.swift; sourceTree = "<group>"; };
 		59EF78D529CA219F0051ACF6 /* MICard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MICard.swift; sourceTree = "<group>"; };
+		59F0451729CEAA3100EF4EA9 /* GridSwiftUIWithTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridSwiftUIWithTop.swift; sourceTree = "<group>"; };
+		59F0451929CEAE2900EF4EA9 /* GridSwiftUIWithSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridSwiftUIWithSection.swift; sourceTree = "<group>"; };
+		59F0451B29CEB58700EF4EA9 /* SafeAreaSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaSwiftUI.swift; sourceTree = "<group>"; };
+		59F0451D29CEB7F400EF4EA9 /* SwiftUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIButton.swift; sourceTree = "<group>"; };
+		59F0451F29CEBF3F00EF4EA9 /* SwiftUIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +152,12 @@
 				59C1E5D029CB5746004F64D9 /* ForEachSwitfUI.swift */,
 				59C1E5D229CB5B6E004F64D9 /* ScrollViewSwiftUI.swift */,
 				59C1E5D629CB5F8D004F64D9 /* ScrollViewSwiftUI2.swift */,
+				59C1E5D829CB6E8A004F64D9 /* GridSwiftUI.swift */,
+				59F0451729CEAA3100EF4EA9 /* GridSwiftUIWithTop.swift */,
+				59F0451929CEAE2900EF4EA9 /* GridSwiftUIWithSection.swift */,
+				59F0451B29CEB58700EF4EA9 /* SafeAreaSwiftUI.swift */,
+				59F0451D29CEB7F400EF4EA9 /* SwiftUIButton.swift */,
+				59F0451F29CEBF3F00EF4EA9 /* SwiftUIState.swift */,
 			);
 			path = SwiftUIText;
 			sourceTree = "<group>";
@@ -299,10 +317,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59F0451E29CEB7F400EF4EA9 /* SwiftUIButton.swift in Sources */,
 				59C1E5D129CB5746004F64D9 /* ForEachSwitfUI.swift in Sources */,
 				59CC117B29C76B9F00FD65BA /* Gradient.swift in Sources */,
+				59F0451A29CEAE2900EF4EA9 /* GridSwiftUIWithSection.swift in Sources */,
 				59CC114F29C74A8F00FD65BA /* ContentView.swift in Sources */,
+				59F0451829CEAA3100EF4EA9 /* GridSwiftUIWithTop.swift in Sources */,
 				59CC117D29C770D900FD65BA /* Icon_SystemIcons.swift in Sources */,
+				59C1E5D929CB6E8A004F64D9 /* GridSwiftUI.swift in Sources */,
 				5925218329CA8D7C0044AE3C /* SwiftUIInitializer.swift in Sources */,
 				59EF78D029CA04DB0051ACF6 /* SwiftUIFrame.swift in Sources */,
 				59CC117929C7656600FD65BA /* Colors.swift in Sources */,
@@ -310,7 +332,9 @@
 				59C1E5D329CB5B6E004F64D9 /* ScrollViewSwiftUI.swift in Sources */,
 				59CC117F29C7858A00FD65BA /* SwiftUI_Images.swift in Sources */,
 				59C1E5D729CB5F8D004F64D9 /* ScrollViewSwiftUI2.swift in Sources */,
+				59F0452029CEBF3F00EF4EA9 /* SwiftUIState.swift in Sources */,
 				5925218129CA8A540044AE3C /* SpacerSwiftUI.swift in Sources */,
+				59F0451C29CEB58700EF4EA9 /* SafeAreaSwiftUI.swift in Sources */,
 				59CC114D29C74A8F00FD65BA /* SwiftUITextApp.swift in Sources */,
 				59EF78D229CA08810051ACF6 /* BackgroundAndOverlaySwitfUI.swift in Sources */,
 				59EF78D429CA1C9E0051ACF6 /* SwiftUIStacks.swift in Sources */,
