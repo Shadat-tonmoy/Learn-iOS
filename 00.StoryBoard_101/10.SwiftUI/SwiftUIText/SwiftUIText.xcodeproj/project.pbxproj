@@ -20,6 +20,7 @@
 		59AEF9E929D04A6900385384 /* SwuftUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AEF9E829D04A6900385384 /* SwuftUITextField.swift */; };
 		59AEF9EB29D04FFE00385384 /* SwiftUITextField2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AEF9EA29D04FFE00385384 /* SwiftUITextField2.swift */; };
 		59AEF9ED29D0566400385384 /* SwiftUITextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AEF9EC29D0566400385384 /* SwiftUITextEditor.swift */; };
+		59AEF9EF29D058E200385384 /* SwiftUIToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AEF9EE29D058E200385384 /* SwiftUIToggle.swift */; };
 		59B61F4D29CEEBA7001FF8C8 /* SwiftUIExtractingSubViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B61F4C29CEEBA7001FF8C8 /* SwiftUIExtractingSubViews.swift */; };
 		59B61F4F29CEF381001FF8C8 /* SwiftUIBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B61F4E29CEF381001FF8C8 /* SwiftUIBinding.swift */; };
 		59B61F5129CEF734001FF8C8 /* SwiftUIConditional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B61F5029CEF734001FF8C8 /* SwiftUIConditional.swift */; };
@@ -83,6 +84,7 @@
 		59AEF9E829D04A6900385384 /* SwuftUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwuftUITextField.swift; sourceTree = "<group>"; };
 		59AEF9EA29D04FFE00385384 /* SwiftUITextField2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITextField2.swift; sourceTree = "<group>"; };
 		59AEF9EC29D0566400385384 /* SwiftUITextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITextEditor.swift; sourceTree = "<group>"; };
+		59AEF9EE29D058E200385384 /* SwiftUIToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIToggle.swift; sourceTree = "<group>"; };
 		59B61F4C29CEEBA7001FF8C8 /* SwiftUIExtractingSubViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIExtractingSubViews.swift; sourceTree = "<group>"; };
 		59B61F4E29CEF381001FF8C8 /* SwiftUIBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIBinding.swift; sourceTree = "<group>"; };
 		59B61F5029CEF734001FF8C8 /* SwiftUIConditional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIConditional.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				59AEF9E429D0414600385384 /* SwiftUIActionSheet.swift */,
 				59AEF9EA29D04FFE00385384 /* SwiftUITextField2.swift */,
 				59AEF9EC29D0566400385384 /* SwiftUITextEditor.swift */,
+				59AEF9EE29D058E200385384 /* SwiftUIToggle.swift */,
 			);
 			path = SwiftUIText;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				59B61F5329CEFC07001FF8C8 /* SwiftUIAnimation.swift in Sources */,
 				5959EF2029D00A1B00E16E37 /* SwiftUIPopOver2.swift in Sources */,
 				59F0452029CEBF3F00EF4EA9 /* SwiftUIState.swift in Sources */,
+				59AEF9EF29D058E200385384 /* SwiftUIToggle.swift in Sources */,
 				5925218129CA8A540044AE3C /* SpacerSwiftUI.swift in Sources */,
 				59F0451C29CEB58700EF4EA9 /* SafeAreaSwiftUI.swift in Sources */,
 				59CC114D29C74A8F00FD65BA /* SwiftUITextApp.swift in Sources */,
