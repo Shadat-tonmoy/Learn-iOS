@@ -10,10 +10,37 @@ import SwiftUI
 struct SwiftUINavigation: View {
     var body: some View {
         NavigationView {
-            ScrollView{
-                NavigationLink("Option 1", destination: Option1Screen())
-                NavigationLink("Option 2", destination: Option2Screen())
-                NavigationLink("Option 3", destination: Option3Screen())
+            ZStack{
+                
+                HStack(){
+                    NavigationLink(destination: Option1Screen(), label: {
+                        VStack {
+                            Image(systemName: "video.fill")
+                                .padding(.all,5)
+                            Text("Option 1")
+                        }.padding(.leading)
+                        
+                    })
+                    Spacer()
+                    NavigationLink(destination: Option2Screen(), label: {
+                        VStack {
+                            Image(systemName: "headphones")
+                                .padding(.all,5)
+                            Text("Option 2")
+                        }
+                        
+                    })
+                    Spacer()
+                    NavigationLink(destination: Option3Screen(), label: {
+                        VStack {
+                            Image(systemName: "slider.vertical.3")
+                                .padding(.all,5)
+                            Text("Option 2")
+                        }
+                        .padding(.trailing)
+                    })
+                    
+                }
             }
             .navigationTitle("Home")
             .navigationBarItems(leading: NavigationLink(
