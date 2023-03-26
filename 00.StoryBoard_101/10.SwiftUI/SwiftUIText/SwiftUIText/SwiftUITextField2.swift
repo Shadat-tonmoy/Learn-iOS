@@ -56,8 +56,10 @@ struct SwiftUITextField2: View {
                 .cornerRadius(10)
                 
                 Button(action: {
-                    textList.append(valueFromField)
-                    valueFromField = ""
+                    if(!valueFromField.isEmpty){
+                        textList.append(valueFromField)
+                        valueFromField = ""
+                    }
                     
                     
                 }, label: {

@@ -19,6 +19,7 @@
 		59AEF9E729D046FF00385384 /* SwiftUIContextMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AEF9E629D046FF00385384 /* SwiftUIContextMenu.swift */; };
 		59AEF9E929D04A6900385384 /* SwuftUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AEF9E829D04A6900385384 /* SwuftUITextField.swift */; };
 		59AEF9EB29D04FFE00385384 /* SwiftUITextField2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AEF9EA29D04FFE00385384 /* SwiftUITextField2.swift */; };
+		59AEF9ED29D0566400385384 /* SwiftUITextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AEF9EC29D0566400385384 /* SwiftUITextEditor.swift */; };
 		59B61F4D29CEEBA7001FF8C8 /* SwiftUIExtractingSubViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B61F4C29CEEBA7001FF8C8 /* SwiftUIExtractingSubViews.swift */; };
 		59B61F4F29CEF381001FF8C8 /* SwiftUIBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B61F4E29CEF381001FF8C8 /* SwiftUIBinding.swift */; };
 		59B61F5129CEF734001FF8C8 /* SwiftUIConditional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B61F5029CEF734001FF8C8 /* SwiftUIConditional.swift */; };
@@ -81,6 +82,7 @@
 		59AEF9E629D046FF00385384 /* SwiftUIContextMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIContextMenu.swift; sourceTree = "<group>"; };
 		59AEF9E829D04A6900385384 /* SwuftUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwuftUITextField.swift; sourceTree = "<group>"; };
 		59AEF9EA29D04FFE00385384 /* SwiftUITextField2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITextField2.swift; sourceTree = "<group>"; };
+		59AEF9EC29D0566400385384 /* SwiftUITextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITextEditor.swift; sourceTree = "<group>"; };
 		59B61F4C29CEEBA7001FF8C8 /* SwiftUIExtractingSubViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIExtractingSubViews.swift; sourceTree = "<group>"; };
 		59B61F4E29CEF381001FF8C8 /* SwiftUIBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIBinding.swift; sourceTree = "<group>"; };
 		59B61F5029CEF734001FF8C8 /* SwiftUIConditional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIConditional.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				59AEF9E229D03C7800385384 /* SwiftUIAlert.swift */,
 				59AEF9E429D0414600385384 /* SwiftUIActionSheet.swift */,
 				59AEF9EA29D04FFE00385384 /* SwiftUITextField2.swift */,
+				59AEF9EC29D0566400385384 /* SwiftUITextEditor.swift */,
 			);
 			path = SwiftUIText;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				59CC117F29C7858A00FD65BA /* SwiftUI_Images.swift in Sources */,
 				5959EF1E29D0075600E16E37 /* SwiftUIPopOver.swift in Sources */,
 				5959EF2429D01E1600E16E37 /* SwiftUIList.swift in Sources */,
+				59AEF9ED29D0566400385384 /* SwiftUITextEditor.swift in Sources */,
 				59C1E5D729CB5F8D004F64D9 /* ScrollViewSwiftUI2.swift in Sources */,
 				59B61F5329CEFC07001FF8C8 /* SwiftUIAnimation.swift in Sources */,
 				5959EF2029D00A1B00E16E37 /* SwiftUIPopOver2.swift in Sources */,
