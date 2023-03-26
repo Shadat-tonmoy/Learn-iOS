@@ -17,6 +17,7 @@
 		59AEF9E329D03C7800385384 /* SwiftUIAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AEF9E229D03C7800385384 /* SwiftUIAlert.swift */; };
 		59AEF9E529D0414600385384 /* SwiftUIActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AEF9E429D0414600385384 /* SwiftUIActionSheet.swift */; };
 		59AEF9E729D046FF00385384 /* SwiftUIContextMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AEF9E629D046FF00385384 /* SwiftUIContextMenu.swift */; };
+		59AEF9E929D04A6900385384 /* SwuftUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AEF9E829D04A6900385384 /* SwuftUITextField.swift */; };
 		59B61F4D29CEEBA7001FF8C8 /* SwiftUIExtractingSubViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B61F4C29CEEBA7001FF8C8 /* SwiftUIExtractingSubViews.swift */; };
 		59B61F4F29CEF381001FF8C8 /* SwiftUIBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B61F4E29CEF381001FF8C8 /* SwiftUIBinding.swift */; };
 		59B61F5129CEF734001FF8C8 /* SwiftUIConditional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B61F5029CEF734001FF8C8 /* SwiftUIConditional.swift */; };
@@ -77,6 +78,7 @@
 		59AEF9E229D03C7800385384 /* SwiftUIAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAlert.swift; sourceTree = "<group>"; };
 		59AEF9E429D0414600385384 /* SwiftUIActionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIActionSheet.swift; sourceTree = "<group>"; };
 		59AEF9E629D046FF00385384 /* SwiftUIContextMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIContextMenu.swift; sourceTree = "<group>"; };
+		59AEF9E829D04A6900385384 /* SwuftUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwuftUITextField.swift; sourceTree = "<group>"; };
 		59B61F4C29CEEBA7001FF8C8 /* SwiftUIExtractingSubViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIExtractingSubViews.swift; sourceTree = "<group>"; };
 		59B61F4E29CEF381001FF8C8 /* SwiftUIBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIBinding.swift; sourceTree = "<group>"; };
 		59B61F5029CEF734001FF8C8 /* SwiftUIConditional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIConditional.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 		59CC114029C74A8F00FD65BA = {
 			isa = PBXGroup;
 			children = (
+				59AEF9E829D04A6900385384 /* SwuftUITextField.swift */,
 				59AEF9E629D046FF00385384 /* SwiftUIContextMenu.swift */,
 				59CC114B29C74A8F00FD65BA /* SwiftUIText */,
 				59CC115C29C74A9000FD65BA /* SwiftUITextTests */,
@@ -361,6 +364,7 @@
 				5959EF1C29D0024300E16E37 /* SwiftUISheets.swift in Sources */,
 				59C1E5D129CB5746004F64D9 /* ForEachSwitfUI.swift in Sources */,
 				59CC117B29C76B9F00FD65BA /* Gradient.swift in Sources */,
+				59AEF9E929D04A6900385384 /* SwuftUITextField.swift in Sources */,
 				5959EF2229D00F2B00E16E37 /* SwiftUINavigation.swift in Sources */,
 				59F0451A29CEAE2900EF4EA9 /* GridSwiftUIWithSection.swift in Sources */,
 				59AEF9E529D0414600385384 /* SwiftUIActionSheet.swift in Sources */,
