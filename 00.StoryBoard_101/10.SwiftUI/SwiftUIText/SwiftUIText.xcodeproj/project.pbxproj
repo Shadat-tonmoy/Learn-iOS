@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		304E303229D3E119009A7242 /* SwiftUIColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E303129D3E119009A7242 /* SwiftUIColorPicker.swift */; };
+		304E303429D3E422009A7242 /* SwiftUIDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E303329D3E422009A7242 /* SwiftUIDatePicker.swift */; };
 		308A7A4B29D2921E00D0C8B6 /* SwiftUIPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308A7A4A29D2921E00D0C8B6 /* SwiftUIPicker.swift */; };
 		5925218129CA8A540044AE3C /* SpacerSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5925218029CA8A540044AE3C /* SpacerSwiftUI.swift */; };
 		5925218329CA8D7C0044AE3C /* SwiftUIInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5925218229CA8D7C0044AE3C /* SwiftUIInitializer.swift */; };
@@ -72,6 +74,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		304E303129D3E119009A7242 /* SwiftUIColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIColorPicker.swift; sourceTree = "<group>"; };
+		304E303329D3E422009A7242 /* SwiftUIDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDatePicker.swift; sourceTree = "<group>"; };
 		308A7A4A29D2921E00D0C8B6 /* SwiftUIPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIPicker.swift; sourceTree = "<group>"; };
 		5925218029CA8A540044AE3C /* SpacerSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacerSwiftUI.swift; sourceTree = "<group>"; };
 		5925218229CA8D7C0044AE3C /* SwiftUIInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIInitializer.swift; sourceTree = "<group>"; };
@@ -183,6 +187,8 @@
 				59CC117E29C7858A00FD65BA /* SwiftUI_Images.swift */,
 				59EF78CF29CA04DB0051ACF6 /* SwiftUIFrame.swift */,
 				59EF78D129CA08810051ACF6 /* BackgroundAndOverlaySwitfUI.swift */,
+				304E303129D3E119009A7242 /* SwiftUIColorPicker.swift */,
+				304E303329D3E422009A7242 /* SwiftUIDatePicker.swift */,
 				59EF78D329CA1C9E0051ACF6 /* SwiftUIStacks.swift */,
 				59EF78D529CA219F0051ACF6 /* MICard.swift */,
 				5925218029CA8A540044AE3C /* SpacerSwiftUI.swift */,
@@ -391,6 +397,7 @@
 				59CC117929C7656600FD65BA /* Colors.swift in Sources */,
 				59EF78D629CA219F0051ACF6 /* MICard.swift in Sources */,
 				59C1E5D329CB5B6E004F64D9 /* ScrollViewSwiftUI.swift in Sources */,
+				304E303229D3E119009A7242 /* SwiftUIColorPicker.swift in Sources */,
 				59B61F4F29CEF381001FF8C8 /* SwiftUIBinding.swift in Sources */,
 				59AEF9EB29D04FFE00385384 /* SwiftUITextField2.swift in Sources */,
 				59CC117F29C7858A00FD65BA /* SwiftUI_Images.swift in Sources */,
@@ -411,6 +418,7 @@
 				59B61F4D29CEEBA7001FF8C8 /* SwiftUIExtractingSubViews.swift in Sources */,
 				59B61F5129CEF734001FF8C8 /* SwiftUIConditional.swift in Sources */,
 				59CC117729C74DF800FD65BA /* Shapes.swift in Sources */,
+				304E303429D3E422009A7242 /* SwiftUIDatePicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
