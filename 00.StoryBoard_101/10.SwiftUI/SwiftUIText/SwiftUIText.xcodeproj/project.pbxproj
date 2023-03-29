@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		304E303229D3E119009A7242 /* SwiftUIColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E303129D3E119009A7242 /* SwiftUIColorPicker.swift */; };
 		304E303429D3E422009A7242 /* SwiftUIDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E303329D3E422009A7242 /* SwiftUIDatePicker.swift */; };
+		304E303629D43971009A7242 /* SwiftUISlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E303529D43971009A7242 /* SwiftUISlider.swift */; };
 		308A7A4B29D2921E00D0C8B6 /* SwiftUIPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308A7A4A29D2921E00D0C8B6 /* SwiftUIPicker.swift */; };
 		5925218129CA8A540044AE3C /* SpacerSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5925218029CA8A540044AE3C /* SpacerSwiftUI.swift */; };
 		5925218329CA8D7C0044AE3C /* SwiftUIInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5925218229CA8D7C0044AE3C /* SwiftUIInitializer.swift */; };
@@ -76,6 +77,7 @@
 /* Begin PBXFileReference section */
 		304E303129D3E119009A7242 /* SwiftUIColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIColorPicker.swift; sourceTree = "<group>"; };
 		304E303329D3E422009A7242 /* SwiftUIDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDatePicker.swift; sourceTree = "<group>"; };
+		304E303529D43971009A7242 /* SwiftUISlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUISlider.swift; sourceTree = "<group>"; };
 		308A7A4A29D2921E00D0C8B6 /* SwiftUIPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIPicker.swift; sourceTree = "<group>"; };
 		5925218029CA8A540044AE3C /* SpacerSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacerSwiftUI.swift; sourceTree = "<group>"; };
 		5925218229CA8D7C0044AE3C /* SwiftUIInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIInitializer.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				59CC117A29C76B9F00FD65BA /* Gradient.swift */,
 				59CC117C29C770D900FD65BA /* Icon_SystemIcons.swift */,
 				59CC117E29C7858A00FD65BA /* SwiftUI_Images.swift */,
+				304E303529D43971009A7242 /* SwiftUISlider.swift */,
 				59EF78CF29CA04DB0051ACF6 /* SwiftUIFrame.swift */,
 				59EF78D129CA08810051ACF6 /* BackgroundAndOverlaySwitfUI.swift */,
 				304E303129D3E119009A7242 /* SwiftUIColorPicker.swift */,
@@ -407,6 +410,7 @@
 				59AEF9ED29D0566400385384 /* SwiftUITextEditor.swift in Sources */,
 				59C1E5D729CB5F8D004F64D9 /* ScrollViewSwiftUI2.swift in Sources */,
 				59B61F5329CEFC07001FF8C8 /* SwiftUIAnimation.swift in Sources */,
+				304E303629D43971009A7242 /* SwiftUISlider.swift in Sources */,
 				5959EF2029D00A1B00E16E37 /* SwiftUIPopOver2.swift in Sources */,
 				59F0452029CEBF3F00EF4EA9 /* SwiftUIState.swift in Sources */,
 				59AEF9EF29D058E200385384 /* SwiftUIToggle.swift in Sources */,
