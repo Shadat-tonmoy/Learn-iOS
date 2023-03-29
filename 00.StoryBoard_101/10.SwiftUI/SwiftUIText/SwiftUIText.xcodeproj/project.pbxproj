@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5925218129CA8A540044AE3C /* SpacerSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5925218029CA8A540044AE3C /* SpacerSwiftUI.swift */; };
 		5925218329CA8D7C0044AE3C /* SwiftUIInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5925218229CA8D7C0044AE3C /* SwiftUIInitializer.swift */; };
+		592FE0CF29D4F26A00F58EE4 /* SwiftUITab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592FE0CE29D4F26A00F58EE4 /* SwiftUITab.swift */; };
+		592FE0D129D4FB8B00F58EE4 /* SwiftUITab2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592FE0D029D4FB8B00F58EE4 /* SwiftUITab2.swift */; };
 		5959EF1C29D0024300E16E37 /* SwiftUISheets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5959EF1B29D0024300E16E37 /* SwiftUISheets.swift */; };
 		5959EF1E29D0075600E16E37 /* SwiftUIPopOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5959EF1D29D0075600E16E37 /* SwiftUIPopOver.swift */; };
 		5959EF2029D00A1B00E16E37 /* SwiftUIPopOver2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5959EF1F29D00A1B00E16E37 /* SwiftUIPopOver2.swift */; };
@@ -73,6 +75,8 @@
 /* Begin PBXFileReference section */
 		5925218029CA8A540044AE3C /* SpacerSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacerSwiftUI.swift; sourceTree = "<group>"; };
 		5925218229CA8D7C0044AE3C /* SwiftUIInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIInitializer.swift; sourceTree = "<group>"; };
+		592FE0CE29D4F26A00F58EE4 /* SwiftUITab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITab.swift; sourceTree = "<group>"; };
+		592FE0D029D4FB8B00F58EE4 /* SwiftUITab2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITab2.swift; sourceTree = "<group>"; };
 		5959EF1B29D0024300E16E37 /* SwiftUISheets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUISheets.swift; sourceTree = "<group>"; };
 		5959EF1D29D0075600E16E37 /* SwiftUIPopOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIPopOver.swift; sourceTree = "<group>"; };
 		5959EF1F29D00A1B00E16E37 /* SwiftUIPopOver2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIPopOver2.swift; sourceTree = "<group>"; };
@@ -176,6 +180,8 @@
 				59CC115229C74A9000FD65BA /* Preview Content */,
 				59CC117629C74DF800FD65BA /* Shapes.swift */,
 				59CC117829C7656600FD65BA /* Colors.swift */,
+				592FE0CE29D4F26A00F58EE4 /* SwiftUITab.swift */,
+				592FE0D029D4FB8B00F58EE4 /* SwiftUITab2.swift */,
 				59CC117A29C76B9F00FD65BA /* Gradient.swift */,
 				59CC117C29C770D900FD65BA /* Icon_SystemIcons.swift */,
 				59CC117E29C7858A00FD65BA /* SwiftUI_Images.swift */,
@@ -389,6 +395,7 @@
 				59EF78D629CA219F0051ACF6 /* MICard.swift in Sources */,
 				59C1E5D329CB5B6E004F64D9 /* ScrollViewSwiftUI.swift in Sources */,
 				59B61F4F29CEF381001FF8C8 /* SwiftUIBinding.swift in Sources */,
+				592FE0CF29D4F26A00F58EE4 /* SwiftUITab.swift in Sources */,
 				59AEF9EB29D04FFE00385384 /* SwiftUITextField2.swift in Sources */,
 				59CC117F29C7858A00FD65BA /* SwiftUI_Images.swift in Sources */,
 				5959EF1E29D0075600E16E37 /* SwiftUIPopOver.swift in Sources */,
@@ -400,6 +407,7 @@
 				59F0452029CEBF3F00EF4EA9 /* SwiftUIState.swift in Sources */,
 				59AEF9EF29D058E200385384 /* SwiftUIToggle.swift in Sources */,
 				5925218129CA8A540044AE3C /* SpacerSwiftUI.swift in Sources */,
+				592FE0D129D4FB8B00F58EE4 /* SwiftUITab2.swift in Sources */,
 				59F0451C29CEB58700EF4EA9 /* SafeAreaSwiftUI.swift in Sources */,
 				59CC114D29C74A8F00FD65BA /* SwiftUITextApp.swift in Sources */,
 				59EF78D229CA08810051ACF6 /* BackgroundAndOverlaySwitfUI.swift in Sources */,
