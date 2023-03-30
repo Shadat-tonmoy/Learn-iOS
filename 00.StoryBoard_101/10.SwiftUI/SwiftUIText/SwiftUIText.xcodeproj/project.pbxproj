@@ -13,6 +13,7 @@
 		308A7A4B29D2921E00D0C8B6 /* SwiftUIPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308A7A4A29D2921E00D0C8B6 /* SwiftUIPicker.swift */; };
 		308F172429D52CDD0089438D /* SwiftUIDarkMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308F172329D52CDD0089438D /* SwiftUIDarkMode.swift */; };
 		308F172629D537090089438D /* SwiftUIOnAppear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308F172529D537090089438D /* SwiftUIOnAppear.swift */; };
+		308F172829D53F1B0089438D /* SwiftUISafeGuard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308F172729D53F1B0089438D /* SwiftUISafeGuard.swift */; };
 		5925218129CA8A540044AE3C /* SpacerSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5925218029CA8A540044AE3C /* SpacerSwiftUI.swift */; };
 		5925218329CA8D7C0044AE3C /* SwiftUIInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5925218229CA8D7C0044AE3C /* SwiftUIInitializer.swift */; };
 		592FE0CF29D4F26A00F58EE4 /* SwiftUITab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592FE0CE29D4F26A00F58EE4 /* SwiftUITab.swift */; };
@@ -85,6 +86,7 @@
 		308A7A4A29D2921E00D0C8B6 /* SwiftUIPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIPicker.swift; sourceTree = "<group>"; };
 		308F172329D52CDD0089438D /* SwiftUIDarkMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDarkMode.swift; sourceTree = "<group>"; };
 		308F172529D537090089438D /* SwiftUIOnAppear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIOnAppear.swift; sourceTree = "<group>"; };
+		308F172729D53F1B0089438D /* SwiftUISafeGuard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUISafeGuard.swift; sourceTree = "<group>"; };
 		5925218029CA8A540044AE3C /* SpacerSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacerSwiftUI.swift; sourceTree = "<group>"; };
 		5925218229CA8D7C0044AE3C /* SwiftUIInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIInitializer.swift; sourceTree = "<group>"; };
 		592FE0CE29D4F26A00F58EE4 /* SwiftUITab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITab.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				5925218229CA8D7C0044AE3C /* SwiftUIInitializer.swift */,
 				59C1E5D029CB5746004F64D9 /* ForEachSwitfUI.swift */,
 				308F172529D537090089438D /* SwiftUIOnAppear.swift */,
+				308F172729D53F1B0089438D /* SwiftUISafeGuard.swift */,
 				59C1E5D229CB5B6E004F64D9 /* ScrollViewSwiftUI.swift */,
 				59C1E5D629CB5F8D004F64D9 /* ScrollViewSwiftUI2.swift */,
 				59C1E5D829CB6E8A004F64D9 /* GridSwiftUI.swift */,
@@ -406,6 +409,7 @@
 				59CC114F29C74A8F00FD65BA /* ContentView.swift in Sources */,
 				59F0451829CEAA3100EF4EA9 /* GridSwiftUIWithTop.swift in Sources */,
 				59CC117D29C770D900FD65BA /* Icon_SystemIcons.swift in Sources */,
+				308F172829D53F1B0089438D /* SwiftUISafeGuard.swift in Sources */,
 				59C1E5D929CB6E8A004F64D9 /* GridSwiftUI.swift in Sources */,
 				5925218329CA8D7C0044AE3C /* SwiftUIInitializer.swift in Sources */,
 				59EF78D029CA04DB0051ACF6 /* SwiftUIFrame.swift in Sources */,
