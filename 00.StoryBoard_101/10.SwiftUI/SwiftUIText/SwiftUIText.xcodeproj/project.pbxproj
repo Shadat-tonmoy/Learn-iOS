@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30020F4029D6887C003541E3 /* SwiftUIEnvironmentObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30020F3F29D6887C003541E3 /* SwiftUIEnvironmentObject.swift */; };
 		304E303229D3E119009A7242 /* SwiftUIColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E303129D3E119009A7242 /* SwiftUIColorPicker.swift */; };
 		304E303429D3E422009A7242 /* SwiftUIDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E303329D3E422009A7242 /* SwiftUIDatePicker.swift */; };
 		304E303629D43971009A7242 /* SwiftUISlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E303529D43971009A7242 /* SwiftUISlider.swift */; };
@@ -82,6 +83,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		30020F3F29D6887C003541E3 /* SwiftUIEnvironmentObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIEnvironmentObject.swift; sourceTree = "<group>"; };
 		304E303129D3E119009A7242 /* SwiftUIColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIColorPicker.swift; sourceTree = "<group>"; };
 		304E303329D3E422009A7242 /* SwiftUIDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDatePicker.swift; sourceTree = "<group>"; };
 		304E303529D43971009A7242 /* SwiftUISlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUISlider.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				59B61F5429CF021D001FF8C8 /* SwiftUITransition.swift */,
 				5959EF1B29D0024300E16E37 /* SwiftUISheets.swift */,
 				5959EF1D29D0075600E16E37 /* SwiftUIPopOver.swift */,
+				30020F3F29D6887C003541E3 /* SwiftUIEnvironmentObject.swift */,
 				5959EF1F29D00A1B00E16E37 /* SwiftUIPopOver2.swift */,
 				5959EF2129D00F2B00E16E37 /* SwiftUINavigation.swift */,
 				5959EF2329D01E1600E16E37 /* SwiftUIList.swift */,
@@ -438,6 +441,7 @@
 				304E303629D43971009A7242 /* SwiftUISlider.swift in Sources */,
 				5959EF2029D00A1B00E16E37 /* SwiftUIPopOver2.swift in Sources */,
 				59F0452029CEBF3F00EF4EA9 /* SwiftUIState.swift in Sources */,
+				30020F4029D6887C003541E3 /* SwiftUIEnvironmentObject.swift in Sources */,
 				59AEF9EF29D058E200385384 /* SwiftUIToggle.swift in Sources */,
 				5925218129CA8A540044AE3C /* SpacerSwiftUI.swift in Sources */,
 				592FE0D129D4FB8B00F58EE4 /* SwiftUITab2.swift in Sources */,
