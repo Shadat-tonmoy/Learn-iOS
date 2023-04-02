@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3000756929D96D4000F29D88 /* SwiftUIAppStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3000756829D96D4000F29D88 /* SwiftUIAppStorage.swift */; };
 		30020F4029D6887C003541E3 /* SwiftUIEnvironmentObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30020F3F29D6887C003541E3 /* SwiftUIEnvironmentObject.swift */; };
 		304E303229D3E119009A7242 /* SwiftUIColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E303129D3E119009A7242 /* SwiftUIColorPicker.swift */; };
 		304E303429D3E422009A7242 /* SwiftUIDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E303329D3E422009A7242 /* SwiftUIDatePicker.swift */; };
@@ -83,6 +84,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3000756829D96D4000F29D88 /* SwiftUIAppStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAppStorage.swift; sourceTree = "<group>"; };
 		30020F3F29D6887C003541E3 /* SwiftUIEnvironmentObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIEnvironmentObject.swift; sourceTree = "<group>"; };
 		304E303129D3E119009A7242 /* SwiftUIColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIColorPicker.swift; sourceTree = "<group>"; };
 		304E303329D3E422009A7242 /* SwiftUIDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDatePicker.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				5925218229CA8D7C0044AE3C /* SwiftUIInitializer.swift */,
 				59C1E5D029CB5746004F64D9 /* ForEachSwitfUI.swift */,
 				308F172529D537090089438D /* SwiftUIOnAppear.swift */,
+				3000756829D96D4000F29D88 /* SwiftUIAppStorage.swift */,
 				308F172729D53F1B0089438D /* SwiftUISafeGuard.swift */,
 				59C1E5D229CB5B6E004F64D9 /* ScrollViewSwiftUI.swift */,
 				59C1E5D629CB5F8D004F64D9 /* ScrollViewSwiftUI2.swift */,
@@ -455,6 +458,7 @@
 				59CC117729C74DF800FD65BA /* Shapes.swift in Sources */,
 				308F172A29D5959E0089438D /* SwiftUIModel.swift in Sources */,
 				304E303429D3E422009A7242 /* SwiftUIDatePicker.swift in Sources */,
+				3000756929D96D4000F29D88 /* SwiftUIAppStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
