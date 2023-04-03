@@ -10,8 +10,8 @@ import SwiftUI
 struct OnboardingScreen: View {
     var body: some View {
         TabView{
-            ForEach(1..<5){ index in
-                FruitCard()
+            ForEach(0..<5){ index in
+                FruitCard(fruit: fruits[index])
                     .edgesIgnoringSafeArea(.all)
             }
             

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FruitCard: View {
     // MARK : PROPERTIES
+    let fruit : Fruit
     
     // MARK : BODY
     var body: some View {
@@ -16,20 +17,20 @@ struct FruitCard: View {
             VStack(spacing : 20) {
                 
                 // : IMAGE
-                Image("blueberry")
+                Image(fruit.image)
                     .resizable()
                     .scaledToFit()
                     .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.15), radius: 8,x: 6, y: 8)
                 
                 // : TITLE
-                Text("Blue Berry")
+                Text(fruit.title)
                     .foregroundColor(.white)
                     .font(.largeTitle)
                     .fontWeight(.heavy)
                 
                 // : HEADLINE
                 
-                Text("Description goes here")
+                Text(fruit.headline)
                     .font(.caption)
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
@@ -43,7 +44,7 @@ struct FruitCard: View {
         } // : ZSTACK
         .frame(minWidth : 0, maxWidth : .infinity, minHeight : 0, maxHeight: .infinity)
         .edgesIgnoringSafeArea(.all)
-        .background(LinearGradient(colors: [Color("ColorBlueberryLight"), Color("ColorBlueberryDark")], startPoint: .top, endPoint: .bottom))
+        .background(LinearGradient(colors: fruit.gradientColors, startPoint: .top, endPoint: .bottom))
         .cornerRadius(8)
         
     }
@@ -53,7 +54,7 @@ struct FruitCard: View {
 
 struct FruitCard_Previews: PreviewProvider {
     static var previews: some View {
-        FruitCard()
+        FruitCard(fruit: fruits[0])
             .previewLayout(.fixed(width: 320, height: 640))
     }
 }
