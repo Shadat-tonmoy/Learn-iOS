@@ -9,10 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Text("Content View Screen")
+        NavigationView {
+            List() {
+                CoverImageView()
+                    .frame(width: 400, height: 300)
+                    .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+            }.navigationTitle("Africa")
         }
-        .padding()
     }
 }
 
