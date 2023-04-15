@@ -46,12 +46,14 @@ struct SwiftUIEnvironmentObject: View {
     var body: some View {
         NavigationView{
             List(viewModel.deviceList, rowContent: { device in
-                NavigationLink(destination : DeviceDetailsScreen(device: device, viewModel: viewModel)){
+                NavigationLink(destination : DeviceDetailsScreen(device: device
+                                                                 /*, viewModel: viewModel*/)){
                     Text(device.name)
                 }
                 
             })
             .navigationTitle("Devices")
+            .environmentObject(viewModel)
         }
     }
 }
@@ -60,12 +62,12 @@ struct DeviceDetailsScreen : View{
     
     let device : Device
     
-    @StateObject var viewModel : DeviceViewModel
+//    @StateObject var viewModel : DeviceViewModel
     
     var body: some View{
         
         ZStack{
-            NavigationLink(destination : DeviceQuantityScreen(viewModel: viewModel)) {
+            NavigationLink(destination : DeviceQuantityScreen(/*viewModel: viewModel*/)) {
                 VStack{
                     VStack {
                         Text("\(device.quantity)")
@@ -96,7 +98,8 @@ struct DeviceDetailsScreen : View{
 
 struct DeviceQuantityScreen : View {
     
-    @StateObject var viewModel : DeviceViewModel
+//    @StateObject var viewModel : DeviceViewModel
+    @EnvironmentObject var viewModel : DeviceViewModel
     
     
     var body: some View {
