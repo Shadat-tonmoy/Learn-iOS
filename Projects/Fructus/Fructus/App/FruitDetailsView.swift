@@ -33,6 +33,8 @@ struct FruitDetailsView: View {
                         
                         // NUTRIENTS
                         
+                        FruitNutrientsView(fruit: fruit)
+                        
                         // SUB HEADER
                         
                         Text("Learn more about \(fruit.title)".uppercased())

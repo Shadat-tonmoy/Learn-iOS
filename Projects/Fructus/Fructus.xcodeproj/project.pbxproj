@@ -20,6 +20,7 @@
 		596AC5AE29EAA1C500B6168F /* FruitDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AC5AD29EAA1C500B6168F /* FruitDetailsView.swift */; };
 		596AC5B029EAAC1D00B6168F /* FruitHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AC5AF29EAAC1D00B6168F /* FruitHeaderView.swift */; };
 		596AC5B229EAAE3300B6168F /* SourceLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AC5B129EAAE3300B6168F /* SourceLinkView.swift */; };
+		596AC5B429EAB17F00B6168F /* FruitNutrientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AC5B329EAB17F00B6168F /* FruitNutrientsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		596AC5AD29EAA1C500B6168F /* FruitDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitDetailsView.swift; sourceTree = "<group>"; };
 		596AC5AF29EAAC1D00B6168F /* FruitHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitHeaderView.swift; sourceTree = "<group>"; };
 		596AC5B129EAAE3300B6168F /* SourceLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceLinkView.swift; sourceTree = "<group>"; };
+		596AC5B329EAB17F00B6168F /* FruitNutrientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitNutrientsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				596AC5AB29EA6ACB00B6168F /* FruitRowView.swift */,
 				596AC5AF29EAAC1D00B6168F /* FruitHeaderView.swift */,
 				596AC5B129EAAE3300B6168F /* SourceLinkView.swift */,
+				596AC5B329EAB17F00B6168F /* FruitNutrientsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				596AC5B229EAAE3300B6168F /* SourceLinkView.swift in Sources */,
 				301EDE5429DA89FA00720394 /* OnboardingScreen.swift in Sources */,
 				596AC5AC29EA6ACB00B6168F /* FruitRowView.swift in Sources */,
+				596AC5B429EAB17F00B6168F /* FruitNutrientsView.swift in Sources */,
 				3000757929D97DB900F29D88 /* ContentView.swift in Sources */,
 				596AC5AE29EAA1C500B6168F /* FruitDetailsView.swift in Sources */,
 				301EDE5029DA7A1000720394 /* FruitCard.swift in Sources */,
