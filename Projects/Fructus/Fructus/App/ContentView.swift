@@ -8,11 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
-        VStack {
-            Text("Hello, world!")
-        }
-        .padding()
+        NavigationView(content: {
+            List(fruits.shuffled(), rowContent: { fruit in
+                NavigationLink(destination: FruitDetailsView(fruit: fruit)){
+                    FruitRowView(fruit: fruit)
+                }
+            })
+            .listStyle(.plain)
+            .navigationTitle("Fruits")
+        })
     }
 }
 
