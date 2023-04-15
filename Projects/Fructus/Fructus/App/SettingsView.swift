@@ -31,6 +31,18 @@ struct SettingsView: View {
                                     
                                 })
                     }
+                    
+                    GroupBox(
+                        label: SettingsLabelView(labelText: "Application", labelImage: "iphone"), content: {
+                            Divider().padding(.vertical, 4)
+                            SettingsRowView(name: "Developer", content: "Shadat Tonmoy")
+                            SettingsRowView(name: "Designer", content: "Shadat Tonmoy")
+                            SettingsRowView(name: "Compatibility", content: "iOS 14")
+                            SettingsRowView(name: "Course", content: "SwiftUI Masterclass", linkLabel: nil, linkDestination: "swiftuimasterclass.com")
+                            
+                        }
+                    
+                    )
                 }
                 
                 

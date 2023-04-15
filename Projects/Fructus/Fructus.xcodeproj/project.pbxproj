@@ -23,6 +23,7 @@
 		596AC5B429EAB17F00B6168F /* FruitNutrientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AC5B329EAB17F00B6168F /* FruitNutrientsView.swift */; };
 		596AC5B629EAB5E500B6168F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AC5B529EAB5E500B6168F /* SettingsView.swift */; };
 		596AC5B829EAB8A200B6168F /* SettingsLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AC5B729EAB8A200B6168F /* SettingsLabelView.swift */; };
+		596AC5BA29EAC8EB00B6168F /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AC5B929EAC8EB00B6168F /* SettingsRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		596AC5B329EAB17F00B6168F /* FruitNutrientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitNutrientsView.swift; sourceTree = "<group>"; };
 		596AC5B529EAB5E500B6168F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		596AC5B729EAB8A200B6168F /* SettingsLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLabelView.swift; sourceTree = "<group>"; };
+		596AC5B929EAC8EB00B6168F /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				596AC5B129EAAE3300B6168F /* SourceLinkView.swift */,
 				596AC5B329EAB17F00B6168F /* FruitNutrientsView.swift */,
 				596AC5B729EAB8A200B6168F /* SettingsLabelView.swift */,
+				596AC5B929EAC8EB00B6168F /* SettingsRowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			files = (
 				301EDE5A29DAC97300720394 /* FruitData.swift in Sources */,
 				596AC5B229EAAE3300B6168F /* SourceLinkView.swift in Sources */,
+				596AC5BA29EAC8EB00B6168F /* SettingsRowView.swift in Sources */,
 				301EDE5429DA89FA00720394 /* OnboardingScreen.swift in Sources */,
 				596AC5AC29EA6ACB00B6168F /* FruitRowView.swift in Sources */,
 				596AC5B429EAB17F00B6168F /* FruitNutrientsView.swift in Sources */,
