@@ -11,56 +11,78 @@ struct AnimalDetailView: View {
     let animal : Animal
     
     var body: some View {
-        
-        NavigationView {
-            ScrollView(.vertical, showsIndicators: false){
-                VStack{
+        ScrollView(.vertical, showsIndicators: false){
+            VStack{
+                
+                // HERO IMAGE
+                
+                Image(animal.image)
+                    .resizable()
+                    .scaledToFit()
+                
+                // TITLE
+                
+                Text(animal.name.uppercased())
+                    .font(.largeTitle)
+                    .fontWeight(.heavy)
+                    .foregroundColor(.primary)
+                    .padding(.vertical, 8)
+                    .underline(color : .accentColor)
+                
+                // HEADLINE
+                
+                Text(animal.headline)
+                    .font(.headline)
+                    .multilineTextAlignment(.leading)
+                    .foregroundColor(.accentColor)
+                    .padding(.horizontal)
+                
+                Group{
+                    HeadingView(headingImage: "photo.on.rectangle.angled", headingText: "Wilderness in Pictures")
                     
-                    // HERO IMAGE
+                    InsetGalleryView(animal: animal)
+                }
+                
+                // GALLERY
+                
+                
+                
+                // FACTS
+                Group{
+                    HeadingView(headingImage: "questionmark.circle", headingText: "Did you know?")
                     
-                    Image(animal.image)
-                        .resizable()
-                        .scaledToFit()
+                    InsetFactView(animal: animal)
+                }.padding(.horizontal)
+                
+                // DESCRIPTION
+                
+                Group{
+                    HeadingView(headingImage: "info.circle", headingText: "All about \(animal.name)")
                     
-                    // TITLE
-                    
-                    Text(animal.name.uppercased())
-                        .font(.largeTitle)
-                        .fontWeight(.heavy)
-                        .foregroundColor(.primary)
-                        .padding(.vertical, 8)
-                        .underline(color : .accentColor)
-                    
-                    // HEADLINE
-                    
-                    Text(animal.headline)
-                        .font(.headline)
+                    Text(animal.description)
                         .multilineTextAlignment(.leading)
-                        .foregroundColor(.accentColor)
-                        .padding(.horizontal)
+                        .layoutPriority(1)
                     
-                    Group{
-                        HeadingView(headingImage: "photo.on.rectangle.angled", headingText: "Wilderness in Pictures")
-                        
-                        InsetGalleryView(animal: animal)
-                    }
+                }.padding(.horizontal)
+                
+                // MAP
+                
+                Group{
+                    HeadingView(headingImage: "map", headingText: "National Parks")
+                    InsetMapView()
                     
-                    // GALLERY
+                }.padding(.horizontal)
+                
+                // LINK
+                
+                Group{
+                    HeadingView(headingImage: "books.vertical", headingText: "Learn More")
                     
-                    
-                    
-                    // FACTS
-                    
-                    // DESCRIPTION
-                    
-                    // MAP
-                    
-                    // LINK
-                } // : VSTACK
-            } // : SCROLL VIEW
-        }.navigationTitle("Learn More about \(animal.name)")
-            .navigationBarTitleDisplayMode(.inline)
-        
+                    ExternalWeblinkView(animal: animal)
+                }.padding(.horizontal)
+            } // : VSTACK
+        } // : SCROLL VIEW
+        .navigationBarTitle("Learn More about \(animal.name)", displayMode: .inline)
         
         
     }
