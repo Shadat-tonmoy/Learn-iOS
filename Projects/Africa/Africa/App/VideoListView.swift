@@ -8,8 +8,22 @@
 import SwiftUI
 
 struct VideoListView: View {
+    let videoList : [Video] = Bundle.main.decode("videos.json")
     var body: some View {
-        Text("Video List View Screen")
+        NavigationView{
+            List(videoList, id: \.self, rowContent: { video in
+                NavigationLink(destination : VideoPlayerView(video: video)){
+                    VideoListItemView(video: video)
+                }
+                
+            })
+            .navigationTitle("Videos")
+            .navigationBarTitleDisplayMode(.inline)
+            .listStyle(.inset)
+        }
+        
+        
+        
     }
 }
 
