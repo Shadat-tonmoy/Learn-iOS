@@ -26,15 +26,65 @@ struct MapView: View {
             
 //            MapMarker(coordinate: location.location, tint: .accentColor)
             
+//            MapAnnotation(coordinate: location.location, content: {
+//                Image("logo")
+//                    .resizable()
+//                    .scaledToFit()
+//                    .frame(width: 32, height: 32)
+//            })
+            
             MapAnnotation(coordinate: location.location, content: {
-                Image("logo")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 32, height: 32)
+                MapAnnotationView(location: location)
             })
             
             
         })
+        .overlay(alignment: .topLeading, content: {
+            HStack(spacing : 15){
+                Image("compass")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 48, height: 48)
+                
+                VStack(alignment: .leading, spacing: 5){
+                    HStack {
+                        Text("Latitude")
+                            .font(.footnote)
+                            .fontWeight(.heavy)
+                        .foregroundColor(.accentColor)
+                        Spacer()
+                        Text("\(region.center.latitude)")
+                            .font(.footnote)
+                            .fontWeight(.heavy)
+                    }
+                    
+                    HStack {
+                        Text("Longitude")
+                            .font(.footnote)
+                            .fontWeight(.heavy)
+                        .foregroundColor(.accentColor)
+                        Spacer()
+                        Text("\(region.center.longitude)")
+                            .font(.footnote)
+                            .fontWeight(.heavy)
+                    }
+                }
+                
+            }
+            .padding(.vertical, 10)
+            .padding(.horizontal, 12)
+            .background(
+                Color.black
+                    .cornerRadius(8)
+                    .opacity(0.6)
+            
+            )
+            .padding(.top, 30)
+            .padding(.horizontal, 30)
+            
+        })
+        
+        
     }
 }
 
