@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     let animal : [Animal] = Bundle.main.decode("animals.json")
+    @State var isGridActivated = false
     
     var body: some View {
         NavigationView {
@@ -26,6 +27,25 @@ struct ContentView: View {
                 
             }.navigationTitle("Africa")
                 .listStyle(.inset)
+                .navigationBarItems(trailing: HStack{
+                    Button(action: {
+                        isGridActivated = false
+                        
+                    }, label: {
+                        Image(systemName: "square.fill.text.grid.1x2")
+                            .font(.title2)
+                            .foregroundColor(isGridActivated ? .white : .accentColor)
+                    })
+                    
+                    Button(action: {
+                        isGridActivated = true
+                        
+                    }, label: {
+                        Image(systemName: "square.grid.2x2")
+                            .font(.title2)
+                            .foregroundColor(isGridActivated ? .accentColor : .white)
+                    })
+                })
         }
     }
 }

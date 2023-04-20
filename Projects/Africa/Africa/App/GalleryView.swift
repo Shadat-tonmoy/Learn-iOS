@@ -72,6 +72,7 @@ struct GalleryView: View {
                                 }
                         }
                     })
+                    .animation(.easeIn)
                 }
                 
             }
