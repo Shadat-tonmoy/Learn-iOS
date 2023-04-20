@@ -79,11 +79,7 @@ struct ContentView: View {
     }
     
     func switchGridType(){
-        gridCellCount += 1
-        gridCellCount %= 4
-        if(gridCellCount == 0) {
-            gridCellCount = 1
-        }
+        gridCellCount = (gridCellCount % 3) + 1
         animalGridItems = Array(repeating: .init(.flexible()), count: gridCellCount)
     }
     
