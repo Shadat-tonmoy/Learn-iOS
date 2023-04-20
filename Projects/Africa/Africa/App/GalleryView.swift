@@ -11,14 +11,22 @@ struct GalleryView: View {
     
     let animals : [Animal] = Bundle.main.decode("animals.json")
     
-    let gridItems : [GridItem] = [
-        GridItem(.flexible()),
-        GridItem(.flexible()),
-        GridItem(.flexible())
-    ]
+//    let gridItems : [GridItem] = [
+//        GridItem(.flexible()),
+//        GridItem(.flexible()),
+//        GridItem(.flexible())
+//    ]
+    
+//    let gridItems : [GridItem] = Array(repeating: GridItem(.flexible()), count: 2)
     
     @State var selectedImage = "lion"
     @State var selectedAnimal = "Lion"
+    @State var gridItemCount = 3.0
+    @State var gridItems : [GridItem] = Array(repeating: GridItem(.flexible()), count: 1)
+    
+    func switchGrid(){
+        gridItems = Array(repeating: .init(.flexible()), count: Int(gridItemCount))
+    }
 
     
     var body: some View {
@@ -33,6 +41,12 @@ struct GalleryView: View {
                         .overlay(content: {
                             Circle().stroke(lineWidth: 5)
                         })
+                    
+                    Slider(value: $gridItemCount, in: 2...6, step : 1)
+                        .onChange(of: gridItemCount, perform: { value in
+                            switchGrid()
+                        })
+                        .padding(.horizontal)
                     
                     
                     LazyVGrid(columns: gridItems, spacing : 30, content: {
@@ -60,6 +74,9 @@ struct GalleryView: View {
                     })
                 }
                 
+            }
+            .onAppear{
+                switchGrid()
             }
             .navigationTitle(selectedAnimal)
             .navigationBarTitleDisplayMode(.inline)
