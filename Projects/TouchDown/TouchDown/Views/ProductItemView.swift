@@ -10,17 +10,22 @@ import SwiftUI
 struct ProductItemView: View {
     let product : Product
     var body: some View {
-        VStack{
+        VStack(alignment:.leading){
             Image(product.image)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 180)
-                .background(Color(red: product.red(), green: product.green(), blue: product.blue()))
+                .background(Color(red: product.red, green: product.green, blue: product.blue))
                 .cornerRadius(12)
             
             Text(product.name)
                 .font(.title3)
                 .fontWeight(.bold)
+            
+            Text(product.formattedPrice)
+                .font(.title3)
+                .fontWeight(.medium)
+                .foregroundColor(.gray)
         }
         
     }

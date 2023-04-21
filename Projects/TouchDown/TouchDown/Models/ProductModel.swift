@@ -15,15 +15,19 @@ struct Product : Codable, Identifiable, Hashable{
     let description : String
     let color : [Double]
     
-    func red() -> Double {
+    var red : Double {
         return color[0]
     }
     
-    func green() -> Double {
+    var green : Double {
         return color[1]
     }
     
-    func blue() -> Double {
+    var blue : Double {
         return color[2]
+    }
+    
+    var formattedPrice : String{
+        return "$\(price)"
     }
 }
