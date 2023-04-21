@@ -11,15 +11,26 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             VStack(spacing : 0) {
+                
                 CustomNavbar()
                 
-                Spacer()
-                
-                FooterView()
-                    .padding(.horizontal)
+                ScrollView(.vertical, showsIndicators: false){
+                    
+                    VStack(spacing: 0){
+                        
+                        PlayerSliderView()
+                        
+                        FooterView()
+                            .padding(.horizontal)
+                        
+                        
+                        
+                    }
+                    
+                }
             }
-            .background(colorBackground.edgesIgnoringSafeArea(.all))
-        }.edgesIgnoringSafeArea(.all)
+            .background(colorBackground.ignoresSafeArea(.all, edges: .all))
+        }.ignoresSafeArea(.all, edges: .top)
     }
 }
 

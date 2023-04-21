@@ -22,6 +22,10 @@
 		592EE14729F153EF00D9F11D /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592EE14629F153EF00D9F11D /* FooterView.swift */; };
 		592EE14929F15AA200D9F11D /* CustomNavbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592EE14829F15AA200D9F11D /* CustomNavbar.swift */; };
 		592EE14B29F15B5200D9F11D /* NavbarLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592EE14A29F15B5200D9F11D /* NavbarLogoView.swift */; };
+		592EE14E29F23F2700D9F11D /* JSONDecoderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592EE14D29F23F2700D9F11D /* JSONDecoderExtension.swift */; };
+		592EE15029F241CB00D9F11D /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592EE14F29F241CB00D9F11D /* PlayerModel.swift */; };
+		592EE15229F2421200D9F11D /* PlayerSliderItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592EE15129F2421200D9F11D /* PlayerSliderItemView.swift */; };
+		592EE15429F2429500D9F11D /* PlayerSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592EE15329F2429500D9F11D /* PlayerSliderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,10 @@
 		592EE14629F153EF00D9F11D /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		592EE14829F15AA200D9F11D /* CustomNavbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavbar.swift; sourceTree = "<group>"; };
 		592EE14A29F15B5200D9F11D /* NavbarLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavbarLogoView.swift; sourceTree = "<group>"; };
+		592EE14D29F23F2700D9F11D /* JSONDecoderExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoderExtension.swift; sourceTree = "<group>"; };
+		592EE14F29F241CB00D9F11D /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
+		592EE15129F2421200D9F11D /* PlayerSliderItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSliderItemView.swift; sourceTree = "<group>"; };
+		592EE15329F2429500D9F11D /* PlayerSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSliderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +119,7 @@
 		592EE10B29F14E8400D9F11D /* TouchDown */ = {
 			isa = PBXGroup;
 			children = (
+				592EE14C29F23F0E00D9F11D /* Extensions */,
 				592EE14329F1533800D9F11D /* Utils */,
 				592EE14229F152F900D9F11D /* Views */,
 				592EE14129F152EF00D9F11D /* Models */,
@@ -171,6 +180,7 @@
 		592EE14129F152EF00D9F11D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				592EE14F29F241CB00D9F11D /* PlayerModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -181,6 +191,8 @@
 				592EE14629F153EF00D9F11D /* FooterView.swift */,
 				592EE14829F15AA200D9F11D /* CustomNavbar.swift */,
 				592EE14A29F15B5200D9F11D /* NavbarLogoView.swift */,
+				592EE15129F2421200D9F11D /* PlayerSliderItemView.swift */,
+				592EE15329F2429500D9F11D /* PlayerSliderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -191,6 +203,14 @@
 				592EE14429F1535A00D9F11D /* Constants.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		592EE14C29F23F0E00D9F11D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				592EE14D29F23F2700D9F11D /* JSONDecoderExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,9 +349,13 @@
 			files = (
 				592EE14929F15AA200D9F11D /* CustomNavbar.swift in Sources */,
 				592EE14B29F15B5200D9F11D /* NavbarLogoView.swift in Sources */,
+				592EE15429F2429500D9F11D /* PlayerSliderView.swift in Sources */,
+				592EE15229F2421200D9F11D /* PlayerSliderItemView.swift in Sources */,
+				592EE15029F241CB00D9F11D /* PlayerModel.swift in Sources */,
 				592EE10F29F14E8400D9F11D /* ContentView.swift in Sources */,
 				592EE14729F153EF00D9F11D /* FooterView.swift in Sources */,
 				592EE10D29F14E8400D9F11D /* TouchDownApp.swift in Sources */,
+				592EE14E29F23F2700D9F11D /* JSONDecoderExtension.swift in Sources */,
 				592EE14529F1535A00D9F11D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
