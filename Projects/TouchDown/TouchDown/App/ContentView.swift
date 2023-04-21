@@ -20,6 +20,8 @@ struct ContentView: View {
                         
                         PlayerSliderView()
                         
+                        CategoryGridView()
+                        
                         FooterView()
                             .padding(.horizontal)
                         
