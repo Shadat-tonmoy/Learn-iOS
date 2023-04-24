@@ -9,34 +9,35 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ZStack {
-            VStack(spacing : 0) {
-                
-                CustomNavbar()
-                
-                ScrollView(.vertical, showsIndicators: false){
+        NavigationView{
+            ZStack {
+                VStack(spacing : 0) {
                     
-                    VStack(spacing: 0){
+                    CustomNavbar()
+                    
+                    ScrollView(.vertical, showsIndicators: false){
                         
-                        PlayerSliderView()
-                        
-                        CategoryGridView()
-                        
-                        ProductGridView()
-                        
-                        BrandGridView()
-                        
-                        FooterView()
-                            .padding(.horizontal)
-                        
-                        
+                        VStack(spacing: 0){
+                            
+                            PlayerSliderView()
+                            
+                            CategoryGridView()
+                            
+                            ProductGridView()
+                            
+                            BrandGridView()
+                            
+                            FooterView()
+                                .padding(.horizontal)
+                        }
                         
                     }
-                    
                 }
-            }
-            .background(colorBackground.ignoresSafeArea(.all, edges: .all))
-        }.ignoresSafeArea(.all, edges: .top)
+                .background(colorBackground.ignoresSafeArea(.all, edges: .all))
+            }.ignoresSafeArea(.all, edges: .top)
+            
+        }
+        
     }
 }
 

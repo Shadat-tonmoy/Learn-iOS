@@ -23,7 +23,9 @@ struct ProductGridView: View {
                       spacing: 15,
                       content: {
                 ForEach(productList, id: \.self, content: { product in
-                    ProductItemView(product: product)
+                    NavigationLink(destination : ProductDetailsView(product: product)){
+                        ProductItemView(product: product)
+                    }
                 })
             })
             .padding(.horizontal)

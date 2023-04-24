@@ -5,7 +5,7 @@
 //  Created by Shadat Tonmoy on 4/21/23.
 //
 
-import Foundation
+import SwiftUI
 
 struct Product : Codable, Identifiable, Hashable{
     let id : Int
@@ -29,5 +29,9 @@ struct Product : Codable, Identifiable, Hashable{
     
     var formattedPrice : String{
         return "$\(price)"
+    }
+    
+    var getColor : Color{
+        return Color(red: red, green: green, blue: blue)
     }
 }
