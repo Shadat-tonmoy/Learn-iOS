@@ -17,6 +17,7 @@
 		59F97F1C29F64D610050FA1F /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F97F1B29F64D610050FA1F /* TodoListView.swift */; };
 		59F97F1E29F64DC00050FA1F /* TodoListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F97F1D29F64DC00050FA1F /* TodoListItem.swift */; };
 		59F97F2029F654DC0050FA1F /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F97F1F29F654DC0050FA1F /* AddItemView.swift */; };
+		59F97F2229F65A5B0050FA1F /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F97F2129F65A5B0050FA1F /* TodoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		59F97F1B29F64D610050FA1F /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
 		59F97F1D29F64DC00050FA1F /* TodoListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListItem.swift; sourceTree = "<group>"; };
 		59F97F1F29F654DC0050FA1F /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
+		59F97F2129F65A5B0050FA1F /* TodoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		59F97EEF29F64D280050FA1F /* ToDoListMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				59F97F2329F65C390050FA1F /* Models */,
 				59F97F1A29F64D470050FA1F /* Views */,
 				59F97EF029F64D280050FA1F /* ToDoListMVVMApp.swift */,
 				59F97EF229F64D280050FA1F /* ContentView.swift */,
@@ -142,6 +145,14 @@
 				59F97F1F29F654DC0050FA1F /* AddItemView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		59F97F2329F65C390050FA1F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				59F97F2129F65A5B0050FA1F /* TodoModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +288,7 @@
 				59F97EF329F64D280050FA1F /* ContentView.swift in Sources */,
 				59F97EF129F64D280050FA1F /* ToDoListMVVMApp.swift in Sources */,
 				59F97F1E29F64DC00050FA1F /* TodoListItem.swift in Sources */,
+				59F97F2229F65A5B0050FA1F /* TodoModel.swift in Sources */,
 				59F97F1C29F64D610050FA1F /* TodoListView.swift in Sources */,
 				59F97F2029F654DC0050FA1F /* AddItemView.swift in Sources */,
 			);

@@ -8,16 +8,21 @@
 import SwiftUI
 
 struct TodoListView: View {
-    let todoItems : [String] = [
-        "This is task 1",
-        "This is task 2",
-        "This is task 3",
-        "This is task 4",
+    let todoItems : [Todo] = [
+        Todo(title: "This is todo 1"),
+        Todo(title: "This is todo 2"),
+        Todo(title: "This is todo 3"),
+        Todo(title: "This is todo 4"),
+        Todo(title: "This is todo 5"),
+        Todo(title: "This is todo 6", isCompleted: true),
+        Todo(title: "This is todo 7"),
+        Todo(title: "This is todo 8", isCompleted: true),
+        Todo(title: "This is todo 9"),
     ]
     var body: some View {
         List{
             ForEach(todoItems, id: \.self, content: { item in
-                TodoListItem(title: item)
+                TodoListItem(todo: item)
             })
         }
         .listStyle(.plain)

@@ -9,12 +9,13 @@ import SwiftUI
 
 struct TodoListItem: View {
     
-    let title : String
+    let todo : Todo
+    
     
     var body: some View {
         HStack{
-            Image(systemName: "checkmark.circle")
-            Text(title)
+            Image(systemName: todo.isCompleted ? "checkmark.circle.fill" : "checkmark.circle")
+            Text(todo.title)
             Spacer()
         }
         .padding(8)
@@ -23,7 +24,7 @@ struct TodoListItem: View {
 
 struct TodoListItem_Previews: PreviewProvider {
     static var previews: some View {
-        TodoListItem(title: "Task Title")
+        TodoListItem(todo: Todo(title: "Test todo"))
             .previewLayout(.sizeThatFits)
     }
 }
