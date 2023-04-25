@@ -10,6 +10,9 @@ import SwiftUI
 struct AddItemView: View {
     
     @State var inputValue : String = ""
+    @State var showAlert = false
+    @EnvironmentObject var viewModel : TodoListViewModel
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         ScrollView{
@@ -19,13 +22,11 @@ struct AddItemView: View {
                     .background(
                         RoundedRectangle(cornerRadius: 12)
                             .fill(.gray.opacity(0.25))
-                    
+                        
                     )
                     .padding()
                 
-                Button(action: {
-                    
-                }, label: {
+                Button(action: addItem, label: {
                     Text("Add Item".uppercased())
                         .fontWeight(.semibold)
                         .foregroundColor(.white)
@@ -37,10 +38,29 @@ struct AddItemView: View {
                         })
                         .padding(.horizontal)
                 })
-                    
+                
                 
             }
         }.navigationTitle("Add Item 🖊")
+            .alert("Invalid Value", isPresented: $showAlert, actions: {
+                
+            }, message: {
+                HStack{
+                    Image(systemName: "exclamationmark.triangle.fill")
+                    Text("Please enter a valid value to continue.")
+                }
+                
+            })
+    }
+    
+    func addItem(){
+        if(inputValue.count >= 3){
+            viewModel.addNewItem(text: inputValue)
+            presentationMode.wrappedValue.dismiss()
+        } else {
+            showAlert.toggle()
+        }
+        
     }
 }
 

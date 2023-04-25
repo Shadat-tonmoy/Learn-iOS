@@ -9,16 +9,20 @@ import SwiftUI
 
 struct TodoListItem: View {
     
-    let todo : Todo
+    var todo : Todo
     
     
     var body: some View {
         HStack{
-            Image(systemName: todo.isCompleted ? "checkmark.circle.fill" : "checkmark.circle")
+            Image(systemName: todo.isCompleted ? "checkmark.circle" : "circle")
+                .foregroundColor(todo.isCompleted ? .green : .red)
+                .font(.title3)
+                .fontWeight(.semibold)
             Text(todo.title)
+                .font(.title3)
             Spacer()
         }
-        .padding(8)
+        .padding(.vertical, 8)
     }
 }
 

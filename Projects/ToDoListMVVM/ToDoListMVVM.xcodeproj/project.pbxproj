@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5919845C29F78A70005B8B1C /* TodoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5919845B29F78A70005B8B1C /* TodoListViewModel.swift */; };
 		59F97EF129F64D280050FA1F /* ToDoListMVVMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F97EF029F64D280050FA1F /* ToDoListMVVMApp.swift */; };
 		59F97EF329F64D280050FA1F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F97EF229F64D280050FA1F /* ContentView.swift */; };
 		59F97EF529F64D280050FA1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59F97EF429F64D280050FA1F /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5919845B29F78A70005B8B1C /* TodoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewModel.swift; sourceTree = "<group>"; };
 		59F97EED29F64D280050FA1F /* ToDoListMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoListMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59F97EF029F64D280050FA1F /* ToDoListMVVMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListMVVMApp.swift; sourceTree = "<group>"; };
 		59F97EF229F64D280050FA1F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5919845A29F78A5D005B8B1C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5919845B29F78A70005B8B1C /* TodoListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		59F97EE429F64D280050FA1F = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +112,7 @@
 		59F97EEF29F64D280050FA1F /* ToDoListMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				5919845A29F78A5D005B8B1C /* ViewModels */,
 				59F97F2329F65C390050FA1F /* Models */,
 				59F97F1A29F64D470050FA1F /* Views */,
 				59F97EF029F64D280050FA1F /* ToDoListMVVMApp.swift */,
@@ -287,6 +298,7 @@
 			files = (
 				59F97EF329F64D280050FA1F /* ContentView.swift in Sources */,
 				59F97EF129F64D280050FA1F /* ToDoListMVVMApp.swift in Sources */,
+				5919845C29F78A70005B8B1C /* TodoListViewModel.swift in Sources */,
 				59F97F1E29F64DC00050FA1F /* TodoListItem.swift in Sources */,
 				59F97F2229F65A5B0050FA1F /* TodoModel.swift in Sources */,
 				59F97F1C29F64D610050FA1F /* TodoListView.swift in Sources */,

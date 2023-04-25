@@ -9,11 +9,27 @@ import SwiftUI
 
 struct Todo : Identifiable, Hashable {
     
-    let id : String = UUID().uuidString
+    var id : String = UUID().uuidString
     let title : String
     var isCompleted : Bool = false
     
-    mutating func toggleCompleted(){
-        isCompleted = !isCompleted
+    
+    init(id : String, title: String, isCompleted: Bool) {
+        self.id = id
+        self.title = title
+        self.isCompleted = isCompleted
+    }
+    
+    init(title: String) {
+        self.title = title
+    }
+    
+    init(title: String, isCompleted : Bool) {
+        self.title = title
+        self.isCompleted = isCompleted
+    }
+    
+    func toggleCompleted() -> Todo{
+        return Todo(id : id, title: title, isCompleted: !isCompleted)
     }
 }
