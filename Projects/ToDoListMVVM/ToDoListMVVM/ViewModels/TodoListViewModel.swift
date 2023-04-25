@@ -9,24 +9,43 @@ import Foundation
 
 class TodoListViewModel : ObservableObject{
     
-    @Published var todoItems : [Todo] = []
+    @Published var todoItems : [Todo] = [] {
+        didSet{
+            saveData()
+        }
+    }
+    
+    let dataKey = "list_items"
     
     init() {
         getTodoItems()
     }
     
     func getTodoItems(){
-        todoItems = [
-            Todo(title: "This is todo 1"),
-            Todo(title: "This is todo 2"),
-            Todo(title: "This is todo 3"),
-            Todo(title: "This is todo 4"),
-            Todo(title: "This is todo 5"),
-            Todo(title: "This is todo 6", isCompleted: true),
-            Todo(title: "This is todo 7"),
-            Todo(title: "This is todo 8", isCompleted: true),
-            Todo(title: "This is todo 9"),
-        ]
+//        todoItems = [
+//            Todo(title: "This is todo 1"),
+//            Todo(title: "This is todo 2"),
+//            Todo(title: "This is todo 3"),
+//            Todo(title: "This is todo 4"),
+//            Todo(title: "This is todo 5"),
+//            Todo(title: "This is todo 6", isCompleted: true),
+//            Todo(title: "This is todo 7"),
+//            Todo(title: "This is todo 8", isCompleted: true),
+//            Todo(title: "This is todo 9"),
+//        ]
+        
+        
+//        if let data = try? UserDefaults.standard.data(forKey: dataKey) {
+//            if let items = try? JSONDecoder().decode([Todo].self, from: data) {
+//                todoItems = items
+//            }
+//        }
+        
+        guard let data = try? UserDefaults.standard.data(forKey: dataKey) else {return}
+        guard let items = try? JSONDecoder().decode([Todo].self, from: data) else {return}
+        
+        todoItems = items
+                
     }
     
     func removeItem(indexSet : IndexSet){
@@ -52,5 +71,10 @@ class TodoListViewModel : ObservableObject{
         }
     }
     
+    func saveData(){
+        if let encodedData = try? JSONEncoder().encode(todoItems) {
+            UserDefaults.standard.set(encodedData, forKey: dataKey)
+        }
+    }
     
 }

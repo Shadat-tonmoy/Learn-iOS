@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Todo : Identifiable, Hashable {
+struct Todo : Identifiable, Hashable, Codable {
     
     var id : String = UUID().uuidString
     let title : String
