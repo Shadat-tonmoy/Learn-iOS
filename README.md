@@ -4,7 +4,7 @@ Video Book - Simple Flutter Project with Youtube API and Firebase.
 
 ## App Preview
 
-![Alt text](/Screen Shots/fruits_app.png?raw=true "Optional Title")
+![Alt text](/screen_shots/fruits_app.png?raw=true "Optional Title")
 
 ## Features
 
@@ -21,7 +21,7 @@ Video Book - Simple Flutter Project with Youtube API and Firebase.
 
 ## App Preview
 
-![Alt text](/Screen Shots/touch_down_app.png?raw=true "Optional Title")
+![Alt text](/screen_shots/touch_down_app.png?raw=true "Optional Title")
 
 ## Features
 
@@ -42,7 +42,7 @@ Video Book - Simple Flutter Project with Youtube API and Firebase.
 
 ## App Preview
 
-![Alt text](/Screen Shots/animal_list_app.png?raw=true "Optional Title")
+![Alt text](/screen_shots/animal_list_app.png?raw=true "Optional Title")
 
 ## Features
 
