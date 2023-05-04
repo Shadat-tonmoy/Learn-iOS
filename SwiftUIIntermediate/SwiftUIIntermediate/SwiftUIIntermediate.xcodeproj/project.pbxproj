@@ -16,6 +16,7 @@
 		597F34942A038A5D002E4B6D /* RotationGestureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597F34932A038A5D002E4B6D /* RotationGestureTest.swift */; };
 		597F34962A038DAE002E4B6D /* DragGestureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597F34952A038DAE002E4B6D /* DragGestureTest.swift */; };
 		597F34982A0398C3002E4B6D /* DragGestureTest2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597F34972A0398C3002E4B6D /* DragGestureTest2.swift */; };
+		597F349C2A039C5A002E4B6D /* DragGestureTest3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597F349B2A039C5A002E4B6D /* DragGestureTest3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		597F34932A038A5D002E4B6D /* RotationGestureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationGestureTest.swift; sourceTree = "<group>"; };
 		597F34952A038DAE002E4B6D /* DragGestureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragGestureTest.swift; sourceTree = "<group>"; };
 		597F34972A0398C3002E4B6D /* DragGestureTest2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragGestureTest2.swift; sourceTree = "<group>"; };
+		597F349B2A039C5A002E4B6D /* DragGestureTest3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragGestureTest3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				597F34932A038A5D002E4B6D /* RotationGestureTest.swift */,
 				597F34952A038DAE002E4B6D /* DragGestureTest.swift */,
 				597F34972A0398C3002E4B6D /* DragGestureTest2.swift */,
+				597F349B2A039C5A002E4B6D /* DragGestureTest3.swift */,
 			);
 			path = SwiftUIIntermediate;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				597F34842A036C82002E4B6D /* ContentView.swift in Sources */,
+				597F349C2A039C5A002E4B6D /* DragGestureTest3.swift in Sources */,
 				597F34982A0398C3002E4B6D /* DragGestureTest2.swift in Sources */,
 				597F34962A038DAE002E4B6D /* DragGestureTest.swift in Sources */,
 				597F34922A03817A002E4B6D /* MagnificationGestureTest.swift in Sources */,
