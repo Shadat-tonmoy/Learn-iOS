@@ -13,6 +13,7 @@
 		597F34892A036C82002E4B6D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 597F34882A036C82002E4B6D /* Preview Assets.xcassets */; };
 		597F34902A036D17002E4B6D /* LongPressGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597F348F2A036D17002E4B6D /* LongPressGesture.swift */; };
 		597F34922A03817A002E4B6D /* MagnificationGestureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597F34912A03817A002E4B6D /* MagnificationGestureTest.swift */; };
+		597F34942A038A5D002E4B6D /* RotationGestureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597F34932A038A5D002E4B6D /* RotationGestureTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		597F34882A036C82002E4B6D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		597F348F2A036D17002E4B6D /* LongPressGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressGesture.swift; sourceTree = "<group>"; };
 		597F34912A03817A002E4B6D /* MagnificationGestureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagnificationGestureTest.swift; sourceTree = "<group>"; };
+		597F34932A038A5D002E4B6D /* RotationGestureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationGestureTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				597F34872A036C82002E4B6D /* Preview Content */,
 				597F348F2A036D17002E4B6D /* LongPressGesture.swift */,
 				597F34912A03817A002E4B6D /* MagnificationGestureTest.swift */,
+				597F34932A038A5D002E4B6D /* RotationGestureTest.swift */,
 			);
 			path = SwiftUIIntermediate;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 				597F34842A036C82002E4B6D /* ContentView.swift in Sources */,
 				597F34922A03817A002E4B6D /* MagnificationGestureTest.swift in Sources */,
 				597F34822A036C82002E4B6D /* SwiftUIIntermediateApp.swift in Sources */,
+				597F34942A038A5D002E4B6D /* RotationGestureTest.swift in Sources */,
 				597F34902A036D17002E4B6D /* LongPressGesture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
