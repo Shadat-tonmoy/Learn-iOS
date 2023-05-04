@@ -15,7 +15,7 @@ struct RandomModel : Identifiable {
 
 struct MultipleSheetsTest: View {
     
-    @State var selectedModel : RandomModel = RandomModel(name: "Initial State")
+    @State var selectedModel : RandomModel? = nil
     @State var showSheet : Bool = false
     
     var body: some View {
@@ -49,11 +49,15 @@ struct MultipleSheetsTest: View {
                         
                     }
             }
-            .sheet(isPresented: $showSheet, content: {
+//            .sheet(isPresented: $showSheet, content: {
+//
+//                SheetView(selectedModel: $selectedModel)
+//
+//            })
+            .sheet(item: $selectedModel){ model in
+                SheetView(selectedModel: model)
                 
-                SheetView(selectedModel: $selectedModel)
-                
-            })
+            }
             
         })
     }
@@ -67,7 +71,8 @@ struct MultipleSheetsTest_Previews: PreviewProvider {
 
 struct SheetView: View {
     
-    @Binding var selectedModel : RandomModel
+//    @Binding var selectedModel : RandomModel
+    let selectedModel : RandomModel
     
     var body: some View {
         VStack{
