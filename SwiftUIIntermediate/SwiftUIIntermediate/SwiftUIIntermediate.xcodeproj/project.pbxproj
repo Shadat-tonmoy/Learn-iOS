@@ -19,6 +19,7 @@
 		597F349C2A039C5A002E4B6D /* DragGestureTest3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597F349B2A039C5A002E4B6D /* DragGestureTest3.swift */; };
 		597F349E2A03BAFF002E4B6D /* ScrollViewReaderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597F349D2A03BAFF002E4B6D /* ScrollViewReaderTest.swift */; };
 		597F34A02A03C69E002E4B6D /* GeometryReaderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597F349F2A03C69E002E4B6D /* GeometryReaderTest.swift */; };
+		597F34A22A03C926002E4B6D /* MultipleSheetsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597F34A12A03C926002E4B6D /* MultipleSheetsTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		597F349B2A039C5A002E4B6D /* DragGestureTest3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragGestureTest3.swift; sourceTree = "<group>"; };
 		597F349D2A03BAFF002E4B6D /* ScrollViewReaderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewReaderTest.swift; sourceTree = "<group>"; };
 		597F349F2A03C69E002E4B6D /* GeometryReaderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderTest.swift; sourceTree = "<group>"; };
+		597F34A12A03C926002E4B6D /* MultipleSheetsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleSheetsTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				597F349B2A039C5A002E4B6D /* DragGestureTest3.swift */,
 				597F349D2A03BAFF002E4B6D /* ScrollViewReaderTest.swift */,
 				597F349F2A03C69E002E4B6D /* GeometryReaderTest.swift */,
+				597F34A12A03C926002E4B6D /* MultipleSheetsTest.swift */,
 			);
 			path = SwiftUIIntermediate;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				597F34A22A03C926002E4B6D /* MultipleSheetsTest.swift in Sources */,
 				597F34A02A03C69E002E4B6D /* GeometryReaderTest.swift in Sources */,
 				597F34842A036C82002E4B6D /* ContentView.swift in Sources */,
 				597F349C2A039C5A002E4B6D /* DragGestureTest3.swift in Sources */,
