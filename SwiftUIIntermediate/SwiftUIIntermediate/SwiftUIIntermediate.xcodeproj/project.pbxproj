@@ -20,6 +20,7 @@
 		597F349E2A03BAFF002E4B6D /* ScrollViewReaderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597F349D2A03BAFF002E4B6D /* ScrollViewReaderTest.swift */; };
 		597F34A02A03C69E002E4B6D /* GeometryReaderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597F349F2A03C69E002E4B6D /* GeometryReaderTest.swift */; };
 		597F34A22A03C926002E4B6D /* MultipleSheetsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597F34A12A03C926002E4B6D /* MultipleSheetsTest.swift */; };
+		597F34A42A03D257002E4B6D /* MaskTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597F34A32A03D257002E4B6D /* MaskTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		597F349D2A03BAFF002E4B6D /* ScrollViewReaderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewReaderTest.swift; sourceTree = "<group>"; };
 		597F349F2A03C69E002E4B6D /* GeometryReaderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderTest.swift; sourceTree = "<group>"; };
 		597F34A12A03C926002E4B6D /* MultipleSheetsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleSheetsTest.swift; sourceTree = "<group>"; };
+		597F34A32A03D257002E4B6D /* MaskTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				597F349D2A03BAFF002E4B6D /* ScrollViewReaderTest.swift */,
 				597F349F2A03C69E002E4B6D /* GeometryReaderTest.swift */,
 				597F34A12A03C926002E4B6D /* MultipleSheetsTest.swift */,
+				597F34A32A03D257002E4B6D /* MaskTest.swift */,
 			);
 			path = SwiftUIIntermediate;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				597F349E2A03BAFF002E4B6D /* ScrollViewReaderTest.swift in Sources */,
 				597F34922A03817A002E4B6D /* MagnificationGestureTest.swift in Sources */,
 				597F34822A036C82002E4B6D /* SwiftUIIntermediateApp.swift in Sources */,
+				597F34A42A03D257002E4B6D /* MaskTest.swift in Sources */,
 				597F34942A038A5D002E4B6D /* RotationGestureTest.swift in Sources */,
 				597F34902A036D17002E4B6D /* LongPressGesture.swift in Sources */,
 			);
