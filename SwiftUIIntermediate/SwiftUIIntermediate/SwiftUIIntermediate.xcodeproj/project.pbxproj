@@ -25,6 +25,7 @@
 		597F34AB2A03DB1E002E4B6D /* tada.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 597F34AA2A03DB1E002E4B6D /* tada.mp3 */; };
 		597F34AD2A03DB27002E4B6D /* quack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 597F34AC2A03DB27002E4B6D /* quack.mp3 */; };
 		59AFE86E2A04ADA800498E41 /* HapticTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AFE86D2A04ADA800498E41 /* HapticTest.swift */; };
+		59AFE8702A04B1C500498E41 /* LocalNotificationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AFE86F2A04B1C500498E41 /* LocalNotificationTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		597F34AA2A03DB1E002E4B6D /* tada.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tada.mp3; sourceTree = "<group>"; };
 		597F34AC2A03DB27002E4B6D /* quack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = quack.mp3; sourceTree = "<group>"; };
 		59AFE86D2A04ADA800498E41 /* HapticTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticTest.swift; sourceTree = "<group>"; };
+		59AFE86F2A04B1C500498E41 /* LocalNotificationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				597F34A32A03D257002E4B6D /* MaskTest.swift */,
 				597F34A52A03D965002E4B6D /* SoundTest.swift */,
 				59AFE86D2A04ADA800498E41 /* HapticTest.swift */,
+				59AFE86F2A04B1C500498E41 /* LocalNotificationTest.swift */,
 			);
 			path = SwiftUIIntermediate;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				597F34822A036C82002E4B6D /* SwiftUIIntermediateApp.swift in Sources */,
 				597F34A42A03D257002E4B6D /* MaskTest.swift in Sources */,
 				597F34942A038A5D002E4B6D /* RotationGestureTest.swift in Sources */,
+				59AFE8702A04B1C500498E41 /* LocalNotificationTest.swift in Sources */,
 				597F34902A036D17002E4B6D /* LongPressGesture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
