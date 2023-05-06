@@ -46,7 +46,7 @@ struct ContentView: View {
                 .padding(.horizontal)
                 .onTapGesture {
                     isLoading = true
-                    viewModel.fetchData()
+                    viewModel.fetchData2()
                 }
                 
         }
