@@ -26,6 +26,7 @@
 		597F34AD2A03DB27002E4B6D /* quack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 597F34AC2A03DB27002E4B6D /* quack.mp3 */; };
 		59AFE86E2A04ADA800498E41 /* HapticTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AFE86D2A04ADA800498E41 /* HapticTest.swift */; };
 		59AFE8702A04B1C500498E41 /* LocalNotificationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AFE86F2A04B1C500498E41 /* LocalNotificationTest.swift */; };
+		59AFE8722A04D80700498E41 /* CoreDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AFE8712A04D80700498E41 /* CoreDataTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		597F34AC2A03DB27002E4B6D /* quack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = quack.mp3; sourceTree = "<group>"; };
 		59AFE86D2A04ADA800498E41 /* HapticTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticTest.swift; sourceTree = "<group>"; };
 		59AFE86F2A04B1C500498E41 /* LocalNotificationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationTest.swift; sourceTree = "<group>"; };
+		59AFE8712A04D80700498E41 /* CoreDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				597F34A52A03D965002E4B6D /* SoundTest.swift */,
 				59AFE86D2A04ADA800498E41 /* HapticTest.swift */,
 				59AFE86F2A04B1C500498E41 /* LocalNotificationTest.swift */,
+				59AFE8712A04D80700498E41 /* CoreDataTest.swift */,
 			);
 			path = SwiftUIIntermediate;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59AFE8722A04D80700498E41 /* CoreDataTest.swift in Sources */,
 				59AFE86E2A04ADA800498E41 /* HapticTest.swift in Sources */,
 				597F34A22A03C926002E4B6D /* MultipleSheetsTest.swift in Sources */,
 				597F34A02A03C69E002E4B6D /* GeometryReaderTest.swift in Sources */,
