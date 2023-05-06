@@ -13,13 +13,13 @@ class BackgroundThreadViewModel : ObservableObject{
     
     
     func fetchData() {
-        DispatchQueue.global().asyncAfter(deadline: .now() + 5) {
+        DispatchQueue.global().asyncAfter(deadline: .now() + 5) { [weak self] in
             
-            let newData = self.getData()
-            
-            DispatchQueue.main.async {
-                self.data = newData
-            }
+            if let newData = self?.getData() {
+                DispatchQueue.main.async {
+                    self?.data = newData
+                }
+            }            
         }
     }
     
