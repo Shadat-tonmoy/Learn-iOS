@@ -84,12 +84,19 @@ struct ContentView: View {
         
     }
     
-    private func handleButtonClick() {
-        if (selectedFruit != nil){
-            updateSelectedFruit()
+    private func handleButtonClick(action : Int) {
+        if (action == 2) {
+            fruitNameFieldState = NameFieldState.NONE
+            selectedFruit = nil
+            fruitNameFieldValue = ""
         } else {
-            addItem()
+            if (selectedFruit != nil){
+                updateSelectedFruit()
+            } else {
+                addItem()
+            }
         }
+        
     }
     
     private func showFruitNameFieldForAddItem(){
@@ -176,7 +183,7 @@ struct FruitNameFieldView: View {
     
     @Binding var fruitNameFieldValue : String
     @Binding var selectedFruit : Fruit?
-    var buttonClickListener : () -> Void
+    var buttonClickListener : (_ action : Int) -> Void
     
     var body: some View {
         
@@ -190,7 +197,7 @@ struct FruitNameFieldView: View {
                 .padding(.horizontal)
             
             Button(selectedFruit != nil ? "Update Fruit" : "Add Fruits", action: {
-                buttonClickListener()
+                buttonClickListener(1)
                 
             })
             .padding()
@@ -202,6 +209,11 @@ struct FruitNameFieldView: View {
             )
             .foregroundColor(.white)
             .padding(.horizontal)
+            
+            Button("Cancel", action: {
+                buttonClickListener(2)
+            })
+            .padding()
             
         }
         
