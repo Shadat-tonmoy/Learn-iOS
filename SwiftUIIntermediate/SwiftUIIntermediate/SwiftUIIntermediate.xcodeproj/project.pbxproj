@@ -27,6 +27,7 @@
 		59AFE86E2A04ADA800498E41 /* HapticTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AFE86D2A04ADA800498E41 /* HapticTest.swift */; };
 		59AFE8702A04B1C500498E41 /* LocalNotificationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AFE86F2A04B1C500498E41 /* LocalNotificationTest.swift */; };
 		59AFE8722A04D80700498E41 /* CoreDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AFE8712A04D80700498E41 /* CoreDataTest.swift */; };
+		59B49DB22A06AEBB002A3871 /* CodebaleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B49DB12A06AEBB002A3871 /* CodebaleTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		59AFE86D2A04ADA800498E41 /* HapticTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticTest.swift; sourceTree = "<group>"; };
 		59AFE86F2A04B1C500498E41 /* LocalNotificationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationTest.swift; sourceTree = "<group>"; };
 		59AFE8712A04D80700498E41 /* CoreDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTest.swift; sourceTree = "<group>"; };
+		59B49DB12A06AEBB002A3871 /* CodebaleTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodebaleTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				59AFE86D2A04ADA800498E41 /* HapticTest.swift */,
 				59AFE86F2A04B1C500498E41 /* LocalNotificationTest.swift */,
 				59AFE8712A04D80700498E41 /* CoreDataTest.swift */,
+				59B49DB12A06AEBB002A3871 /* CodebaleTest.swift */,
 			);
 			path = SwiftUIIntermediate;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				597F34842A036C82002E4B6D /* ContentView.swift in Sources */,
 				597F349C2A039C5A002E4B6D /* DragGestureTest3.swift in Sources */,
 				597F34982A0398C3002E4B6D /* DragGestureTest2.swift in Sources */,
+				59B49DB22A06AEBB002A3871 /* CodebaleTest.swift in Sources */,
 				597F34962A038DAE002E4B6D /* DragGestureTest.swift in Sources */,
 				597F349E2A03BAFF002E4B6D /* ScrollViewReaderTest.swift in Sources */,
 				597F34922A03817A002E4B6D /* MagnificationGestureTest.swift in Sources */,
