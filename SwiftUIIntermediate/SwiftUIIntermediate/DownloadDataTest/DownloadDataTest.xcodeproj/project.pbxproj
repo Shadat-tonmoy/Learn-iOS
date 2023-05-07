@@ -15,6 +15,7 @@
 		599EB1A82A0779DE000C1DEA /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599EB1A72A0779DE000C1DEA /* PostModel.swift */; };
 		599EB1AA2A077A4F000C1DEA /* DataConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599EB1A92A077A4F000C1DEA /* DataConverter.swift */; };
 		599EB1AC2A0782A9000C1DEA /* PostDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599EB1AB2A0782A9000C1DEA /* PostDetailsView.swift */; };
+		599EB1AE2A078882000C1DEA /* DownloadDataWithCombineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599EB1AD2A078882000C1DEA /* DownloadDataWithCombineViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		599EB1A72A0779DE000C1DEA /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		599EB1A92A077A4F000C1DEA /* DataConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataConverter.swift; sourceTree = "<group>"; };
 		599EB1AB2A0782A9000C1DEA /* PostDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsView.swift; sourceTree = "<group>"; };
+		599EB1AD2A078882000C1DEA /* DownloadDataWithCombineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadDataWithCombineViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				599EB1A72A0779DE000C1DEA /* PostModel.swift */,
 				599EB1A92A077A4F000C1DEA /* DataConverter.swift */,
 				599EB1AB2A0782A9000C1DEA /* PostDetailsView.swift */,
+				599EB1AD2A078882000C1DEA /* DownloadDataWithCombineViewModel.swift */,
 			);
 			path = DownloadDataTest;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			files = (
 				599EB1A62A07768B000C1DEA /* DownloadDataViewModel.swift in Sources */,
 				599EB1AA2A077A4F000C1DEA /* DataConverter.swift in Sources */,
+				599EB1AE2A078882000C1DEA /* DownloadDataWithCombineViewModel.swift in Sources */,
 				599EB19A2A077634000C1DEA /* ContentView.swift in Sources */,
 				599EB1AC2A0782A9000C1DEA /* PostDetailsView.swift in Sources */,
 				599EB1A82A0779DE000C1DEA /* PostModel.swift in Sources */,

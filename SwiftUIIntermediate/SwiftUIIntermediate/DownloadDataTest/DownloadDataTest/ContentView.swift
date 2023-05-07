@@ -9,13 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @StateObject private var viewModel : DownloadDataViewModel = DownloadDataViewModel()
+//    @StateObject private var viewModel : DownloadDataViewModel = DownloadDataViewModel()
+    @StateObject private var viewModel : DownloadDataWithCombineViewModel = DownloadDataWithCombineViewModel()
     
     var body: some View {
         
         NavigationView {
             VStack {
-                if let postList = viewModel.postModel {
+                if (viewModel.isFetchingData) {
+                    ProgressView()
+                }
+                
+                if let postList = viewModel.postList {
                     List(postList, id: \.self, rowContent: { post in
                         ZStack{
                             PostItemView(postModel: post)
