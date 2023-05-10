@@ -28,6 +28,7 @@
 		59AFE8702A04B1C500498E41 /* LocalNotificationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AFE86F2A04B1C500498E41 /* LocalNotificationTest.swift */; };
 		59AFE8722A04D80700498E41 /* CoreDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AFE8712A04D80700498E41 /* CoreDataTest.swift */; };
 		59B49DB22A06AEBB002A3871 /* CodebaleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B49DB12A06AEBB002A3871 /* CodebaleTest.swift */; };
+		59EA97E52A0AA6A50043AA5A /* SwiftUIFileManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EA97E42A0AA6A50043AA5A /* SwiftUIFileManagerTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,8 @@
 		59AFE86F2A04B1C500498E41 /* LocalNotificationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationTest.swift; sourceTree = "<group>"; };
 		59AFE8712A04D80700498E41 /* CoreDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTest.swift; sourceTree = "<group>"; };
 		59B49DB12A06AEBB002A3871 /* CodebaleTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodebaleTest.swift; sourceTree = "<group>"; };
+		59E74B1B2A0BEB790015538F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		59EA97E42A0AA6A50043AA5A /* SwiftUIFileManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIFileManagerTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,7 @@
 		597F34802A036C82002E4B6D /* SwiftUIIntermediate */ = {
 			isa = PBXGroup;
 			children = (
+				59E74B1B2A0BEB790015538F /* Info.plist */,
 				597F34A72A03DAFB002E4B6D /* sounds */,
 				597F34812A036C82002E4B6D /* SwiftUIIntermediateApp.swift */,
 				597F34832A036C82002E4B6D /* ContentView.swift */,
@@ -105,6 +109,7 @@
 				59AFE86F2A04B1C500498E41 /* LocalNotificationTest.swift */,
 				59AFE8712A04D80700498E41 /* CoreDataTest.swift */,
 				59B49DB12A06AEBB002A3871 /* CodebaleTest.swift */,
+				59EA97E42A0AA6A50043AA5A /* SwiftUIFileManagerTest.swift */,
 			);
 			path = SwiftUIIntermediate;
 			sourceTree = "<group>";
@@ -211,6 +216,7 @@
 				597F349E2A03BAFF002E4B6D /* ScrollViewReaderTest.swift in Sources */,
 				597F34922A03817A002E4B6D /* MagnificationGestureTest.swift in Sources */,
 				597F34822A036C82002E4B6D /* SwiftUIIntermediateApp.swift in Sources */,
+				59EA97E52A0AA6A50043AA5A /* SwiftUIFileManagerTest.swift in Sources */,
 				597F34A42A03D257002E4B6D /* MaskTest.swift in Sources */,
 				597F34942A038A5D002E4B6D /* RotationGestureTest.swift in Sources */,
 				59AFE8702A04B1C500498E41 /* LocalNotificationTest.swift in Sources */,
@@ -345,6 +351,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIIntermediate/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUIIntermediate/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Save image to gallery";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -373,6 +382,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIIntermediate/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUIIntermediate/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Save image to gallery";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
