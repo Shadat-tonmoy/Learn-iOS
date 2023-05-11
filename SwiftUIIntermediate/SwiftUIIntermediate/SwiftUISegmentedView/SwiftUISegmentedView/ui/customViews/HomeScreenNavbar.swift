@@ -1,0 +1,37 @@
+//
+//  HomeScreenNavbar.swift
+//  SwiftUISegmentedView
+//
+//  Created by Shadat Tonmoy on 5/11/23.
+//
+
+import SwiftUI
+
+struct HomeScreenNavbar: View {
+    var body: some View {
+        HStack{
+            
+            Image(systemName: "line.3.horizontal.decrease")
+                .foregroundColor(.white)
+                .font(.subheadline)
+            
+            Spacer()
+            
+            Text("Video Compression")
+                .foregroundColor(.white)
+                .font(.subheadline)
+            
+            Spacer()
+            
+        }
+        .padding()
+        .background(AppColors.toolbarBG)
+        .shadow(color: Color.black.opacity(0.05), radius: 5, x: 0, y: 5)
+    }
+}
+
+struct HomeScreenNavbar_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeScreenNavbar()
+    }
+}
