@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct HomeScreenIcon: View {
     
@@ -30,6 +31,31 @@ struct HomeScreenIcon: View {
                 .fill(AppColors.defaultBG)
                 .shadow(radius: 1)
         )
+    }
+}
+
+struct HomeScreenVideoPickerItem : View {
+    
+    
+    let iconName : String
+    let title : String
+    @Binding var selectedVideos : [PhotosPickerItem]
+    let selectionCallback : (_ selectedVideos : [PhotosPickerItem]) -> Void
+    
+    
+    var body: some View {
+        
+        PhotosPicker(
+            selection: $selectedVideos,
+            matching: .any(of: [.videos, .not(.images)])) {
+                HomeScreenIcon(iconName: iconName, title: title)
+                
+            }
+            .onChange(of: selectedVideos){ selectedItems in
+//                print("Selected videos : \(selectedItems)")
+                selectionCallback(selectedItems)
+            }
+        
     }
 }
 
