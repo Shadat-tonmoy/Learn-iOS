@@ -12,4 +12,5 @@ import SwiftUI
 class AppColors{
     
     static let toolbarBG = Color("ToolbarBG")
+    static let defaultBG = Color("DefaultBG")
 }

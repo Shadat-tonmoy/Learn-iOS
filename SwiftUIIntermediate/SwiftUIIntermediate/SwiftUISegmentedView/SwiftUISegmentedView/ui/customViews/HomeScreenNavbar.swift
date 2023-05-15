@@ -13,13 +13,13 @@ struct HomeScreenNavbar: View {
             
             Image(systemName: "line.3.horizontal.decrease")
                 .foregroundColor(.white)
-                .font(.subheadline)
+                .font(.title3)
             
             Spacer()
             
-            Text("Video Compression")
+            Text("Video Compressor")
                 .foregroundColor(.white)
-                .font(.subheadline)
+                .font(.title3)
             
             Spacer()
             

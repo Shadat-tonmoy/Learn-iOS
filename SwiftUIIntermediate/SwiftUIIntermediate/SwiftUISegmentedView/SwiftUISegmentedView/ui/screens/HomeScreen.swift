@@ -10,22 +10,60 @@ import SwiftUI
 struct HomeScreen: View {
     var body: some View {
         NavigationStack {
-            VStack(spacing: 0) {
+            VStack(alignment: .leading, spacing: 0) {
+                
                 HomeScreenNavbar()
                 
-                
-                NavigationLink(destination: FastCompressionView()) {
-                    VStack{
-                        Image(systemName: "slider.horizontal.3")
-                            .font(.title)
-                            .foregroundColor(AppColors.toolbarBG)
+                ScrollView(.vertical) {
+                    
+                    VStack(alignment: .leading) {
+                        HomeScreenSectionHeader(title: "Compress Video")
                         
-                        Text("Fast Compression")
-                            .font(.headline)
-                            .foregroundColor(.primary)
+                        HStack(spacing : 20){
+                            NavigationLink(destination: FastCompressionView()) {
+                                HomeScreenIcon(iconName: "slider.horizontal.3", title: "Fast\nCompression")
+                                
+                            }
+                            
+                            NavigationLink(destination: FastCompressionView()) {
+                                HomeScreenIcon(iconName: "slider.horizontal.3", title: "Advance\nCompression")
+                                
+                            }
+                        }
+                        .padding()
+                        
+                        HomeScreenSectionHeader(title: "Convert Video")
+                        
+                        HStack(spacing : 20){
+                            NavigationLink(destination: FastCompressionView()) {
+                                HomeScreenIcon(iconName: "slider.horizontal.3", title: "Convert Format")
+                                
+                            }
+                            
+                            NavigationLink(destination: FastCompressionView()) {
+                                HomeScreenIcon(iconName: "slider.horizontal.3", title: "Video to Audio")
+                                
+                            }
+                        }
+                        .padding()
+                        
+                        HomeScreenSectionHeader(title: "Process Video")
+                        
+                        HStack(spacing : 20){
+                            NavigationLink(destination: FastCompressionView()) {
+                                HomeScreenIcon(iconName: "slider.horizontal.3", title: "Trim Video")
+                            }
+                        }
+                        .padding()
                     }
                     
+                    
                 }
+                
+                
+                
+                
+                
                 
                 
                 
