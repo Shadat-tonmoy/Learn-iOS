@@ -17,7 +17,7 @@ struct HomeScreenIcon: View {
         VStack(spacing : 10){
             Image(systemName: iconName)
                 .font(.title)
-                .foregroundColor(AppColors.toolbarBG)
+                .foregroundColor(Color.toolbarBG)
             
             Text(title)
                 .font(.caption)
@@ -28,7 +28,7 @@ struct HomeScreenIcon: View {
         .padding()
         .background(
             RoundedRectangle(cornerRadius: 5)
-                .fill(AppColors.defaultBG)
+                .fill(Color.defaultBG)
                 .shadow(radius: 1)
         )
     }

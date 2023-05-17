@@ -24,13 +24,14 @@ struct HomeScreen: View {
                         HomeScreenSectionHeader(title: "Compress Video")
                         
                         HStack(spacing : 20){
+                            NavigationLink(destination : FastCompressionView()){
+                                HomeScreenIcon(
+                                    iconName: "slider.horizontal.3",
+                                    title: "Fast\nCompresion"
+                                )
+                                
+                            }
                             
-                            HomeScreenVideoPickerItem(
-                                iconName: "slider.horizontal.3",
-                                title: "Fast\nCompresion",
-                                selectedVideos: $viewModel.selectedVideos,
-                                selectionCallback: viewModel.handleSelectedVideos
-                            )
                             
                             
                             HomeScreenVideoPickerItem(

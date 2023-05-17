@@ -9,8 +9,9 @@ import SwiftUI
 
 
 
-class AppColors{
+extension Color{
     
     static let toolbarBG = Color("ToolbarBG")
     static let defaultBG = Color("DefaultBG")
+    static let primaryColor = Color("PrimaryColor")
 }

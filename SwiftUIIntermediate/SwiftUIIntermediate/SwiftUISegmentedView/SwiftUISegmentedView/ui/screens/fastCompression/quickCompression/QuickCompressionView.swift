@@ -10,10 +10,13 @@ import SwiftUI
 struct QuickCompressionView: View {
     var body: some View {
         VStack{
+            
+            QuickCompressionOptionView()
+            
+            FitToShareWithView()
+            
             Spacer()
-            Text("Quick Compression")
-                .font(.title)
-            Spacer()
+            
         }
     }
 }

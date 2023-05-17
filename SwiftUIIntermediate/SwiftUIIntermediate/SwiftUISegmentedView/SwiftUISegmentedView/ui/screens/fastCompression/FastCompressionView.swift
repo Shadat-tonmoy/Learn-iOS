@@ -38,7 +38,10 @@ struct FastCompressionView: View {
                     
                 })
             }
-            .background(AppColors.toolbarBG)
+            .background(Color.toolbarBG)
+            
+            CompressionPropertyView()
+            
             getSelectedTabView()
                 .transition(.move(edge: .trailing))
             
