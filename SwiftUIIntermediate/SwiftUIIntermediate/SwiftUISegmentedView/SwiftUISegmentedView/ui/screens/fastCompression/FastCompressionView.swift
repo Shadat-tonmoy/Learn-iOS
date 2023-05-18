@@ -45,6 +45,10 @@ struct FastCompressionView: View {
             getSelectedTabView()
                 .transition(.move(edge: .trailing))
             
+            TrimVideoButtonView()
+            
+            AdjustVolumeButtonView()
+            
             Spacer()
             
         }

@@ -12,9 +12,10 @@ struct FitToShareWithView: View {
         VStack(alignment : .leading){
             Text("Fit To Share With")
                 .font(.headline)
-                .padding()
+                .padding(.vertical)
+                .padding(.horizontal, 10)
                 
-            ScrollView(.horizontal){
+            ScrollView(.horizontal, showsIndicators: false){
                 HStack{
                     ForEach(SocialMediaOptionRepo.getOptions()) { item in
                         SocialMediaSingleItem(
@@ -44,8 +45,10 @@ struct SocialMediaSingleItem: View {
     
     var body: some View {
         VStack(spacing:10){
-            Image(systemName: icon)
-                .font(.title)
+            Image(icon)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 25, height: 25)
                 .foregroundColor(Color.primaryColor)
             
             Text(title)

@@ -15,7 +15,7 @@ struct QuickCompressionView: View {
             
             FitToShareWithView()
             
-            Spacer()
+//            Spacer()
             
         }
     }

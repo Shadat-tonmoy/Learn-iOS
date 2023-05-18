@@ -12,6 +12,11 @@
 		591C9A512A0A94E100420B24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 591C9A502A0A94E100420B24 /* Assets.xcassets */; };
 		591C9A542A0A94E100420B24 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 591C9A532A0A94E100420B24 /* Preview Assets.xcassets */; };
 		591C9A5D2A0A9D7700420B24 /* NavbarWithBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591C9A5C2A0A9D7700420B24 /* NavbarWithBackButton.swift */; };
+		5923A36A2A166D8900023734 /* TrimVideoButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5923A3692A166D8900023734 /* TrimVideoButtonView.swift */; };
+		5923A36C2A16709D00023734 /* AdjustVolumeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5923A36B2A16709D00023734 /* AdjustVolumeButtonView.swift */; };
+		5923A36E2A1675CD00023734 /* ResolutionCompressionOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5923A36D2A1675CD00023734 /* ResolutionCompressionOptionView.swift */; };
+		5923A3712A16765E00023734 /* ConstantValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5923A3702A16765E00023734 /* ConstantValues.swift */; };
+		5923A3732A1676F300023734 /* ResolutionOptionRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5923A3722A1676F300023734 /* ResolutionOptionRepo.swift */; };
 		59544CC42A129D37007CCFA3 /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59544CC32A129D37007CCFA3 /* HomeScreenViewModel.swift */; };
 		59975A3D2A1513CE0090F0A6 /* CompressionPropertyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59975A3C2A1513CE0090F0A6 /* CompressionPropertyView.swift */; };
 		59975A3F2A151D1D0090F0A6 /* QuickCompressionOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59975A3E2A151D1D0090F0A6 /* QuickCompressionOptionView.swift */; };
@@ -39,6 +44,11 @@
 		591C9A502A0A94E100420B24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		591C9A532A0A94E100420B24 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		591C9A5C2A0A9D7700420B24 /* NavbarWithBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavbarWithBackButton.swift; sourceTree = "<group>"; };
+		5923A3692A166D8900023734 /* TrimVideoButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimVideoButtonView.swift; sourceTree = "<group>"; };
+		5923A36B2A16709D00023734 /* AdjustVolumeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustVolumeButtonView.swift; sourceTree = "<group>"; };
+		5923A36D2A1675CD00023734 /* ResolutionCompressionOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolutionCompressionOptionView.swift; sourceTree = "<group>"; };
+		5923A3702A16765E00023734 /* ConstantValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantValues.swift; sourceTree = "<group>"; };
+		5923A3722A1676F300023734 /* ResolutionOptionRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolutionOptionRepo.swift; sourceTree = "<group>"; };
 		59544CC32A129D37007CCFA3 /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
 		59975A3C2A1513CE0090F0A6 /* CompressionPropertyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompressionPropertyView.swift; sourceTree = "<group>"; };
 		59975A3E2A151D1D0090F0A6 /* QuickCompressionOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickCompressionOptionView.swift; sourceTree = "<group>"; };
@@ -89,6 +99,7 @@
 		591C9A4B2A0A94E000420B24 /* SwiftUISegmentedView */ = {
 			isa = PBXGroup;
 			children = (
+				5923A36F2A16764900023734 /* constants */,
 				59975A442A152A870090F0A6 /* model */,
 				59F024A92A13CBD100855848 /* services */,
 				59E74B1C2A0BF12D0015538F /* ui */,
@@ -108,6 +119,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		5923A36F2A16764900023734 /* constants */ = {
+			isa = PBXGroup;
+			children = (
+				5923A3702A16765E00023734 /* ConstantValues.swift */,
+			);
+			path = constants;
+			sourceTree = "<group>";
+		};
 		59544CC22A129D26007CCFA3 /* home */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +142,9 @@
 				59975A3C2A1513CE0090F0A6 /* CompressionPropertyView.swift */,
 				59975A3E2A151D1D0090F0A6 /* QuickCompressionOptionView.swift */,
 				59975A422A1527CC0090F0A6 /* FitToShareWithView.swift */,
+				5923A3692A166D8900023734 /* TrimVideoButtonView.swift */,
+				5923A36B2A16709D00023734 /* AdjustVolumeButtonView.swift */,
+				5923A36D2A1675CD00023734 /* ResolutionCompressionOptionView.swift */,
 			);
 			path = fastCompressionViewComponent;
 			sourceTree = "<group>";
@@ -140,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				59975A482A152B200090F0A6 /* SocialMediaOptionRepo.swift */,
+				5923A3722A1676F300023734 /* ResolutionOptionRepo.swift */,
 			);
 			path = repository;
 			sourceTree = "<group>";
@@ -300,6 +323,7 @@
 			files = (
 				59F78A4A2A0D443E00EBC0F1 /* Extensions.swift in Sources */,
 				59F78A5A2A0D54B000EBC0F1 /* Constants.swift in Sources */,
+				5923A3732A1676F300023734 /* ResolutionOptionRepo.swift in Sources */,
 				59F78A4C2A0D45C800EBC0F1 /* AppColors.swift in Sources */,
 				59F024AB2A13CBE100855848 /* VideoLibraryService.swift in Sources */,
 				59F78A562A0D4FAA00EBC0F1 /* QualityCompressionView.swift in Sources */,
@@ -308,7 +332,10 @@
 				59F78A582A0D4FB500EBC0F1 /* ResolutionCompressionView.swift in Sources */,
 				59F78A4F2A0D4F3B00EBC0F1 /* FastCompressionView.swift in Sources */,
 				59975A412A151EEB0090F0A6 /* Styles.swift in Sources */,
+				5923A36E2A1675CD00023734 /* ResolutionCompressionOptionView.swift in Sources */,
+				5923A36A2A166D8900023734 /* TrimVideoButtonView.swift in Sources */,
 				59E74B1F2A0BF1430015538F /* HomeScreen.swift in Sources */,
+				5923A3712A16765E00023734 /* ConstantValues.swift in Sources */,
 				59975A3D2A1513CE0090F0A6 /* CompressionPropertyView.swift in Sources */,
 				59544CC42A129D37007CCFA3 /* HomeScreenViewModel.swift in Sources */,
 				591C9A5D2A0A9D7700420B24 /* NavbarWithBackButton.swift in Sources */,
@@ -316,6 +343,7 @@
 				591C9A4D2A0A94E000420B24 /* SwiftUISegmentedViewApp.swift in Sources */,
 				59975A462A152A9A0090F0A6 /* Others.swift in Sources */,
 				59F78A542A0D4F9D00EBC0F1 /* QuickCompressionView.swift in Sources */,
+				5923A36C2A16709D00023734 /* AdjustVolumeButtonView.swift in Sources */,
 				59975A3F2A151D1D0090F0A6 /* QuickCompressionOptionView.swift in Sources */,
 				59975A432A1527CC0090F0A6 /* FitToShareWithView.swift in Sources */,
 				59975A492A152B200090F0A6 /* SocialMediaOptionRepo.swift in Sources */,

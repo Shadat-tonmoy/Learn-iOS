@@ -19,3 +19,14 @@ struct SocialMediaOption : Identifiable, Hashable{
         isSelected.toggle()
     }
 }
+
+struct ResolutionCompressionOption : Identifiable, Hashable {
+    let id : Int
+    let title : String
+    let subtitle : String
+    var isSelected : Bool
+    
+    mutating func toggleSelection() {
+        isSelected.toggle()
+    }
+}

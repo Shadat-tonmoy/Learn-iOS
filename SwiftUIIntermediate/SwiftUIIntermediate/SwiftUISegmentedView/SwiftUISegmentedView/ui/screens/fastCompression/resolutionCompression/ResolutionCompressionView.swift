@@ -10,10 +10,8 @@ import SwiftUI
 struct ResolutionCompressionView: View {
     var body: some View {
         VStack{
-            Spacer()
-            Text("Resolution Compression")
-                .font(.title)
-            Spacer()
+            ResolutionCompressionOptionView()
+//            Spacer()
         }
     }
 }

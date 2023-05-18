@@ -18,7 +18,8 @@ struct QuickCompressionOptionView: View {
                 QuickCompressionOptionItemView(title: "Large File", subtitle: "Best Quality & Resolution (75% of Original Resolution")
             }
             .frame(maxWidth: .infinity, alignment: .leading)
-            .padding()
+            .padding(.vertical)
+            .padding(.horizontal,10)
             .background(getCardBackground())
             .padding(.horizontal, 10)
             
@@ -26,7 +27,8 @@ struct QuickCompressionOptionView: View {
                 QuickCompressionOptionItemView(title: "Fit To File Size", subtitle: "Slower Compression")
             }
             .frame(maxWidth: .infinity, alignment: .leading)
-            .padding()
+            .padding(.vertical)
+            .padding(.horizontal,10)
             .background(getCardBackground())
             .padding(.horizontal, 10)
         }
