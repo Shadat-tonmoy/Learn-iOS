@@ -11,6 +11,11 @@ import PhotosUI
 struct HomeScreen: View {
     
     @StateObject var viewModel : HomeScreenViewModel = HomeScreenViewModel()
+    @StateObject var videoLibrary : VideoLibraryService = VideoLibraryService()
+    
+    init(){
+        videoLibrary.requestAuthorization()
+    }
     
     var body: some View {
         NavigationStack {

@@ -49,6 +49,7 @@
 		5923A36D2A1675CD00023734 /* ResolutionCompressionOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolutionCompressionOptionView.swift; sourceTree = "<group>"; };
 		5923A3702A16765E00023734 /* ConstantValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantValues.swift; sourceTree = "<group>"; };
 		5923A3722A1676F300023734 /* ResolutionOptionRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolutionOptionRepo.swift; sourceTree = "<group>"; };
+		5923A3742A16849F00023734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		59544CC32A129D37007CCFA3 /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
 		59975A3C2A1513CE0090F0A6 /* CompressionPropertyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompressionPropertyView.swift; sourceTree = "<group>"; };
 		59975A3E2A151D1D0090F0A6 /* QuickCompressionOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickCompressionOptionView.swift; sourceTree = "<group>"; };
@@ -99,6 +100,7 @@
 		591C9A4B2A0A94E000420B24 /* SwiftUISegmentedView */ = {
 			isa = PBXGroup;
 			children = (
+				5923A3742A16849F00023734 /* Info.plist */,
 				5923A36F2A16764900023734 /* constants */,
 				59975A442A152A870090F0A6 /* model */,
 				59F024A92A13CBD100855848 /* services */,
@@ -478,6 +480,9 @@
 				DEVELOPMENT_TEAM = 8H99G6VBDV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUISegmentedView/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Required Photo Gallery Permission";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -507,6 +512,9 @@
 				DEVELOPMENT_TEAM = 8H99G6VBDV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUISegmentedView/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Required Photo Gallery Permission";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
