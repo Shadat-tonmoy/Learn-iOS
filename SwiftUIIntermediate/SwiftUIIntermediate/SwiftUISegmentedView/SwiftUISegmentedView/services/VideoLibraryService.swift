@@ -21,7 +21,7 @@ class VideoLibraryService : ObservableObject{
     func requestAuthorization() {
         /// This is the code that does the permission requests
         PHPhotoLibrary.requestAuthorization { status in
-            print("requestAuthorization : status : \(status)")
+//            print("requestAuthorization : status : \(status)")
             self.authorizationStatus = status
             /// We can determine permission granted by the status
             switch status {
@@ -29,7 +29,7 @@ class VideoLibraryService : ObservableObject{
                 /// This won't be the photos themselves but the
                 /// references only.
             case .authorized, .limited:
-                print("Will fetch all photos, self : \(self)")
+//                print("Will fetch all photos, self : \(self)")
                 self.fetchAllPhotos()
                 
                 /// For denied response, we should show an error
@@ -44,8 +44,8 @@ class VideoLibraryService : ObservableObject{
     }
     
     
-    private func fetchAllPhotos() {
-        print("Fetch All Photos Called!")
+    func fetchAllPhotos() {
+//        print("Fetch All Photos Called!")
         imageCachingManager.allowsCachingHighQualityImages = false
         let fetchOptions = PHFetchOptions()
         fetchOptions.includeHiddenAssets = false
@@ -55,20 +55,20 @@ class VideoLibraryService : ObservableObject{
         
         DispatchQueue.main.async {
             self.results.fetchResult = PHAsset.fetchAssets(with: .video, options: fetchOptions)
-            let totalVideo = self.results.fetchResult.count
-            for i in 0..<totalVideo {
-                let video = self.results.fetchResult[i]
-                print("Video : \(video)")
-                self.getAssetFileSize(asset: video)
-                
-            }
-            print("Total found image : \(self.results.fetchResult.count)")
+//            let totalVideo = self.results.fetchResult.count
+//            for i in 0..<totalVideo {
+//                let video = self.results.fetchResult[i]
+//                print("Video : \(video)")
+//                self.getAssetFileSize(asset: video)
+//
+//            }
+//            print("Total found image : \(self.results.fetchResult.count)")
             
             
         }
     }
     
-    func getAssetFileSize(asset : PHAsset){
+    func getAssetFileSize(asset : PHAsset) -> String{
         let resources = PHAssetResource.assetResources(for: asset) // your PHAsset
         
         var sizeOnDisk: Int64? = 0
@@ -78,10 +78,17 @@ class VideoLibraryService : ObservableObject{
             sizeOnDisk = Int64(bitPattern: UInt64(unsignedInt64!))
             if let size = sizeOnDisk {
                 let humanReadableSize = converByteToHumanReadable(size)
-                print("Size on Disk : \(sizeOnDisk), humanReadable : \(humanReadableSize)")
+                return humanReadableSize
             }
             
         }
+        
+        return ""
+    }
+    
+    func getVideoDurationString(asset : PHAsset) -> String{
+        print(asset.duration)
+        return "\(asset.pixelWidth)x\(asset.pixelHeight)"
     }
     
     
@@ -92,41 +99,17 @@ class VideoLibraryService : ObservableObject{
         return formatter.string(fromByteCount: Int64(bytes))
     }
     
-    //    func fetchImage(
-    //            byLocalIdentifier localId: PHAssetLocalIdentifier,
-    //            targetSize: CGSize = PHImageManagerMaximumSize,
-    //            contentMode: PHImageContentMode = .default
-    //        ) async throws -> UIImage? {
-    //            let results = PHAsset.fetchAssets(
-    //                withLocalIdentifiers: [localId],
-    //                options: nil
-    //            )
-    //            guard let asset = results.firstObject else {
-    //                throw QueryError.phAssetNotFound
-    //            }
-    //            let options = PHImageRequestOptions()
-    //            options.deliveryMode = .opportunistic
-    //            options.resizeMode = .fast
-    //            options.isNetworkAccessAllowed = true
-    //            options.isSynchronous = true
-    //            return try await withCheckedThrowingContinuation { [weak self] continuation in
-    //                /// Use the imageCachingManager to fetch the image
-    //                self?.imageCachingManager.requestImage(
-    //                    for: asset,
-    //                    targetSize: targetSize,
-    //                    contentMode: contentMode,
-    //                    options: options,
-    //                    resultHandler: { image, info in
-    //                        /// image is of type UIImage
-    //                        if let error = info?[PHImageErrorKey] as? Error {
-    //                            continuation.resume(throwing: error)
-    //                            return
-    //                        }
-    //                        continuation.resume(returning: image)
-    //                    }
-    //                )
-    //            }
-    //        }
+    func getAssetThumbnail(asset: PHAsset) -> UIImage {
+        let manager = PHImageManager.default()
+        let option = PHImageRequestOptions()
+        var thumbnail = UIImage()
+        option.isSynchronous = true
+        manager.requestImage(for: asset, targetSize: CGSize(width: 300, height: 300), contentMode: .aspectFit, options: option, resultHandler: {(result, info)->Void in
+            thumbnail = result!
+        })
+//        print("Returning thumb for : \(asset.localIdentifier)")
+        return thumbnail
+    }
 }
 
 

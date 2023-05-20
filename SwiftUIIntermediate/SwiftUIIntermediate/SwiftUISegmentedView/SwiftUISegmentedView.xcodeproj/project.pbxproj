@@ -25,6 +25,7 @@
 		59975A462A152A9A0090F0A6 /* Others.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59975A452A152A9A0090F0A6 /* Others.swift */; };
 		59975A492A152B200090F0A6 /* SocialMediaOptionRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59975A482A152B200090F0A6 /* SocialMediaOptionRepo.swift */; };
 		59AC77722A127EAE00D612A5 /* HomeScreenComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AC77712A127EAE00D612A5 /* HomeScreenComponents.swift */; };
+		59DCA8F22A17CFB200160A28 /* VideoPickerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DCA8F12A17CFB200160A28 /* VideoPickerScreen.swift */; };
 		59E74B1F2A0BF1430015538F /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E74B1E2A0BF1430015538F /* HomeScreen.swift */; };
 		59F024AB2A13CBE100855848 /* VideoLibraryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F024AA2A13CBE100855848 /* VideoLibraryService.swift */; };
 		59F78A4A2A0D443E00EBC0F1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F78A492A0D443E00EBC0F1 /* Extensions.swift */; };
@@ -58,6 +59,7 @@
 		59975A452A152A9A0090F0A6 /* Others.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Others.swift; sourceTree = "<group>"; };
 		59975A482A152B200090F0A6 /* SocialMediaOptionRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaOptionRepo.swift; sourceTree = "<group>"; };
 		59AC77712A127EAE00D612A5 /* HomeScreenComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenComponents.swift; sourceTree = "<group>"; };
+		59DCA8F12A17CFB200160A28 /* VideoPickerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPickerScreen.swift; sourceTree = "<group>"; };
 		59E74B1E2A0BF1430015538F /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		59F024AA2A13CBE100855848 /* VideoLibraryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoLibraryService.swift; sourceTree = "<group>"; };
 		59F78A492A0D443E00EBC0F1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -169,6 +171,14 @@
 			path = repository;
 			sourceTree = "<group>";
 		};
+		59DCA8F02A17CF9E00160A28 /* videoPicker */ = {
+			isa = PBXGroup;
+			children = (
+				59DCA8F12A17CFB200160A28 /* VideoPickerScreen.swift */,
+			);
+			path = videoPicker;
+			sourceTree = "<group>";
+		};
 		59E74B1C2A0BF12D0015538F /* ui */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +193,7 @@
 		59E74B1D2A0BF1360015538F /* screens */ = {
 			isa = PBXGroup;
 			children = (
+				59DCA8F02A17CF9E00160A28 /* videoPicker */,
 				59544CC22A129D26007CCFA3 /* home */,
 				59F78A4D2A0D4F2700EBC0F1 /* fastCompression */,
 			);
@@ -341,6 +352,7 @@
 				59975A3D2A1513CE0090F0A6 /* CompressionPropertyView.swift in Sources */,
 				59544CC42A129D37007CCFA3 /* HomeScreenViewModel.swift in Sources */,
 				591C9A5D2A0A9D7700420B24 /* NavbarWithBackButton.swift in Sources */,
+				59DCA8F22A17CFB200160A28 /* VideoPickerScreen.swift in Sources */,
 				591C9A4F2A0A94E000420B24 /* ContentView.swift in Sources */,
 				591C9A4D2A0A94E000420B24 /* SwiftUISegmentedViewApp.swift in Sources */,
 				59975A462A152A9A0090F0A6 /* Others.swift in Sources */,

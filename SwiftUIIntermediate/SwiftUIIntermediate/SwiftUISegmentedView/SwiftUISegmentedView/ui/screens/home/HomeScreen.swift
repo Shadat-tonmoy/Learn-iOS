@@ -37,14 +37,13 @@ struct HomeScreen: View {
                                 
                             }
                             
-                            
-                            
-                            HomeScreenVideoPickerItem(
-                                iconName: "slider.horizontal.3",
-                                title: "Advance\nCompresion",
-                                selectedVideos: $viewModel.selectedVideos,
-                                selectionCallback: viewModel.handleSelectedVideos
-                            )
+                            NavigationLink(destination : VideoPickerScreen()){
+                                HomeScreenIcon(
+                                    iconName: "slider.horizontal.3",
+                                    title: "Advance\nCompresion"
+                                )
+                                
+                            }
                         }
                         .padding()
                         

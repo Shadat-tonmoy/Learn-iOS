@@ -14,35 +14,41 @@ struct NavbarWithBackButton: View {
     let title : String
     
     var body: some View {
-        HStack{
-            HStack {
-                Image(systemName: "chevron.backward")
-                    .foregroundColor(.white)
-                    .font(.subheadline)
-                    
+        ZStack {
+            HStack{
                 
-                Text("Back")
-                    .foregroundColor(.white)
-                    .font(.subheadline)
-                    .onTapGesture {
-                        dismiss()
-                    }
+                HStack {
+                    Image(systemName: "chevron.backward")
+                        .foregroundColor(.white)
+                        .font(.subheadline)
+                        
                     
+                    Text("Back")
+                        .foregroundColor(.white)
+                        .font(.subheadline)
+                        .onTapGesture {
+                            dismiss()
+                        }
+                        
+                }
+                Spacer()
+                
             }
+            .padding()
+            .background(Color.toolbarBG)
+            .shadow(color: Color.black.opacity(0.05), radius: 5, x: 0, y: 5)
+            
+            HStack{
                 
-            
-            Spacer()
-            
-            Text(title)
-                .foregroundColor(.white)
-                .font(.subheadline)
-            
-            Spacer()
-            
+                Spacer()
+                
+                Text(title)
+                    .foregroundColor(.white)
+                    .font(.subheadline)
+                
+                Spacer()
+            }
         }
-        .padding()
-        .background(Color.toolbarBG)
-        .shadow(color: Color.black.opacity(0.05), radius: 5, x: 0, y: 5)
     }
 }
 
