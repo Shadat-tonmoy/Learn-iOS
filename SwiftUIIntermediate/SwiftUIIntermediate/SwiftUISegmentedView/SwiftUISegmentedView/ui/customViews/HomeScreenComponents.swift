@@ -14,9 +14,11 @@ struct HomeScreenIcon: View {
     let title : String
     
     var body: some View {
-        VStack(spacing : 10){
-            Image(systemName: iconName)
-                .font(.title)
+        VStack(spacing : 15){
+            Image(iconName)
+                .resizable()
+                .scaledToFill()
+                .frame(width: 30, height: 30)
                 .foregroundColor(Color.toolbarBG)
             
             Text(title)
@@ -61,7 +63,7 @@ struct HomeScreenVideoPickerItem : View {
 
 struct HomeScreenIcon_Previews: PreviewProvider {
     static var previews: some View {
-        HomeScreenIcon(iconName: "slider.horizontal.3", title: "Fast\nCompression")
+        HomeScreenIcon(iconName: "fastCompression", title: "Fast\nCompression")
             .previewLayout(.sizeThatFits)
     }
     

@@ -31,7 +31,7 @@ struct HomeScreen: View {
                         HStack(spacing : 20){
                             NavigationLink(destination : FastCompressionView()){
                                 HomeScreenIcon(
-                                    iconName: "slider.horizontal.3",
+                                    iconName: "fastCompression",
                                     title: "Fast\nCompresion"
                                 )
                                 
@@ -39,7 +39,7 @@ struct HomeScreen: View {
                             
                             NavigationLink(destination : VideoPickerScreen()){
                                 HomeScreenIcon(
-                                    iconName: "slider.horizontal.3",
+                                    iconName: "advanceCompression",
                                     title: "Advance\nCompresion"
                                 )
                                 
@@ -52,14 +52,14 @@ struct HomeScreen: View {
                         HStack(spacing : 20){
                             
                             HomeScreenVideoPickerItem(
-                                iconName: "slider.horizontal.3",
+                                iconName: "convertFormat",
                                 title: "Convert Format",
                                 selectedVideos: $viewModel.selectedVideos,
                                 selectionCallback: viewModel.handleSelectedVideos
                             )
                             
                             HomeScreenVideoPickerItem(
-                                iconName: "slider.horizontal.3",
+                                iconName: "videoToAudio",
                                 title: "Video to Audio",
                                 selectedVideos: $viewModel.selectedVideos,
                                 selectionCallback: viewModel.handleSelectedVideos
@@ -71,7 +71,7 @@ struct HomeScreen: View {
                         
                         HStack(spacing : 20){
                             HomeScreenVideoPickerItem(
-                                iconName: "slider.horizontal.3",
+                                iconName: "trimVideo",
                                 title: "Trim Video",
                                 selectedVideos: $viewModel.selectedVideos,
                                 selectionCallback: viewModel.handleSelectedVideos

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		590675C02A188CBE00ED84F4 /* QualityCompressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590675BF2A188CBE00ED84F4 /* QualityCompressViewModel.swift */; };
 		591C9A4D2A0A94E000420B24 /* SwiftUISegmentedViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591C9A4C2A0A94E000420B24 /* SwiftUISegmentedViewApp.swift */; };
 		591C9A4F2A0A94E000420B24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591C9A4E2A0A94E000420B24 /* ContentView.swift */; };
 		591C9A512A0A94E100420B24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 591C9A502A0A94E100420B24 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		590675BF2A188CBE00ED84F4 /* QualityCompressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QualityCompressViewModel.swift; sourceTree = "<group>"; };
 		591C9A492A0A94E000420B24 /* SwiftUISegmentedView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUISegmentedView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		591C9A4C2A0A94E000420B24 /* SwiftUISegmentedViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUISegmentedViewApp.swift; sourceTree = "<group>"; };
 		591C9A4E2A0A94E000420B24 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				59F78A552A0D4FAA00EBC0F1 /* QualityCompressionView.swift */,
+				590675BF2A188CBE00ED84F4 /* QualityCompressViewModel.swift */,
 			);
 			path = qualityCompression;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				5923A36E2A1675CD00023734 /* ResolutionCompressionOptionView.swift in Sources */,
 				5923A36A2A166D8900023734 /* TrimVideoButtonView.swift in Sources */,
 				59E74B1F2A0BF1430015538F /* HomeScreen.swift in Sources */,
+				590675C02A188CBE00ED84F4 /* QualityCompressViewModel.swift in Sources */,
 				5923A3712A16765E00023734 /* ConstantValues.swift in Sources */,
 				59975A3D2A1513CE0090F0A6 /* CompressionPropertyView.swift in Sources */,
 				59544CC42A129D37007CCFA3 /* HomeScreenViewModel.swift in Sources */,
