@@ -15,6 +15,11 @@ class IDs{
     static let RESOLUTION_720P = 5
     static let RESOLUTION_1080P = 6
     
+    static let QUICK_COMPRESS_LOW = 1
+    static let QUICK_COMPRESS_MID = 2
+    static let QUICK_COMPRESS_HIGH = 3
+    
+    
 }
 
 class Values{

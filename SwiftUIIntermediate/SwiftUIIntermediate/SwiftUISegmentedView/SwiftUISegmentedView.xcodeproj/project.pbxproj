@@ -18,6 +18,9 @@
 		5923A36E2A1675CD00023734 /* ResolutionCompressionOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5923A36D2A1675CD00023734 /* ResolutionCompressionOptionView.swift */; };
 		5923A3712A16765E00023734 /* ConstantValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5923A3702A16765E00023734 /* ConstantValues.swift */; };
 		5923A3732A1676F300023734 /* ResolutionOptionRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5923A3722A1676F300023734 /* ResolutionOptionRepo.swift */; };
+		59541ED52A18B5E8006439FB /* QualityCompressOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59541ED42A18B5E8006439FB /* QualityCompressOptionView.swift */; };
+		59541ED72A18D2B5006439FB /* VideoCompressionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59541ED62A18D2B5006439FB /* VideoCompressionModel.swift */; };
+		59541ED92A18D31D006439FB /* QuickCompressionOptionRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59541ED82A18D31D006439FB /* QuickCompressionOptionRepo.swift */; };
 		59544CC42A129D37007CCFA3 /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59544CC32A129D37007CCFA3 /* HomeScreenViewModel.swift */; };
 		59975A3D2A1513CE0090F0A6 /* CompressionPropertyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59975A3C2A1513CE0090F0A6 /* CompressionPropertyView.swift */; };
 		59975A3F2A151D1D0090F0A6 /* QuickCompressionOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59975A3E2A151D1D0090F0A6 /* QuickCompressionOptionView.swift */; };
@@ -53,6 +56,9 @@
 		5923A3702A16765E00023734 /* ConstantValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantValues.swift; sourceTree = "<group>"; };
 		5923A3722A1676F300023734 /* ResolutionOptionRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolutionOptionRepo.swift; sourceTree = "<group>"; };
 		5923A3742A16849F00023734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		59541ED42A18B5E8006439FB /* QualityCompressOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QualityCompressOptionView.swift; sourceTree = "<group>"; };
+		59541ED62A18D2B5006439FB /* VideoCompressionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCompressionModel.swift; sourceTree = "<group>"; };
+		59541ED82A18D31D006439FB /* QuickCompressionOptionRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickCompressionOptionRepo.swift; sourceTree = "<group>"; };
 		59544CC32A129D37007CCFA3 /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
 		59975A3C2A1513CE0090F0A6 /* CompressionPropertyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompressionPropertyView.swift; sourceTree = "<group>"; };
 		59975A3E2A151D1D0090F0A6 /* QuickCompressionOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickCompressionOptionView.swift; sourceTree = "<group>"; };
@@ -151,6 +157,7 @@
 				5923A3692A166D8900023734 /* TrimVideoButtonView.swift */,
 				5923A36B2A16709D00023734 /* AdjustVolumeButtonView.swift */,
 				5923A36D2A1675CD00023734 /* ResolutionCompressionOptionView.swift */,
+				59541ED42A18B5E8006439FB /* QualityCompressOptionView.swift */,
 			);
 			path = fastCompressionViewComponent;
 			sourceTree = "<group>";
@@ -160,6 +167,7 @@
 			children = (
 				59975A472A152B130090F0A6 /* repository */,
 				59975A452A152A9A0090F0A6 /* Others.swift */,
+				59541ED62A18D2B5006439FB /* VideoCompressionModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -169,6 +177,7 @@
 			children = (
 				59975A482A152B200090F0A6 /* SocialMediaOptionRepo.swift */,
 				5923A3722A1676F300023734 /* ResolutionOptionRepo.swift */,
+				59541ED82A18D31D006439FB /* QuickCompressionOptionRepo.swift */,
 			);
 			path = repository;
 			sourceTree = "<group>";
@@ -337,6 +346,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59541ED52A18B5E8006439FB /* QualityCompressOptionView.swift in Sources */,
 				59F78A4A2A0D443E00EBC0F1 /* Extensions.swift in Sources */,
 				59F78A5A2A0D54B000EBC0F1 /* Constants.swift in Sources */,
 				5923A3732A1676F300023734 /* ResolutionOptionRepo.swift in Sources */,
@@ -361,7 +371,9 @@
 				591C9A4D2A0A94E000420B24 /* SwiftUISegmentedViewApp.swift in Sources */,
 				59975A462A152A9A0090F0A6 /* Others.swift in Sources */,
 				59F78A542A0D4F9D00EBC0F1 /* QuickCompressionView.swift in Sources */,
+				59541ED92A18D31D006439FB /* QuickCompressionOptionRepo.swift in Sources */,
 				5923A36C2A16709D00023734 /* AdjustVolumeButtonView.swift in Sources */,
+				59541ED72A18D2B5006439FB /* VideoCompressionModel.swift in Sources */,
 				59975A3F2A151D1D0090F0A6 /* QuickCompressionOptionView.swift in Sources */,
 				59975A432A1527CC0090F0A6 /* FitToShareWithView.swift in Sources */,
 				59975A492A152B200090F0A6 /* SocialMediaOptionRepo.swift in Sources */,

@@ -13,7 +13,40 @@ struct QualityCompressionView: View {
     
     var body: some View {
         VStack{
+            VStack{
+                Toggle("Percentage", isOn: $viewModel.isPercentage)
+                    .fontWeight(.semibold)
+                    .padding(.bottom,10)
+                    .tint(.primaryColor)
+                
+                if(viewModel.isPercentage){
+                    CompressByPercentageItemView(title: "Frame Rate", sliderVlaue: $viewModel.frameRatePercentage)
+                    CompressByPercentageItemView(title: "Bit Rate", sliderVlaue: $viewModel.bitRatePercentage)
+                    CompressByPercentageItemView(title: "Resolution", sliderVlaue: $viewModel.resolutionRatePercentage)
+                }
+                
+            }
+            .padding()
+            .background(getCardBackground())
+            .padding(.horizontal,10)
             
+            VStack{
+                Toggle("Fixed Value", isOn: $viewModel.isFixedValue)
+                    .fontWeight(.semibold)
+                    .padding(.bottom,10)
+                    .tint(.primaryColor)
+                
+                if(viewModel.isFixedValue){
+                    CompressByFixedValueItemView(title: "Frame Rate", selectedValue: $viewModel.frameRateValue, selectedValueText: "Original")
+                    CompressByFixedValueItemView(title: "Bit Rate", selectedValue: $viewModel.bitRateValue, selectedValueText: "Original")
+                    CompressByFixedValueItemView(title: "Resolution", selectedValue: $viewModel.resolutionRateValue, selectedValueText: "Original")
+                }
+                
+                
+            }
+            .padding()
+            .background(getCardBackground())
+            .padding(.horizontal,10)
         }
     }
 }
@@ -24,21 +57,6 @@ struct QualityCompressionView_Previews: PreviewProvider {
     }
 }
 
-struct iOSCheckboxToggleStyle: ToggleStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        // 1
-        Button(action: {
 
-            // 2
-            configuration.isOn.toggle()
 
-        }, label: {
-            HStack {
-                // 3
-                Image(systemName: configuration.isOn ? "checkmark.square" : "square")
 
-                configuration.label
-            }
-        })
-    }
-}
