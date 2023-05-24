@@ -80,6 +80,11 @@ extension CoinRowView {
 
 struct CoinRowView_Previews: PreviewProvider {
     static var previews: some View {
-        CoinRowView(coin: developerPreview.coin, showHoldings: true)
+        Group{
+            CoinRowView(coin: developerPreview.coin, showHoldings: true)
+            CoinRowView(coin: developerPreview.coin, showHoldings: true)
+                .previewLayout(.sizeThatFits)
+                .preferredColorScheme(.dark)
+        }
     }
 }
