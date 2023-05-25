@@ -6,16 +6,26 @@
 //
 
 import SwiftUI
+import Combine
 
 class HomeViewModel : ObservableObject {
     
     @Published var allCoins : [CoinModel] = []
     @Published var portfolioCoins : [CoinModel] = []
+    private var cancellables : Set<AnyCancellable> = Set()
+    
+    
+    var coinDataFetchingTask : CoinDataFetchingTask = CoinDataFetchingTask()
     
     init(){
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
-            self.allCoins.append(DeveloperPreview.instance.coin)
-            self.portfolioCoins.append(DeveloperPreview.instance.coin)
+        initSubscriber()
+    }
+    
+    private func initSubscriber(){
+        coinDataFetchingTask.$allCoins.sink(receiveValue: { [weak self] coins in
+            self?.allCoins = coins
+            
         })
+        .store(in: &cancellables)
     }
 }
