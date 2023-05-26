@@ -28,5 +28,28 @@ class HomeViewModel : ObservableObject {
             
         })
         .store(in: &cancellables)
+        
+        $searchText.combineLatest(coinDataFetchingTask.$allCoins)
+            .map { (searchText : String, initialCoinList : [CoinModel]) -> [CoinModel] in
+                guard
+                    !searchText.isEmpty else {
+                    return initialCoinList
+                }
+                
+                let searchTextLower = searchText.lowercased()
+                
+                let filteredList = initialCoinList.filter { (coin : CoinModel) -> Bool in
+                    coin.name.lowercased().contains(searchTextLower) ||
+                    coin.symbol.lowercased().contains(searchTextLower)
+                }
+                
+                return filteredList
+                
+                
+            }
+            .sink(receiveValue: { [weak self] (filteredCoinList : [CoinModel]) in
+                self?.allCoins = filteredCoinList
+            })
+            .store(in: &cancellables)
     }
 }
