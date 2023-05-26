@@ -14,12 +14,27 @@ class CoinImageViewModel : ObservableObject{
     @Published var coinImage : UIImage? = nil
     @Published var isLoading : Bool = false
     var imageRequest : AnyCancellable?
+    let localFileManager = LocalFileManager.instance
+    let coin : CoinModel
+    let cachedImageFolderName = "CachedImage"
     
     init(coin : CoinModel) {
-        fetchImage(urlString: coin.image)
+        self.coin = coin
+        getImage()
     }
     
-    private func fetchImage(urlString : String) {
+    func getImage() {
+        guard
+            let localImage = localFileManager.getImageFromFileManager(fileName: coin.id, folderName: cachedImageFolderName) else {
+            downloadImage(urlString: coin.image)
+            return
+        }
+        print("Setting Image From Local...")
+        coinImage = localImage
+    }
+    
+    private func downloadImage(urlString : String) {
+        print("Downloading Image...")
         isLoading = true
         guard let url = URL(string: urlString) else {
             return
@@ -30,10 +45,16 @@ class CoinImageViewModel : ObservableObject{
                 UIImage(data: data)
             }
             .sink(receiveCompletion: NetworkManager.completionHandler, receiveValue: { [weak self] image in
-                self?.isLoading = false
                 guard let uiImage = image else {
                     return
                 }
+                if let validSelf = self {
+                    validSelf.localFileManager.saveImage(image: uiImage,
+                                                         fileName: validSelf.coin.id,
+                                                         folderName: validSelf.cachedImageFolderName)
+                }
+                
+                self?.isLoading = false
                 self?.coinImage = uiImage
                 self?.imageRequest?.cancel()
             })

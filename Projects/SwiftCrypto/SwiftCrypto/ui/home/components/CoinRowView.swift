@@ -44,6 +44,17 @@ extension CoinRowView {
             
             CoinImageView(coinModel: coin)
                 .frame(width: 30, height: 30)
+                
+            
+//            AsyncImage(url: URL(string: coin.image), content: { image in
+//                image.resizable()
+//                    .scaledToFit()
+//
+//            }, placeholder: {
+//                ProgressView()
+//            })
+//            .frame(width: 30, height: 30)
+                
             
             Text(coin.symbol.uppercased())
                 .font(.headline)
