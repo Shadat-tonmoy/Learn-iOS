@@ -23,6 +23,7 @@
 		59C431F82A1BC0CD00705B1B /* CircularButtonAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C431F72A1BC0CD00705B1B /* CircularButtonAnimationView.swift */; };
 		59EC67AE2A1D0EA800DD25FD /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EC67AD2A1D0EA800DD25FD /* CoinRowView.swift */; };
 		59F069E02A205E370051A5A1 /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F069DF2A205E370051A5A1 /* LocalFileManager.swift */; };
+		59F069E22A206CF70051A5A1 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F069E12A206CF70051A5A1 /* SearchBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		59C431F72A1BC0CD00705B1B /* CircularButtonAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularButtonAnimationView.swift; sourceTree = "<group>"; };
 		59EC67AD2A1D0EA800DD25FD /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
 		59F069DF2A205E370051A5A1 /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
+		59F069E12A206CF70051A5A1 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 			children = (
 				594C91DB2A1FBB42002F87D4 /* coinImage */,
 				59EC67AD2A1D0EA800DD25FD /* CoinRowView.swift */,
+				59F069E12A206CF70051A5A1 /* SearchBarView.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				59C431F12A1B91E000705B1B /* HomeView.swift in Sources */,
 				5931C25D2A1C6D9C005E4A4C /* CoinModel.swift in Sources */,
 				59C431ED2A1B25F500705B1B /* Extensions.swift in Sources */,
+				59F069E22A206CF70051A5A1 /* SearchBarView.swift in Sources */,
 				59C431F32A1B91EC00705B1B /* HomeViewModel.swift in Sources */,
 				59C431DD2A1B171F00705B1B /* SwiftCryptoApp.swift in Sources */,
 				594C91DF2A1FBB60002F87D4 /* CoinImageViewModel.swift in Sources */,
