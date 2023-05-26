@@ -25,6 +25,8 @@ struct HomeView: View {
                 
                 homeHeader
                 
+                HomeStatsView(showPortfolio: $showPortfolio)
+                
                 SearchBarView(searchText: $homeViewModel.searchText)
                 
                 columnTitle

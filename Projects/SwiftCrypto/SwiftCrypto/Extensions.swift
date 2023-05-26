@@ -239,6 +239,10 @@ struct DeveloperPreview{
     
     
     let homeViewModel : HomeViewModel = HomeViewModel()
+    
+    let stat1 = StatisticModel(title: "Market Cap", value: "12.58Bn", percentageChange: 25.34)
+    let stat2 = StatisticModel(title: "Total Volume", value: "1.23Tn", percentageChange: -12.87)
+    let stat3 = StatisticModel(title: "New Value", value: "7.23Bn")
 }
 
 
