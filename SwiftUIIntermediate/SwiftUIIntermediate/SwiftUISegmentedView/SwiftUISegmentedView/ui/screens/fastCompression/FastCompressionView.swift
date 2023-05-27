@@ -11,7 +11,8 @@ struct FastCompressionView: View {
     
     
     
-    @State private var selectedTab = 1
+    @State private var selectedTab = 0
+    @StateObject private var viewModel : FastCompressionViewModel = FastCompressionViewModel()
     
     private var tabs : [String] = ["Quick", "Resolution", "Quality", ]
     
@@ -81,7 +82,7 @@ struct FastCompressionView: View {
     
     private func getSelectedTabView() -> AnyView {
         if(selectedTab == Constans.quickCompression) {
-            return AnyView(QuickCompressionView())
+            return AnyView(QuickCompressionView(optionRepo: viewModel.quickCompressionOptionRepo))
         } else if(selectedTab == Constans.resolutionCompression) {
             return AnyView(ResolutionCompressionView())
         } else if(selectedTab == Constans.qualityCompression){

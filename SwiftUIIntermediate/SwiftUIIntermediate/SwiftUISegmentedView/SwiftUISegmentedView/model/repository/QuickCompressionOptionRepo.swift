@@ -5,12 +5,12 @@
 //  Created by Shadat Tonmoy on 5/20/23.
 //
 
-import Foundation
+import SwiftUI
 
 
-class QuickCompressionOptionRepo {
+class QuickCompressionOptionRepo : ObservableObject {
     
-    private static let options : [QuickCompressOption] = [
+    @Published var options : [QuickCompressOption] = [
         QuickCompressOption(id: IDs.QUICK_COMPRESS_LOW,
                             title: "Small File",
                             description: "Acceptable Quality & Resolution. (30% of Original Resolution)",
@@ -37,7 +37,21 @@ class QuickCompressionOptionRepo {
     ]
     
     
-    static func getOptions() -> [QuickCompressOption]{
+    func getOptions() -> [QuickCompressOption]{
         return options
+    }
+    
+    func updateSelectedOption(selectedOption : QuickCompressOption) {
+//        let updatedList = options.map{ option in
+//            QuickCompressOption(id: option.id, title: option.title, description: option.description, resolutionScaleFactor: option.resolutionScaleFactor, bitRateThreshold: option.bitRateThreshold, frameRateThreshold: option.frameRateThreshold, isSelected: option.id == selectedOption.id)
+//            
+//        }
+//        options = updatedList
+        options.forEach{ option in
+            option.isSelected = option.id == selectedOption.id
+            
+        }
+        objectWillChange.send()
+        
     }
 }

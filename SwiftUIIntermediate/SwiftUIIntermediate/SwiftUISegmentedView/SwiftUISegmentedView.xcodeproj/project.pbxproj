@@ -22,13 +22,14 @@
 		59541ED72A18D2B5006439FB /* VideoCompressionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59541ED62A18D2B5006439FB /* VideoCompressionModel.swift */; };
 		59541ED92A18D31D006439FB /* QuickCompressionOptionRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59541ED82A18D31D006439FB /* QuickCompressionOptionRepo.swift */; };
 		59544CC42A129D37007CCFA3 /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59544CC32A129D37007CCFA3 /* HomeScreenViewModel.swift */; };
+		595C94CA2A22758E00EE8EE7 /* FastCompressionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595C94C92A22758E00EE8EE7 /* FastCompressionViewModel.swift */; };
 		59975A3D2A1513CE0090F0A6 /* CompressionPropertyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59975A3C2A1513CE0090F0A6 /* CompressionPropertyView.swift */; };
-		59975A3F2A151D1D0090F0A6 /* QuickCompressionOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59975A3E2A151D1D0090F0A6 /* QuickCompressionOptionView.swift */; };
 		59975A412A151EEB0090F0A6 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59975A402A151EEB0090F0A6 /* Styles.swift */; };
 		59975A432A1527CC0090F0A6 /* FitToShareWithView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59975A422A1527CC0090F0A6 /* FitToShareWithView.swift */; };
 		59975A462A152A9A0090F0A6 /* Others.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59975A452A152A9A0090F0A6 /* Others.swift */; };
 		59975A492A152B200090F0A6 /* SocialMediaOptionRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59975A482A152B200090F0A6 /* SocialMediaOptionRepo.swift */; };
 		59AC77722A127EAE00D612A5 /* HomeScreenComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AC77712A127EAE00D612A5 /* HomeScreenComponents.swift */; };
+		59BDC9822A21C7C600807A94 /* VideoPickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BDC9812A21C7C600807A94 /* VideoPickerModel.swift */; };
 		59DCA8F22A17CFB200160A28 /* VideoPickerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DCA8F12A17CFB200160A28 /* VideoPickerScreen.swift */; };
 		59E74B1F2A0BF1430015538F /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E74B1E2A0BF1430015538F /* HomeScreen.swift */; };
 		59F024AB2A13CBE100855848 /* VideoLibraryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F024AA2A13CBE100855848 /* VideoLibraryService.swift */; };
@@ -60,13 +61,14 @@
 		59541ED62A18D2B5006439FB /* VideoCompressionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCompressionModel.swift; sourceTree = "<group>"; };
 		59541ED82A18D31D006439FB /* QuickCompressionOptionRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickCompressionOptionRepo.swift; sourceTree = "<group>"; };
 		59544CC32A129D37007CCFA3 /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
+		595C94C92A22758E00EE8EE7 /* FastCompressionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastCompressionViewModel.swift; sourceTree = "<group>"; };
 		59975A3C2A1513CE0090F0A6 /* CompressionPropertyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompressionPropertyView.swift; sourceTree = "<group>"; };
-		59975A3E2A151D1D0090F0A6 /* QuickCompressionOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickCompressionOptionView.swift; sourceTree = "<group>"; };
 		59975A402A151EEB0090F0A6 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		59975A422A1527CC0090F0A6 /* FitToShareWithView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitToShareWithView.swift; sourceTree = "<group>"; };
 		59975A452A152A9A0090F0A6 /* Others.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Others.swift; sourceTree = "<group>"; };
 		59975A482A152B200090F0A6 /* SocialMediaOptionRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaOptionRepo.swift; sourceTree = "<group>"; };
 		59AC77712A127EAE00D612A5 /* HomeScreenComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenComponents.swift; sourceTree = "<group>"; };
+		59BDC9812A21C7C600807A94 /* VideoPickerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPickerModel.swift; sourceTree = "<group>"; };
 		59DCA8F12A17CFB200160A28 /* VideoPickerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPickerScreen.swift; sourceTree = "<group>"; };
 		59E74B1E2A0BF1430015538F /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		59F024AA2A13CBE100855848 /* VideoLibraryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoLibraryService.swift; sourceTree = "<group>"; };
@@ -152,7 +154,6 @@
 			isa = PBXGroup;
 			children = (
 				59975A3C2A1513CE0090F0A6 /* CompressionPropertyView.swift */,
-				59975A3E2A151D1D0090F0A6 /* QuickCompressionOptionView.swift */,
 				59975A422A1527CC0090F0A6 /* FitToShareWithView.swift */,
 				5923A3692A166D8900023734 /* TrimVideoButtonView.swift */,
 				5923A36B2A16709D00023734 /* AdjustVolumeButtonView.swift */,
@@ -168,6 +169,7 @@
 				59975A472A152B130090F0A6 /* repository */,
 				59975A452A152A9A0090F0A6 /* Others.swift */,
 				59541ED62A18D2B5006439FB /* VideoCompressionModel.swift */,
+				59BDC9812A21C7C600807A94 /* VideoPickerModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -236,6 +238,7 @@
 				59F78A512A0D4F7700EBC0F1 /* qualityCompression */,
 				59F78A502A0D4F7000EBC0F1 /* quickCompression */,
 				59F78A4E2A0D4F3B00EBC0F1 /* FastCompressionView.swift */,
+				595C94C92A22758E00EE8EE7 /* FastCompressionViewModel.swift */,
 			);
 			path = fastCompression;
 			sourceTree = "<group>";
@@ -366,15 +369,16 @@
 				59975A3D2A1513CE0090F0A6 /* CompressionPropertyView.swift in Sources */,
 				59544CC42A129D37007CCFA3 /* HomeScreenViewModel.swift in Sources */,
 				591C9A5D2A0A9D7700420B24 /* NavbarWithBackButton.swift in Sources */,
+				595C94CA2A22758E00EE8EE7 /* FastCompressionViewModel.swift in Sources */,
 				59DCA8F22A17CFB200160A28 /* VideoPickerScreen.swift in Sources */,
 				591C9A4F2A0A94E000420B24 /* ContentView.swift in Sources */,
 				591C9A4D2A0A94E000420B24 /* SwiftUISegmentedViewApp.swift in Sources */,
+				59BDC9822A21C7C600807A94 /* VideoPickerModel.swift in Sources */,
 				59975A462A152A9A0090F0A6 /* Others.swift in Sources */,
 				59F78A542A0D4F9D00EBC0F1 /* QuickCompressionView.swift in Sources */,
 				59541ED92A18D31D006439FB /* QuickCompressionOptionRepo.swift in Sources */,
 				5923A36C2A16709D00023734 /* AdjustVolumeButtonView.swift in Sources */,
 				59541ED72A18D2B5006439FB /* VideoCompressionModel.swift in Sources */,
-				59975A3F2A151D1D0090F0A6 /* QuickCompressionOptionView.swift in Sources */,
 				59975A432A1527CC0090F0A6 /* FitToShareWithView.swift in Sources */,
 				59975A492A152B200090F0A6 /* SocialMediaOptionRepo.swift in Sources */,
 			);
