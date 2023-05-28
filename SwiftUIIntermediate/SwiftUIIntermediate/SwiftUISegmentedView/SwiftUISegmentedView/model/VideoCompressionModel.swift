@@ -31,3 +31,25 @@ class QuickCompressOption : Identifiable, ObservableObject {
         isSelected.toggle()
     }
 }
+
+
+
+class VideoFormatOption : Identifiable{
+    var id : Int
+    var title : String
+    var extensions : String
+    var isPremium : Bool
+    var isSelected : Bool
+    
+    init(id: Int, title: String, extensions: String, isPremium: Bool, isSelected: Bool) {
+        self.id = id
+        self.title = title
+        self.extensions = extensions
+        self.isPremium = isPremium
+        self.isSelected = isSelected
+    }
+    
+    func toggleSelection(){
+        isSelected.toggle()
+    }
+}

@@ -29,6 +29,8 @@
 		59975A462A152A9A0090F0A6 /* Others.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59975A452A152A9A0090F0A6 /* Others.swift */; };
 		59975A492A152B200090F0A6 /* SocialMediaOptionRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59975A482A152B200090F0A6 /* SocialMediaOptionRepo.swift */; };
 		59AC77722A127EAE00D612A5 /* HomeScreenComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AC77712A127EAE00D612A5 /* HomeScreenComponents.swift */; };
+		59B5C6312A230E7A0089A267 /* VideoFormatOptionRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B5C6302A230E7A0089A267 /* VideoFormatOptionRepo.swift */; };
+		59B5C6342A230FD50089A267 /* FormatOptionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B5C6332A230FD50089A267 /* FormatOptionScreen.swift */; };
 		59BDC9822A21C7C600807A94 /* VideoPickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BDC9812A21C7C600807A94 /* VideoPickerModel.swift */; };
 		59DCA8F22A17CFB200160A28 /* VideoPickerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DCA8F12A17CFB200160A28 /* VideoPickerScreen.swift */; };
 		59E74B1F2A0BF1430015538F /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E74B1E2A0BF1430015538F /* HomeScreen.swift */; };
@@ -68,6 +70,8 @@
 		59975A452A152A9A0090F0A6 /* Others.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Others.swift; sourceTree = "<group>"; };
 		59975A482A152B200090F0A6 /* SocialMediaOptionRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaOptionRepo.swift; sourceTree = "<group>"; };
 		59AC77712A127EAE00D612A5 /* HomeScreenComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenComponents.swift; sourceTree = "<group>"; };
+		59B5C6302A230E7A0089A267 /* VideoFormatOptionRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoFormatOptionRepo.swift; sourceTree = "<group>"; };
+		59B5C6332A230FD50089A267 /* FormatOptionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatOptionScreen.swift; sourceTree = "<group>"; };
 		59BDC9812A21C7C600807A94 /* VideoPickerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPickerModel.swift; sourceTree = "<group>"; };
 		59DCA8F12A17CFB200160A28 /* VideoPickerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPickerScreen.swift; sourceTree = "<group>"; };
 		59E74B1E2A0BF1430015538F /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
@@ -180,8 +184,17 @@
 				59975A482A152B200090F0A6 /* SocialMediaOptionRepo.swift */,
 				5923A3722A1676F300023734 /* ResolutionOptionRepo.swift */,
 				59541ED82A18D31D006439FB /* QuickCompressionOptionRepo.swift */,
+				59B5C6302A230E7A0089A267 /* VideoFormatOptionRepo.swift */,
 			);
 			path = repository;
+			sourceTree = "<group>";
+		};
+		59B5C6322A230FB40089A267 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				59B5C6332A230FD50089A267 /* FormatOptionScreen.swift */,
+			);
+			path = common;
 			sourceTree = "<group>";
 		};
 		59DCA8F02A17CF9E00160A28 /* videoPicker */ = {
@@ -206,6 +219,7 @@
 		59E74B1D2A0BF1360015538F /* screens */ = {
 			isa = PBXGroup;
 			children = (
+				59B5C6322A230FB40089A267 /* common */,
 				59DCA8F02A17CF9E00160A28 /* videoPicker */,
 				59544CC22A129D26007CCFA3 /* home */,
 				59F78A4D2A0D4F2700EBC0F1 /* fastCompression */,
@@ -350,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				59541ED52A18B5E8006439FB /* QualityCompressOptionView.swift in Sources */,
+				59B5C6342A230FD50089A267 /* FormatOptionScreen.swift in Sources */,
 				59F78A4A2A0D443E00EBC0F1 /* Extensions.swift in Sources */,
 				59F78A5A2A0D54B000EBC0F1 /* Constants.swift in Sources */,
 				5923A3732A1676F300023734 /* ResolutionOptionRepo.swift in Sources */,
@@ -373,6 +388,7 @@
 				59DCA8F22A17CFB200160A28 /* VideoPickerScreen.swift in Sources */,
 				591C9A4F2A0A94E000420B24 /* ContentView.swift in Sources */,
 				591C9A4D2A0A94E000420B24 /* SwiftUISegmentedViewApp.swift in Sources */,
+				59B5C6312A230E7A0089A267 /* VideoFormatOptionRepo.swift in Sources */,
 				59BDC9822A21C7C600807A94 /* VideoPickerModel.swift in Sources */,
 				59975A462A152A9A0090F0A6 /* Others.swift in Sources */,
 				59F78A542A0D4F9D00EBC0F1 /* QuickCompressionView.swift in Sources */,

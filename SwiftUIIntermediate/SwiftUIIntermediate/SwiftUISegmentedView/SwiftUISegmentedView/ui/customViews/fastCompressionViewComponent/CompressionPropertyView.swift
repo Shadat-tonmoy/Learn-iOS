@@ -8,13 +8,25 @@
 import SwiftUI
 
 struct CompressionPropertyView: View {
+    
+    var optionCallback : (_ optionId : Int) -> Void
+    
     var body: some View {
         HStack(spacing:24){
             PropertyItemView(title: "Codec", value: "h264")
+                .onTapGesture {
+                    optionCallback(1)
+                }
             Spacer()
             PropertyItemView(title: "Format", value: "MP4")
+                .onTapGesture {
+                    optionCallback(1)
+                }
             Spacer()
             PropertyItemView(title: "Speed", value: "Normal")
+                .onTapGesture {
+                    optionCallback(1)
+                }
         }
         .padding(10)
         .background(getCardBackground())
@@ -24,7 +36,7 @@ struct CompressionPropertyView: View {
 
 struct CompressionPropertyView_Previews: PreviewProvider {
     static var previews: some View {
-        CompressionPropertyView()
+        CompressionPropertyView(optionCallback: {id in })
     }
 }
 

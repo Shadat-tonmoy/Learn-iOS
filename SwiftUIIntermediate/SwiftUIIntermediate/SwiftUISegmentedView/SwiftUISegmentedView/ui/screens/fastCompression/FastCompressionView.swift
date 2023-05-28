@@ -10,19 +10,17 @@ import SwiftUI
 struct FastCompressionView: View {
     
     
-    
-    @State private var selectedTab = 0
     @StateObject private var viewModel : FastCompressionViewModel = FastCompressionViewModel()
     
-    private var tabs : [String] = ["Quick", "Resolution", "Quality", ]
+    
     
     var body: some View {
         
         VStack(spacing: 0) {
             NavbarWithBackButton(title: "Fast Compression")
             HStack(){
-                ForEach(0..<tabs.count, id: \.self, content: { index in
-                    Text(tabs[index])
+                ForEach(0..<viewModel.tabs.count, id: \.self, content: { index in
+                    Text(viewModel.tabs[index])
                         .frame(maxWidth: .infinity)
                         .foregroundColor(getForegroundColor(index))
                         .padding(.vertical, 12)
@@ -31,7 +29,7 @@ struct FastCompressionView: View {
                         .fontWeight(.medium)
                         .onTapGesture {
                             withAnimation(.easeInOut(duration: 0.1)){
-                                selectedTab = index
+                                viewModel.selectedTab = index
                             }
                             
                             
@@ -41,7 +39,7 @@ struct FastCompressionView: View {
             }
             .background(Color.toolbarBG)
             
-            CompressionPropertyView()
+            CompressionPropertyView(optionCallback: propertyOptionCallback)
             
             getSelectedTabView()
                 .transition(.move(edge: .trailing))
@@ -54,6 +52,9 @@ struct FastCompressionView: View {
             
         }
         .navigationBarBackButtonHidden(true)
+        .sheet(isPresented: $viewModel.showFormatOptions, content: {
+            FormatOptionScreen()
+        })
         
         
         
@@ -64,7 +65,7 @@ struct FastCompressionView: View {
     }
     
     private func isSelected (position : Int) -> Bool {
-        return position == selectedTab
+        return position == viewModel.selectedTab
     }
     
     private func getForegroundColor(_ position : Int) -> Color {
@@ -81,15 +82,12 @@ struct FastCompressionView: View {
     }
     
     private func getSelectedTabView() -> AnyView {
-        if(selectedTab == Constans.quickCompression) {
-            return AnyView(QuickCompressionView(optionRepo: viewModel.quickCompressionOptionRepo))
-        } else if(selectedTab == Constans.resolutionCompression) {
-            return AnyView(ResolutionCompressionView())
-        } else if(selectedTab == Constans.qualityCompression){
-            return AnyView(QualityCompressionView())
-        } else {
-            return AnyView(EmptyView())
-        }
+        return viewModel.getSelectedTabView()
+    }
+    
+    private func propertyOptionCallback(optionId : Int){
+        viewModel.showFormatOptions = true
+        
     }
 }
 

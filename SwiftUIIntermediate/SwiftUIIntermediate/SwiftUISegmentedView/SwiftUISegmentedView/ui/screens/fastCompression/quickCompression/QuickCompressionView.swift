@@ -9,12 +9,12 @@ import SwiftUI
 
 struct QuickCompressionView: View {
     
-    @StateObject var optionRepo : QuickCompressionOptionRepo
+    @StateObject var viewModel : FastCompressionViewModel
     
     var body: some View {
         VStack{
             
-            QuickCompressionOptionView(optionRepo: optionRepo)
+            QuickCompressionOptionView(viewModel: viewModel)
             
             FitToShareWithView()
             
@@ -24,18 +24,18 @@ struct QuickCompressionView: View {
 
 struct QuickCompressionView_Previews: PreviewProvider {
     static var previews: some View {
-        QuickCompressionView(optionRepo: (QuickCompressionOptionRepo()))
+        QuickCompressionView(viewModel: FastCompressionViewModel())
     }
 }
 
 struct QuickCompressionOptionView: View {
     
-    @StateObject var optionRepo : QuickCompressionOptionRepo
+    @StateObject var viewModel : FastCompressionViewModel
     
     var body: some View {
         VStack(spacing:10) {
             VStack(alignment : .leading, spacing:10){
-                ForEach($optionRepo.options, content: { option in
+                ForEach(viewModel.getQuickCompressionOptions(), content: { option in
                     QuickCompressionOptionItemView(option: option, optionClickListener: onOptionClicked)
                 })
                 
@@ -48,19 +48,19 @@ struct QuickCompressionOptionView: View {
     
     func onOptionClicked(option : QuickCompressOption) -> Void {
         print("onOptionClicked : \(option.title)")
-        optionRepo.updateSelectedOption(selectedOption: option)
+        viewModel.updateSelectedOption(selectedOption: option)
     }
 }
 
 struct QuickCompressionOptionView_Previews: PreviewProvider {
     static var previews: some View {
-        QuickCompressionOptionView(optionRepo: (QuickCompressionOptionRepo()))
+        QuickCompressionOptionView(viewModel: FastCompressionViewModel())
     }
 }
 
 struct QuickCompressionOptionItemView: View {
     
-    @Binding var option : QuickCompressOption
+    var option : QuickCompressOption
     var optionClickListener : (_ option : QuickCompressOption) -> Void
     
     var body: some View {

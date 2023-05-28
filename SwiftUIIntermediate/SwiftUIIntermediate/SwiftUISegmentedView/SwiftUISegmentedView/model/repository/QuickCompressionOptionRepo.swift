@@ -8,9 +8,9 @@
 import SwiftUI
 
 
-class QuickCompressionOptionRepo : ObservableObject {
+class QuickCompressionOptionRepo {
     
-    @Published var options : [QuickCompressOption] = [
+    static var options : [QuickCompressOption] = [
         QuickCompressOption(id: IDs.QUICK_COMPRESS_LOW,
                             title: "Small File",
                             description: "Acceptable Quality & Resolution. (30% of Original Resolution)",
@@ -37,11 +37,11 @@ class QuickCompressionOptionRepo : ObservableObject {
     ]
     
     
-    func getOptions() -> [QuickCompressOption]{
-        return options
-    }
+//    func getOptions() -> [QuickCompressOption]{
+//        return options
+//    }
     
-    func updateSelectedOption(selectedOption : QuickCompressOption) {
+    static func updateSelectedOption(selectedOption : QuickCompressOption) {
 //        let updatedList = options.map{ option in
 //            QuickCompressOption(id: option.id, title: option.title, description: option.description, resolutionScaleFactor: option.resolutionScaleFactor, bitRateThreshold: option.bitRateThreshold, frameRateThreshold: option.frameRateThreshold, isSelected: option.id == selectedOption.id)
 //            
@@ -51,7 +51,7 @@ class QuickCompressionOptionRepo : ObservableObject {
             option.isSelected = option.id == selectedOption.id
             
         }
-        objectWillChange.send()
+//        objectWillChange.send()
         
     }
 }

@@ -30,3 +30,30 @@ class Values{
     static let RESOLUTION_720P = 720
     static let RESOLUTION_1080P = 1080
 }
+
+class Formats{
+    static let FORMAT_MP4 = 2
+    static let FORMAT_MKV = 3
+    static let FORMAT_MOV = 4
+    static let FORMAT_3GP = 5
+    static let FORMAT_FLV = 6
+    static let FORMAT_MTS = 7
+    static let FORMAT_AVI = 8
+    static let FORMAT_TS = 9
+    static let FORMAT_M4V = 10
+    static let FORMAT_MP3 = 11
+    static let FORMAT_M4A = 13
+    static let FORMAT_AAC = 14
+    static let FORMAT_AMR = 15
+    static let FORMAT_WAV = 16
+    static let FORMAT_FLAC = 17
+    static let FORMAT_MID = 18
+    static let FORMAT_OGG = 19
+    static let FORMAT_M2TS = 20
+    static let FORMAT_MPG = 21
+    static let FORMAT_MPEG = 22
+    static let FORMAT_VOB = 23
+    static let FORMAT_WEBM = 24
+    static let FORMAT_WMV = 25
+    static let FORMAT_GP3 = 26
+}
