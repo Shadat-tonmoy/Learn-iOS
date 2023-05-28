@@ -11,6 +11,7 @@ struct AdjustVolumeScreen: View {
     
     @State var volumeValue = 50.0
     @State var muteVideo = false
+    @Binding var showSheet : Bool
     
     var body: some View {
         VStack(spacing : 10){
@@ -41,8 +42,8 @@ struct AdjustVolumeScreen: View {
                 .padding(.top)
             
             HStack{
-                
                 Button("Cancel", action: {
+                    showSheet = false
                     
                     
                 })
@@ -55,6 +56,7 @@ struct AdjustVolumeScreen: View {
                 }
                 
                 Button("Done", action: {
+                    showSheet = false
                     
                 })
                 .frame(maxWidth: .infinity)
@@ -77,7 +79,7 @@ struct AdjustVolumeScreen: View {
 
 struct AdjustVolumeScreen_Previews: PreviewProvider {
     static var previews: some View {
-        AdjustVolumeScreen()
+        AdjustVolumeScreen(showSheet: .constant(true))
             .previewLayout(.sizeThatFits)
     }
 }

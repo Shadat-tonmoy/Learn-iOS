@@ -66,7 +66,7 @@ struct FastCompressionView: View {
             SpeedOptionScreen()
         })
         .sheet(isPresented: $viewModel.showAdjustVolumeOption, content: {
-            AdjustVolumeScreen()
+            AdjustVolumeScreen(showSheet: $viewModel.showAdjustVolumeOption)
         })
         
     }
