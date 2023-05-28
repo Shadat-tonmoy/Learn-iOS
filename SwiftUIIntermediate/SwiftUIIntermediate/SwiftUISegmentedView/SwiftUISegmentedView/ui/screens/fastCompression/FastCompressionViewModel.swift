@@ -58,5 +58,4 @@ class FastCompressionViewModel : ObservableObject {
         showSpeedOptions = videoPropertyOption == Values.SPEED_OPTIONS
     }
     
-    
 }

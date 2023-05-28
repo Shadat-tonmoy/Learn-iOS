@@ -35,6 +35,7 @@
 		59B5C63A2A231D980089A267 /* CodecOptionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B5C6392A231D980089A267 /* CodecOptionScreen.swift */; };
 		59B5C63C2A231DA40089A267 /* SpeedOptionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B5C63B2A231DA40089A267 /* SpeedOptionScreen.swift */; };
 		59B5C63E2A237B4B0089A267 /* AdjustVolumeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B5C63D2A237B4B0089A267 /* AdjustVolumeScreen.swift */; };
+		59B5C6402A238F0D0089A267 /* FastCompressionTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B5C63F2A238F0D0089A267 /* FastCompressionTabView.swift */; };
 		59BDC9822A21C7C600807A94 /* VideoPickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BDC9812A21C7C600807A94 /* VideoPickerModel.swift */; };
 		59DCA8F22A17CFB200160A28 /* VideoPickerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DCA8F12A17CFB200160A28 /* VideoPickerScreen.swift */; };
 		59E74B1F2A0BF1430015538F /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E74B1E2A0BF1430015538F /* HomeScreen.swift */; };
@@ -80,6 +81,7 @@
 		59B5C6392A231D980089A267 /* CodecOptionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodecOptionScreen.swift; sourceTree = "<group>"; };
 		59B5C63B2A231DA40089A267 /* SpeedOptionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedOptionScreen.swift; sourceTree = "<group>"; };
 		59B5C63D2A237B4B0089A267 /* AdjustVolumeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustVolumeScreen.swift; sourceTree = "<group>"; };
+		59B5C63F2A238F0D0089A267 /* FastCompressionTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastCompressionTabView.swift; sourceTree = "<group>"; };
 		59BDC9812A21C7C600807A94 /* VideoPickerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPickerModel.swift; sourceTree = "<group>"; };
 		59DCA8F12A17CFB200160A28 /* VideoPickerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPickerScreen.swift; sourceTree = "<group>"; };
 		59E74B1E2A0BF1430015538F /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				5923A3692A166D8900023734 /* TrimVideoButtonView.swift */,
 				5923A36B2A16709D00023734 /* AdjustVolumeButtonView.swift */,
 				59541ED42A18B5E8006439FB /* QualityCompressOptionView.swift */,
+				59B5C63F2A238F0D0089A267 /* FastCompressionTabView.swift */,
 			);
 			path = fastCompressionViewComponent;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				59B5C63C2A231DA40089A267 /* SpeedOptionScreen.swift in Sources */,
 				59F78A582A0D4FB500EBC0F1 /* ResolutionCompressionView.swift in Sources */,
 				59F78A4F2A0D4F3B00EBC0F1 /* FastCompressionView.swift in Sources */,
+				59B5C6402A238F0D0089A267 /* FastCompressionTabView.swift in Sources */,
 				59975A412A151EEB0090F0A6 /* Styles.swift in Sources */,
 				59B5C63E2A237B4B0089A267 /* AdjustVolumeScreen.swift in Sources */,
 				5923A36A2A166D8900023734 /* TrimVideoButtonView.swift in Sources */,
