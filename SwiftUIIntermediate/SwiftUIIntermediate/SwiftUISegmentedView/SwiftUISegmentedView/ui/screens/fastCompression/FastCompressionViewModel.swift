@@ -15,6 +15,8 @@ class FastCompressionViewModel : ObservableObject {
     @Published var showCodecOptions = false
     @Published var showSpeedOptions = false
     
+    @Published var videoPropertyOption = Values.NONE
+    
     var tabs : [String] = ["Quick", "Resolution", "Quality"]
     
     
@@ -22,8 +24,17 @@ class FastCompressionViewModel : ObservableObject {
         return QuickCompressionOptionRepo.options
     }
     
-    func updateSelectedOption(selectedOption : QuickCompressOption) {
+    func getResolutionCompressionOptions() -> [ResolutionCompressionOption] {
+        return ResolutionOptionRepo.getOptions()
+    }
+    
+    func updateQuickCompressionSelectedOption(selectedOption : QuickCompressOption) {
         QuickCompressionOptionRepo.updateSelectedOption(selectedOption: selectedOption)
+        objectWillChange.send()
+    }
+    
+    func updateResolutionCompressionSelectedOption(selectedOption : ResolutionCompressionOption) {
+        ResolutionOptionRepo.updateSelectedOption(selectedOption: selectedOption)
         objectWillChange.send()
     }
     
@@ -31,12 +42,19 @@ class FastCompressionViewModel : ObservableObject {
         if(selectedTab == Constans.quickCompression) {
             return AnyView(QuickCompressionView(viewModel: self))
         } else if(selectedTab == Constans.resolutionCompression) {
-            return AnyView(ResolutionCompressionView())
+            return AnyView(ResolutionCompressionView(viewModel: self))
         } else if(selectedTab == Constans.qualityCompression){
             return AnyView(QualityCompressionView())
         } else {
             return AnyView(EmptyView())
         }
+    }
+    
+    func updateVideoPropertyOption(value : Int) {
+        videoPropertyOption = value
+        showFormatOptions = videoPropertyOption == Values.FORMAT_OPTIONS
+        showCodecOptions = videoPropertyOption == Values.CODEC_OPTIONS
+        showSpeedOptions = videoPropertyOption == Values.SPEED_OPTIONS
     }
     
     

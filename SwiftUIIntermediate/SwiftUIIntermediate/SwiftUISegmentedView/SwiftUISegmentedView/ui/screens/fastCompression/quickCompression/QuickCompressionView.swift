@@ -48,7 +48,7 @@ struct QuickCompressionOptionView: View {
     
     func onOptionClicked(option : QuickCompressOption) -> Void {
         print("onOptionClicked : \(option.title)")
-        viewModel.updateSelectedOption(selectedOption: option)
+        viewModel.updateQuickCompressionSelectedOption(selectedOption: option)
     }
 }
 

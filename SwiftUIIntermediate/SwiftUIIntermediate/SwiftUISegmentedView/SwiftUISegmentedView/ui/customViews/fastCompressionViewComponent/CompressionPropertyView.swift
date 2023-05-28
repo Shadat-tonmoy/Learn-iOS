@@ -15,17 +15,17 @@ struct CompressionPropertyView: View {
         HStack(spacing:24){
             PropertyItemView(title: "Codec", value: "h264")
                 .onTapGesture {
-                    optionCallback(1)
+                    optionCallback(Values.CODEC_OPTIONS)
                 }
             Spacer()
             PropertyItemView(title: "Format", value: "MP4")
                 .onTapGesture {
-                    optionCallback(1)
+                    optionCallback(Values.FORMAT_OPTIONS)
                 }
             Spacer()
             PropertyItemView(title: "Speed", value: "Normal")
                 .onTapGesture {
-                    optionCallback(1)
+                    optionCallback(Values.SPEED_OPTIONS)
                 }
         }
         .padding(10)

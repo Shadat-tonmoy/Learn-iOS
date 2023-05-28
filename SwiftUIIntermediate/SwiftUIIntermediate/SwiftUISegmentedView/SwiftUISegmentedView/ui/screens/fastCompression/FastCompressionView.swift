@@ -55,12 +55,12 @@ struct FastCompressionView: View {
         .sheet(isPresented: $viewModel.showFormatOptions, content: {
             FormatOptionScreen()
         })
-        
-        
-        
-        
-        
-        
+        .sheet(isPresented: $viewModel.showCodecOptions, content: {
+            CodecOptionScreen()
+        })
+        .sheet(isPresented: $viewModel.showSpeedOptions, content: {
+            SpeedOptionScreen()
+        })
         
     }
     
@@ -86,8 +86,7 @@ struct FastCompressionView: View {
     }
     
     private func propertyOptionCallback(optionId : Int){
-        viewModel.showFormatOptions = true
-        
+        viewModel.updateVideoPropertyOption(value: optionId)
     }
 }
 

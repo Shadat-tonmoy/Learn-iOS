@@ -53,3 +53,48 @@ class VideoFormatOption : Identifiable{
         isSelected.toggle()
     }
 }
+
+
+class VideoCodecOption : Identifiable {
+    var id: Int
+    var title: String
+    var titleTrimmed: String
+    var value: String
+    var isSelected: Bool
+    
+    init(id: Int, title: String, titleTrimmed: String, value: String, isSelected: Bool) {
+        self.id = id
+        self.title = title
+        self.titleTrimmed = titleTrimmed
+        self.value = value
+        self.isSelected = isSelected
+    }
+    
+    func toggleSelection(){
+        isSelected.toggle()
+    }
+    
+}
+
+
+class ProcessingSpeedOption : Identifiable {
+    
+    var id: Int
+    var title: String
+    var subTitle: String
+    var value: String
+    var isSelected: Bool
+    
+    init(id: Int, title: String, subTitle: String, value: String, isSelected: Bool) {
+        self.id = id
+        self.title = title
+        self.subTitle = subTitle
+        self.value = value
+        self.isSelected = isSelected
+    }
+    
+    func toggleSelection(){
+        isSelected.toggle()
+    }
+    
+}

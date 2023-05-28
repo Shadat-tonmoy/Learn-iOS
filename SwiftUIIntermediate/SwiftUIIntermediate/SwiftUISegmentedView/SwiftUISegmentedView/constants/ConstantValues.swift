@@ -29,6 +29,10 @@ class Values{
     static let RESOLUTION_480P = 480
     static let RESOLUTION_720P = 720
     static let RESOLUTION_1080P = 1080
+    static let NONE = -1
+    static let FORMAT_OPTIONS = 1
+    static let CODEC_OPTIONS = 2
+    static let SPEED_OPTIONS = 3
 }
 
 class Formats{
@@ -56,4 +60,14 @@ class Formats{
     static let FORMAT_WEBM = 24
     static let FORMAT_WMV = 25
     static let FORMAT_GP3 = 26
+}
+
+class Codecs{
+    static let CODEC_H264 = 1
+    static let CODEC_H265 = 2
+}
+
+class Speeds{
+    static let SPEED_NORMAL = 1
+    static let SPEED_FAST = 2
 }

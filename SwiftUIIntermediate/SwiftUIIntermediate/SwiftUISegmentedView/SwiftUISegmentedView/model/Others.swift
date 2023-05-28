@@ -8,25 +8,40 @@
 import Foundation
 
 
-struct SocialMediaOption : Identifiable, Hashable{
+class SocialMediaOption : Identifiable {
     
     let id : Int
     let title : String
     let icon : String
     var isSelected : Bool
     
-    mutating func toggleSelection() {
+    init(id: Int, title: String, icon: String, isSelected: Bool) {
+        self.id = id
+        self.title = title
+        self.icon = icon
+        self.isSelected = isSelected
+    }
+    
+    func toggleSelection() {
         isSelected.toggle()
     }
 }
 
-struct ResolutionCompressionOption : Identifiable, Hashable {
+class ResolutionCompressionOption : Identifiable {
+    
     let id : Int
     let title : String
     let subtitle : String
     var isSelected : Bool
     
-    mutating func toggleSelection() {
+    init(id: Int, title: String, subtitle: String, isSelected: Bool) {
+        self.id = id
+        self.title = title
+        self.subtitle = subtitle
+        self.isSelected = isSelected
+    }
+    
+    func toggleSelection() {
         isSelected.toggle()
     }
 }
