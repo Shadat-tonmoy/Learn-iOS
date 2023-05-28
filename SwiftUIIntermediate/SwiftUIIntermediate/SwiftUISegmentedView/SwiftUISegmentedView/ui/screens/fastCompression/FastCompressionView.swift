@@ -47,6 +47,10 @@ struct FastCompressionView: View {
             TrimVideoButtonView()
             
             AdjustVolumeButtonView()
+                .onTapGesture {
+                    viewModel.showAdjustVolumeOption = true
+                }
+            
             
             Spacer()
             
@@ -60,6 +64,9 @@ struct FastCompressionView: View {
         })
         .sheet(isPresented: $viewModel.showSpeedOptions, content: {
             SpeedOptionScreen()
+        })
+        .sheet(isPresented: $viewModel.showAdjustVolumeOption, content: {
+            AdjustVolumeScreen()
         })
         
     }

@@ -14,6 +14,7 @@ class FastCompressionViewModel : ObservableObject {
     @Published var showFormatOptions = false
     @Published var showCodecOptions = false
     @Published var showSpeedOptions = false
+    @Published var showAdjustVolumeOption = false
     
     @Published var videoPropertyOption = Values.NONE
     
