@@ -16,9 +16,9 @@ class NetworkManager{
         return URLSession.shared.dataTaskPublisher(for: url)
             .subscribe(on: DispatchQueue.global(qos: .background))
             .tryMap{ (output) -> Data in
-                guard let respose = output.response as? HTTPURLResponse,
-                      respose.statusCode >= 200 && respose.statusCode < 300 else {
-                    print("Error response code")
+                guard let response = output.response as? HTTPURLResponse,
+                      response.statusCode >= 200 && response.statusCode < 300 else {
+                    print("Error response code : \(output.response)")
                     return output.data
                 }
                 return output.data

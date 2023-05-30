@@ -11,11 +11,14 @@ import Combine
 class CoinDataFetchingTask {
     
     @Published var allCoins : [CoinModel] = []
+    @Published var marketData : MarketDataModel? = nil
     
     var coinSubscription : AnyCancellable?
+    var globalDataSubscription : AnyCancellable?
     
     init(){
         fetchAllCoins()
+        fetchMarketData()
         
     }
     
@@ -36,5 +39,26 @@ class CoinDataFetchingTask {
                 self?.allCoins = coins
                 self?.coinSubscription?.cancel()
             })
+    }
+    
+    func fetchMarketData() {
+        print("Fetch Market Data Called")
+        
+        let apiUrl = "https://api.coingecko.com/api/v3/global"
+        
+        guard let url = URL(string: apiUrl) else {
+            print("Invalid url")
+            return
+        }
+        
+        globalDataSubscription = NetworkManager.download(url: url)
+            .decode(type: GlobalData.self, decoder: JSONDecoder())
+            .sink(receiveCompletion: { data in
+                print("Received Data Successfully as \(data)")
+            }, receiveValue: { [weak self] (globalData : GlobalData) in
+                self?.marketData = globalData.data
+                self?.globalDataSubscription?.cancel()
+            })
+            
     }
 }

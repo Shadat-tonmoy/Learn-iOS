@@ -13,6 +13,8 @@ struct HomeView: View {
     
     @State private var showPortfolio = false
     
+    @State private var showManagePortfolio = false
+    
     var body: some View {
         ZStack{
             
@@ -42,6 +44,10 @@ struct HomeView: View {
             }
             
         }
+        .sheet(isPresented: $showManagePortfolio, content: {
+            PortfolioView(showManagePortfolioView: $showManagePortfolio)
+                .environmentObject(homeViewModel)
+        })
     }
 }
 
@@ -65,6 +71,11 @@ extension HomeView {
                 .background(
                     CircularButtonAnimationView(animate: $showPortfolio)
                 )
+                .onTapGesture {
+                    if showPortfolio {
+                        showManagePortfolio.toggle()
+                    }
+                }
                 
             Spacer()
             

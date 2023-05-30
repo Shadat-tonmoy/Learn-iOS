@@ -13,9 +13,10 @@ class HomeViewModel : ObservableObject {
     @Published var allCoins : [CoinModel] = []
     @Published var portfolioCoins : [CoinModel] = []
     @Published var searchText : String = ""
+    @Published var marketData : MarketDataModel? = nil
     private var cancellables : Set<AnyCancellable> = Set()
     
-    var statModelList : [StatisticModel] = [
+    @Published var statModelList : [StatisticModel] = [
         StatisticModel(title: "Market Cap", value: "12.58Bn", percentageChange: 25.34),
         StatisticModel(title: "Total Assets", value: "7.98Tn", percentageChange: -25.34),
         StatisticModel(title: "Market Cap", value: "12.58Bn")
@@ -44,6 +45,32 @@ class HomeViewModel : ObservableObject {
                 self?.allCoins = filteredCoinList
             })
             .store(in: &cancellables)
+        
+        coinDataFetchingTask.$marketData
+            .map(convertMarketDataToStats)
+            .sink(receiveValue: { [weak self] statList in
+                self?.statModelList = statList
+                
+            })
+            .store(in: &cancellables)
+    }
+    
+    private func convertMarketDataToStats(marketData : MarketDataModel?) -> [StatisticModel] {
+        
+        var stats : [StatisticModel] = []
+        
+        guard let data = marketData else {
+            return stats
+        }
+        
+        stats.append(StatisticModel(title: "Market Cap", value: data.marketCap, percentageChange: data.marketCapChangePercentage24HUsd))
+        
+        stats.append(StatisticModel(title: "24H Volume", value: data.volume))
+        stats.append(StatisticModel(title: "BTC Dominant", value: data.btcDominant))
+        stats.append(StatisticModel(title: "Portfolio Value", value: "$0.0", percentageChange: 0.0))
+        
+        return stats
+        
     }
     
     private func filterCoin(searchText : String, initialCoinList : [CoinModel]) -> [CoinModel] {
