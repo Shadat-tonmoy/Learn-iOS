@@ -8,20 +8,24 @@
 import SwiftUI
 
 struct FormatOptionScreen: View {
+    
+    @StateObject var viewModel : FastCompressionViewModel
+    
     var body: some View {
         VStack(alignment : .leading) {
-            Text("Choose Preferred Format")
-                .font(.headline)
-                .padding(.horizontal)
-                .padding(.top,15)
-            List(VideoFormatOptionRepo.getOptions(), rowContent: { option in
-                Text(option.title)
-                    .font(.system(size: 14))
-                    .fontWeight(.medium)
+            VideoPropertyOptionHeaderView(title: "Choose Preferred Format", clickCallback: {
+                viewModel.hideFormatOptions()
+            })
+            
+            List(viewModel.getFormatOptions(), rowContent: { option in
+                VideoPropertyOptionView(title: option.title, isSelected: option.isSelected)
+                    .onTapGesture {
+                        viewModel.updateSelectedFormat(selectedOption: option)
+                    }
                 
             })
             .listStyle(PlainListStyle())
-                
+            
         }
         .presentationDetents([.fraction(0.95)])
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -31,6 +35,10 @@ struct FormatOptionScreen: View {
 
 struct FormatOptionScreen_Previews: PreviewProvider {
     static var previews: some View {
-        FormatOptionScreen()
+        FormatOptionScreen(viewModel: FastCompressionViewModel())
     }
 }
+
+
+
+

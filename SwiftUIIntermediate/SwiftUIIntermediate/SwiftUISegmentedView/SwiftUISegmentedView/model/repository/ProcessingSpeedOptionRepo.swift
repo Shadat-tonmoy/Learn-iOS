@@ -19,4 +19,14 @@ class ProcessingSpeedOptionRepo {
     static func getOptions() -> [ProcessingSpeedOption] {
         return options
     }
+    
+    static func getDefaultOption() -> ProcessingSpeedOption {
+        return options[0]
+    }
+    
+    static func updateSelectedOption(selectedOption : ProcessingSpeedOption) {
+        options.forEach{ option in
+            option.isSelected = option.id == selectedOption.id
+        }
+    }
 }

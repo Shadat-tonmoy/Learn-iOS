@@ -37,6 +37,7 @@
 		59B5C63E2A237B4B0089A267 /* AdjustVolumeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B5C63D2A237B4B0089A267 /* AdjustVolumeScreen.swift */; };
 		59B5C6402A238F0D0089A267 /* FastCompressionTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B5C63F2A238F0D0089A267 /* FastCompressionTabView.swift */; };
 		59BDC9822A21C7C600807A94 /* VideoPickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BDC9812A21C7C600807A94 /* VideoPickerModel.swift */; };
+		59BEA6452A265FA2008EA104 /* VideoPropertyViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BEA6442A265FA2008EA104 /* VideoPropertyViews.swift */; };
 		59DCA8F22A17CFB200160A28 /* VideoPickerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DCA8F12A17CFB200160A28 /* VideoPickerScreen.swift */; };
 		59E74B1F2A0BF1430015538F /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E74B1E2A0BF1430015538F /* HomeScreen.swift */; };
 		59F024AB2A13CBE100855848 /* VideoLibraryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F024AA2A13CBE100855848 /* VideoLibraryService.swift */; };
@@ -83,6 +84,7 @@
 		59B5C63D2A237B4B0089A267 /* AdjustVolumeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustVolumeScreen.swift; sourceTree = "<group>"; };
 		59B5C63F2A238F0D0089A267 /* FastCompressionTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastCompressionTabView.swift; sourceTree = "<group>"; };
 		59BDC9812A21C7C600807A94 /* VideoPickerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPickerModel.swift; sourceTree = "<group>"; };
+		59BEA6442A265FA2008EA104 /* VideoPropertyViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPropertyViews.swift; sourceTree = "<group>"; };
 		59DCA8F12A17CFB200160A28 /* VideoPickerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPickerScreen.swift; sourceTree = "<group>"; };
 		59E74B1E2A0BF1430015538F /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		59F024AA2A13CBE100855848 /* VideoLibraryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoLibraryService.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				59B5C6392A231D980089A267 /* CodecOptionScreen.swift */,
 				59B5C63B2A231DA40089A267 /* SpeedOptionScreen.swift */,
 				59B5C63D2A237B4B0089A267 /* AdjustVolumeScreen.swift */,
+				59BEA6442A265FA2008EA104 /* VideoPropertyViews.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				5923A3732A1676F300023734 /* ResolutionOptionRepo.swift in Sources */,
 				59F78A4C2A0D45C800EBC0F1 /* AppColors.swift in Sources */,
 				59F024AB2A13CBE100855848 /* VideoLibraryService.swift in Sources */,
+				59BEA6452A265FA2008EA104 /* VideoPropertyViews.swift in Sources */,
 				59F78A562A0D4FAA00EBC0F1 /* QualityCompressionView.swift in Sources */,
 				59F78A5D2A0D584300EBC0F1 /* HomeScreenNavbar.swift in Sources */,
 				59AC77722A127EAE00D612A5 /* HomeScreenComponents.swift in Sources */,

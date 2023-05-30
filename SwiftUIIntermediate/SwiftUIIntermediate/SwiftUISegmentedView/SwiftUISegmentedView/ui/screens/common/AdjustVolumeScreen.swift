@@ -12,11 +12,14 @@ struct AdjustVolumeScreen: View {
     @State var volumeValue = 50.0
     @State var muteVideo = false
     @Binding var showSheet : Bool
+    @StateObject var viewModel : FastCompressionViewModel
     
     var body: some View {
         VStack(spacing : 10){
-            Text("Adjust Volume")
-                .frame(maxWidth: .infinity, alignment: .leading)
+            
+            VideoPropertyOptionHeaderView(title: "Adjust Volume", clickCallback: {
+                viewModel.hideVolumeOptions()
+            })
             
             HStack{
                 
@@ -79,7 +82,7 @@ struct AdjustVolumeScreen: View {
 
 struct AdjustVolumeScreen_Previews: PreviewProvider {
     static var previews: some View {
-        AdjustVolumeScreen(showSheet: .constant(true))
+        AdjustVolumeScreen(showSheet: .constant(true), viewModel: FastCompressionViewModel())
             .previewLayout(.sizeThatFits)
     }
 }

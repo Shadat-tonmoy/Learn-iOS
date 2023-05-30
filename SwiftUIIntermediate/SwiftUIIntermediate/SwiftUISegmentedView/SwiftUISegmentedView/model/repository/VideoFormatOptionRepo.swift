@@ -30,4 +30,14 @@ class VideoFormatOptionRepo {
     static func getOptions() -> [VideoFormatOption] {
         return options
     }
+    
+    static func getDefaultOption() -> VideoFormatOption {
+        options[0]
+    }
+    
+    static func updateSelectedOption(selectedOption : VideoFormatOption) {
+        options.forEach{ option in
+            option.isSelected = option.id == selectedOption.id
+        }
+    }
 }

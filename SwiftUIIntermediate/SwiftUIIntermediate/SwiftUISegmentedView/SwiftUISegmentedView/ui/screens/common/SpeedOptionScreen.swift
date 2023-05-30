@@ -8,17 +8,21 @@
 import SwiftUI
 
 struct SpeedOptionScreen: View {
+    @StateObject var viewModel : FastCompressionViewModel
+    
     var body: some View {
         
         VStack(alignment : .leading) {
-            Text("Choose Preferred Speed")
-                .font(.headline)
-                .padding(.horizontal)
-                .padding(.top,15)
+            
+            VideoPropertyOptionHeaderView(title: "Choose Preferred Speed", clickCallback: {
+                viewModel.hideSpeedOptions()
+            })
+            
             List(ProcessingSpeedOptionRepo.getOptions(), rowContent: { option in
-                Text(option.title)
-                    .font(.system(size: 14))
-                    .fontWeight(.medium)
+                VideoPropertyOptionView(title: option.title, isSelected: option.isSelected)
+                    .onTapGesture {
+                        viewModel.updateSelectedProcessingSpeedOption(selectedOption: option)
+                    }
                 
             })
             .listStyle(PlainListStyle())
@@ -32,6 +36,6 @@ struct SpeedOptionScreen: View {
 
 struct SpeedOptionScreen_Previews: PreviewProvider {
     static var previews: some View {
-        SpeedOptionScreen()
+        SpeedOptionScreen(viewModel: FastCompressionViewModel())
     }
 }

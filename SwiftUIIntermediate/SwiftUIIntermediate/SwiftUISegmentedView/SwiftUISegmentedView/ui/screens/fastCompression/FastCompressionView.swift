@@ -39,16 +39,16 @@ struct FastCompressionView: View {
         }
         .navigationBarBackButtonHidden(true)
         .sheet(isPresented: $viewModel.showFormatOptions, content: {
-            FormatOptionScreen()
+            FormatOptionScreen(viewModel: viewModel)
         })
         .sheet(isPresented: $viewModel.showCodecOptions, content: {
-            CodecOptionScreen()
+            CodecOptionScreen(viewModel: viewModel)
         })
         .sheet(isPresented: $viewModel.showSpeedOptions, content: {
-            SpeedOptionScreen()
+            SpeedOptionScreen(viewModel: viewModel)
         })
         .sheet(isPresented: $viewModel.showAdjustVolumeOption, content: {
-            AdjustVolumeScreen(showSheet: $viewModel.showAdjustVolumeOption)
+            AdjustVolumeScreen(showSheet: $viewModel.showAdjustVolumeOption,viewModel: viewModel)
         })
         
     }

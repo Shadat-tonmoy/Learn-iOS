@@ -18,6 +18,11 @@ class FastCompressionViewModel : ObservableObject {
     
     @Published var videoPropertyOption = Values.NONE
     
+    @Published var selectedFormat : VideoFormatOption = VideoFormatOptionRepo.getDefaultOption()
+    @Published var selectedCodec : VideoCodecOption = VideoCodecOptionRepo.getDefaultOption()
+    @Published var selectedSpeed : ProcessingSpeedOption = ProcessingSpeedOptionRepo.getDefaultOption()
+    @Published var volumePercentage = 100
+    
     var tabs : [String] = ["Quick", "Resolution", "Quality"]
     
     
@@ -25,17 +30,47 @@ class FastCompressionViewModel : ObservableObject {
         return QuickCompressionOptionRepo.options
     }
     
-    func getResolutionCompressionOptions() -> [ResolutionCompressionOption] {
-        return ResolutionOptionRepo.getOptions()
-    }
-    
     func updateQuickCompressionSelectedOption(selectedOption : QuickCompressOption) {
         QuickCompressionOptionRepo.updateSelectedOption(selectedOption: selectedOption)
         objectWillChange.send()
     }
     
+    func getResolutionCompressionOptions() -> [ResolutionCompressionOption] {
+        return ResolutionOptionRepo.getOptions()
+    }
+    
     func updateResolutionCompressionSelectedOption(selectedOption : ResolutionCompressionOption) {
         ResolutionOptionRepo.updateSelectedOption(selectedOption: selectedOption)
+        objectWillChange.send()
+    }
+    
+    func getFormatOptions() -> [VideoFormatOption] {
+        return VideoFormatOptionRepo.getOptions()
+    }
+    
+    func updateSelectedFormat(selectedOption : VideoFormatOption) {
+        VideoFormatOptionRepo.updateSelectedOption(selectedOption: selectedOption)
+        selectedFormat = selectedOption
+        objectWillChange.send()
+    }
+    
+    func getCodecOptions() -> [VideoCodecOption] {
+        return VideoCodecOptionRepo.getOptions()
+    }
+    
+    func updateSelectedCodecOption(selectedOption : VideoCodecOption) {
+        VideoCodecOptionRepo.updateSelectedOption(selectedOption: selectedOption)
+        selectedCodec = selectedOption
+        objectWillChange.send()
+    }
+    
+    func getProcessingSpeedOptions() -> [ProcessingSpeedOption] {
+        return ProcessingSpeedOptionRepo.getOptions()
+    }
+    
+    func updateSelectedProcessingSpeedOption(selectedOption : ProcessingSpeedOption) {
+        ProcessingSpeedOptionRepo.updateSelectedOption(selectedOption: selectedOption)
+        selectedSpeed = selectedOption
         objectWillChange.send()
     }
     
@@ -56,6 +91,22 @@ class FastCompressionViewModel : ObservableObject {
         showFormatOptions = videoPropertyOption == Values.FORMAT_OPTIONS
         showCodecOptions = videoPropertyOption == Values.CODEC_OPTIONS
         showSpeedOptions = videoPropertyOption == Values.SPEED_OPTIONS
+    }
+    
+    func hideFormatOptions() {
+        showFormatOptions = false
+    }
+    
+    func hideCodecOptions() {
+        showCodecOptions = false
+    }
+    
+    func hideSpeedOptions() {
+        showSpeedOptions = false
+    }
+    
+    func hideVolumeOptions() {
+        showAdjustVolumeOption = false
     }
     
 }

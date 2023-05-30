@@ -18,4 +18,14 @@ class VideoCodecOptionRepo {
     static func getOptions() -> [VideoCodecOption] {
         return options
     }
+    
+    static func getDefaultOption() -> VideoCodecOption {
+        return options[0]
+    }
+    
+    static func updateSelectedOption(selectedOption : VideoCodecOption) {
+        options.forEach{ option in
+            option.isSelected = option.id == selectedOption.id
+        }
+    }
 }
