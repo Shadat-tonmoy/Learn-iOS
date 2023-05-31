@@ -21,4 +21,14 @@ class SocialMediaOptionRepo{
         return options
     }
     
+    static func getDefaultOption() -> SocialMediaOption {
+        return options[0]
+    }
+    
+    static func updateSelectedOption(selectedOption : SocialMediaOption){
+        options.forEach{ option in
+            option.isSelected = option.id == selectedOption.id
+        }
+    }
+    
 }

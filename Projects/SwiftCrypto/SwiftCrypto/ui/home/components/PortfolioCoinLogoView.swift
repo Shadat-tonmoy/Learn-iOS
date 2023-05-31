@@ -14,7 +14,7 @@ struct PortfolioCoinLogoView: View {
     var body: some View {
         VStack{
             CoinImageView(coinModel: coin)
-                .frame(width: 50, height: 50)
+                .frame(width: 30, height: 30)
             Text(coin.symbol.uppercased())
                 .font(.headline)
                 .foregroundColor(.theme.accent)
@@ -25,8 +25,8 @@ struct PortfolioCoinLogoView: View {
                 .foregroundColor(.theme.secondaryText)
                 .lineLimit(1)
         }
-        .frame(width : 75)
-        .padding(4)
+        .frame(width : 65)
+        .padding(5)
     }
 }
 

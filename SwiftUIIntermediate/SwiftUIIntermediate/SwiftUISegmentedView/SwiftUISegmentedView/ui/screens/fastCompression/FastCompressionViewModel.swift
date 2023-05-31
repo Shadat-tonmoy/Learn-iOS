@@ -21,6 +21,7 @@ class FastCompressionViewModel : ObservableObject {
     @Published var selectedFormat : VideoFormatOption = VideoFormatOptionRepo.getDefaultOption()
     @Published var selectedCodec : VideoCodecOption = VideoCodecOptionRepo.getDefaultOption()
     @Published var selectedSpeed : ProcessingSpeedOption = ProcessingSpeedOptionRepo.getDefaultOption()
+    @Published var selectedSocialMediaOption : SocialMediaOption = SocialMediaOptionRepo
     @Published var volumePercentage = 100
     
     var tabs : [String] = ["Quick", "Resolution", "Quality"]

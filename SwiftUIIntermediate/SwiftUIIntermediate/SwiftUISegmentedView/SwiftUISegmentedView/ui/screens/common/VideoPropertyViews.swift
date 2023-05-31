@@ -25,6 +25,8 @@ struct VideoPropertyOptionHeaderView : View {
             Text(title)
                 .padding(.leading,8)
             
+            Spacer()
+            
         }
         .padding(.top,15)
         .font(.headline)
@@ -33,7 +35,8 @@ struct VideoPropertyOptionHeaderView : View {
 }
 struct VideoPropertyOptionHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        VideoPropertyOptionView(title: "MP4", isSelected: true)
+//        VideoPropertyOptionView(title: "MP4", isSelected: true)
+        VideoPropertyOptionHeaderView(title: "Adjust Volume", clickCallback: {})
     }
 }
 
