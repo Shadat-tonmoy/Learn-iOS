@@ -19,6 +19,11 @@ class IDs{
     static let QUICK_COMPRESS_MID = 2
     static let QUICK_COMPRESS_HIGH = 3
     
+    static let SOCIAL_MEDIA_WHATSAPP = 1
+    static let SOCIAL_MEDIA_MESSENGER = 2
+    static let SOCIAL_MEDIA_INSTAGRAM = 3
+    static let SOCIAL_MEDIA_GMAIL = 4
+    
     
 }
 

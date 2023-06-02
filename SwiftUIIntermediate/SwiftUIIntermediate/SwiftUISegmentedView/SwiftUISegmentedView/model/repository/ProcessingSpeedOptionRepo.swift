@@ -29,4 +29,10 @@ class ProcessingSpeedOptionRepo {
             option.isSelected = option.id == selectedOption.id
         }
     }
+    
+    static func selectNone(){
+        options.forEach{ option in
+            option.isSelected = false
+        }
+    }
 }

@@ -8,19 +8,36 @@
 import SwiftUI
 
 struct FitToShareWithView: View {
+    
+    @State var viewModel : FastCompressionViewModel
+    
     var body: some View {
         VStack(alignment : .leading){
             Text("Fit To Share With")
                 .font(.headline)
                 .padding(.vertical)
                 .padding(.horizontal, 10)
-                
+            
             ScrollView(.horizontal, showsIndicators: false){
                 HStack{
-                    ForEach(SocialMediaOptionRepo.getOptions()) { item in
+                    ForEach(viewModel.getSocialMediaOptions()) { item in
                         SocialMediaSingleItem(
                             icon: item.icon,
                             title: item.title)
+                        .overlay{
+                            if(item.isSelected){
+                                ZStack{
+                                    RoundedRectangle(cornerRadius: 5)
+                                        .fill(Color.primaryColor.opacity(0.15))
+                                    
+                                    RoundedRectangle(cornerRadius: 5)
+                                        .stroke(Color.primaryColor)
+                                }
+                            }
+                        }
+                        .onTapGesture {
+                            viewModel.updateSelectedSocialMediaOption(selectedOption: item)
+                        }
                     }
                 }
                 
@@ -35,7 +52,7 @@ struct FitToShareWithView: View {
 
 struct FitToShareWithView_Previews: PreviewProvider {
     static var previews: some View {
-        FitToShareWithView()
+        FitToShareWithView(viewModel: FastCompressionViewModel())
     }
 }
 

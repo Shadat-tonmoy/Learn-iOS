@@ -16,7 +16,7 @@ struct QuickCompressionView: View {
             
             QuickCompressionOptionView(viewModel: viewModel)
             
-            FitToShareWithView()
+            FitToShareWithView(viewModel: viewModel)
             
         }
     }
@@ -42,6 +42,10 @@ struct QuickCompressionOptionView: View {
             }
             .background(getCardBackground())
             .padding(.horizontal,10)
+            
+            CompressToFileSizeView()
+                .background(getCardBackground())
+                .padding(.horizontal,10)
         }
         
     }
@@ -89,5 +93,22 @@ struct QuickCompressionOptionItemView: View {
             optionClickListener(option)
         }
         
+    }
+}
+
+
+struct CompressToFileSizeView : View {
+    
+    var body: some View {
+    
+        VStack(alignment:.leading) {
+            Text("Fit To File Size")
+                .font(.headline)
+            Text("Slower Compression")
+                .font(.caption)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(.horizontal, 10)
+        .padding(.vertical, 10)
     }
 }

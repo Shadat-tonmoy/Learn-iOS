@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Combine
+import CoreData
 
 class HomeViewModel : ObservableObject {
     
@@ -25,6 +26,7 @@ class HomeViewModel : ObservableObject {
     
     
     var coinDataFetchingTask : CoinDataFetchingTask = CoinDataFetchingTask()
+    var portfolioDataFetchingTask : PortfolioDataFetchingTask = PortfolioDataFetchingTask()
     
     init(){
         initSubscriber()
@@ -53,6 +55,25 @@ class HomeViewModel : ObservableObject {
                 
             })
             .store(in: &cancellables)
+        
+        $allCoins
+            .combineLatest(portfolioDataFetchingTask.$savedEntities)
+            .map{ (coinModels, portfolioEntities) -> [CoinModel] in
+                coinModels.compactMap { (coin) -> CoinModel? in
+                    guard let entity = portfolioEntities.first(where: { (portfolioEntity : PortfolioEntity) in
+                        coin.id == portfolioEntity.id
+                    }) else {
+                        return nil
+                    }
+                    return coin.updateHoldings(amount: entity.quantity)
+                }
+                
+            }
+            .sink { [weak self] (coinModels : [CoinModel]) in
+                self?.portfolioCoins = coinModels
+            }
+            .store(in: &cancellables)
+            
     }
     
     private func convertMarketDataToStats(marketData : MarketDataModel?) -> [StatisticModel] {
@@ -88,5 +109,9 @@ class HomeViewModel : ObservableObject {
         
         return filteredList
         
+    }
+    
+    func updatePortfolio(coinModel : CoinModel, amount : Double){
+        portfolioDataFetchingTask.updatePortfolio(coin: coinModel, amount: amount)
     }
 }

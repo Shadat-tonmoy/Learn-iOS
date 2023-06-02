@@ -21,7 +21,7 @@ class FastCompressionViewModel : ObservableObject {
     @Published var selectedFormat : VideoFormatOption = VideoFormatOptionRepo.getDefaultOption()
     @Published var selectedCodec : VideoCodecOption = VideoCodecOptionRepo.getDefaultOption()
     @Published var selectedSpeed : ProcessingSpeedOption = ProcessingSpeedOptionRepo.getDefaultOption()
-    @Published var selectedSocialMediaOption : SocialMediaOption = SocialMediaOptionRepo
+    @Published var selectedSocialMediaOption : SocialMediaOption = SocialMediaOptionRepo.getDefaultOption()
     @Published var volumePercentage = 100
     
     var tabs : [String] = ["Quick", "Resolution", "Quality"]
@@ -72,6 +72,17 @@ class FastCompressionViewModel : ObservableObject {
     func updateSelectedProcessingSpeedOption(selectedOption : ProcessingSpeedOption) {
         ProcessingSpeedOptionRepo.updateSelectedOption(selectedOption: selectedOption)
         selectedSpeed = selectedOption
+        objectWillChange.send()
+    }
+    
+    func getSocialMediaOptions() -> [SocialMediaOption] {
+        return SocialMediaOptionRepo.getOptions()
+    }
+    
+    func updateSelectedSocialMediaOption(selectedOption : SocialMediaOption) {
+        SocialMediaOptionRepo.updateSelectedOption(selectedOption: selectedOption)
+        selectedSocialMediaOption = selectedOption
+        QuickCompressionOptionRepo.selectNone()
         objectWillChange.send()
     }
     

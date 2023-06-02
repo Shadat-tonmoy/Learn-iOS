@@ -37,21 +37,20 @@ class QuickCompressionOptionRepo {
     ]
     
     
-//    func getOptions() -> [QuickCompressOption]{
-//        return options
-//    }
+    static func getOptions() -> [QuickCompressOption]{
+        return options
+    }
     
     static func updateSelectedOption(selectedOption : QuickCompressOption) {
-//        let updatedList = options.map{ option in
-//            QuickCompressOption(id: option.id, title: option.title, description: option.description, resolutionScaleFactor: option.resolutionScaleFactor, bitRateThreshold: option.bitRateThreshold, frameRateThreshold: option.frameRateThreshold, isSelected: option.id == selectedOption.id)
-//            
-//        }
-//        options = updatedList
         options.forEach{ option in
             option.isSelected = option.id == selectedOption.id
             
         }
-//        objectWillChange.send()
-        
+    }
+    
+    static func selectNone(){
+        options.forEach{ option in
+            option.isSelected = false
+        }
     }
 }

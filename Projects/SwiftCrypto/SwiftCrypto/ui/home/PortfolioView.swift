@@ -46,7 +46,7 @@ struct PortfolioView: View {
                 ToolbarItem(placement : .navigationBarTrailing , content: {
                     Text("Save".uppercased())
                         .onTapGesture {
-                            UIApplication.shared.endEditing()
+                            saveButtonPressed()
                             
                         }
                 })
@@ -59,6 +59,17 @@ struct PortfolioView: View {
             })
         }
         
+    }
+    
+    private func saveButtonPressed(){
+        UIApplication.shared.endEditing()
+        guard
+            let coinToUpdate = selectedCoin,
+            let amount = Double(quantityText) else {
+            return
+        }
+        
+        homeViewModel.updatePortfolio(coinModel: coinToUpdate, amount: amount)
     }
 }
 
