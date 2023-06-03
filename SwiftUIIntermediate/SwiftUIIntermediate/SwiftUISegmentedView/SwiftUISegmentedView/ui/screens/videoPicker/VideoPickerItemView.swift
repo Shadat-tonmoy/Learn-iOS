@@ -9,7 +9,7 @@ import SwiftUI
 
 struct VideoPickerItemView: View {
     
-    let videoFile : VideoFile
+    @StateObject var videoFile : VideoFile
     
     var body: some View {
         GeometryReader { proxy in
@@ -22,28 +22,47 @@ struct VideoPickerItemView: View {
                         height: proxy.size.width
                     )
                     .clipped()
-                VStack {
-                    Spacer()
-                    HStack{
-                        VStack(alignment: .trailing){
-                            
-                            Text(videoFile.getFileResolution())
-                                .font(.system(size: 10))
-                            
-                            Text(videoFile.getFileSize())
-                                .font(.system(size: 10))
-                        }
+                VStack(spacing : 0) {
+                    if videoFile.selected {
+                        SelectionOverlay
+                    } else {
+                        Spacer()
                     }
-                    .frame(maxWidth: .infinity, alignment: .trailing)
-                    .padding(5)
-                    .background(.black.opacity(0.75))
+                    
+                    VideoInfoView
                 }
-                
-                
             }
+            
         }
         // We'll also make sure that the photo will
         // be square
         .aspectRatio(1, contentMode: .fit)
+    }
+    
+    private var SelectionOverlay : some View {
+        return ZStack {
+            Image(systemName: "checkmark.circle.fill")
+                .foregroundColor(.primaryColor)
+                .font(.headline)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(.black.opacity(0.75))
+    }
+    
+    private var VideoInfoView : some View {
+        
+        return HStack{
+            VStack(alignment: .trailing){
+                
+                Text(videoFile.getFileResolution())
+                    .font(.system(size: 10))
+                
+                Text(videoFile.getFileSize())
+                    .font(.system(size: 10))
+            }
+        }
+        .frame(maxWidth: .infinity, alignment: .trailing)
+        .padding(5)
+        .background(.black.opacity(0.75))
     }
 }

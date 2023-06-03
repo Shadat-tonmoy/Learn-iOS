@@ -11,7 +11,7 @@ import UIKit
 import Photos
 
 
-class VideoFile : Identifiable, Codable {
+class VideoFile : Identifiable, ObservableObject {
     
     let id : String
     let title : String
@@ -21,8 +21,9 @@ class VideoFile : Identifiable, Codable {
     let createdAt : Double
     let modifiedAt : Double
     let fileSize : Int64
+    @Published var selected : Bool = false
     
-    init(id: String, title: String, width: Int, height: Int, duration: Double, createdAt: Double, modifiedAt: Double, fileSize: Int64) {
+    init(id: String, title: String, width: Int, height: Int, duration: Double, createdAt: Double, modifiedAt: Double, fileSize: Int64, selected : Bool = false) {
         self.id = id
         self.title = title
         self.width = width
@@ -31,34 +32,29 @@ class VideoFile : Identifiable, Codable {
         self.createdAt = createdAt
         self.modifiedAt = modifiedAt
         self.fileSize = fileSize
+        self.selected = selected
     }
     
-    
     func json() -> String? {
-        do {
-            let jsonData = try JSONEncoder().encode(self)
-            let json = String(data: jsonData, encoding: String.Encoding.utf8)
-            return json
-        } catch let error {
-            print("Error encoding data. Error : \(error)")
-        }
+//        do {
+//            let jsonData = try JSONEncoder().encode(self)
+//            let json = String(data: jsonData, encoding: String.Encoding.utf8)
+//            return json
+//        } catch let error {
+//            print("Error encoding data. Error : \(error)")
+//        }
         return nil
     }
     
     func getFileSize() -> String {
-        return converByteToHumanReadable(fileSize)
+        return Utils.getHumanRedableFileSize(fileSize)
     }
     
     func getFileResolution() -> String {
         return "\(width)x\(height)"
     }
     
-    private func converByteToHumanReadable(_ bytes:Int64) -> String {
-        let formatter:ByteCountFormatter = ByteCountFormatter()
-        formatter.countStyle = .binary
-        
-        return formatter.string(fromByteCount: Int64(bytes))
-    }
+    
     
     func getVideoThumbnail() -> UIImage {
         let asset = PHAsset.fetchAssets(withLocalIdentifiers: [id], options: nil).firstObject
@@ -75,6 +71,10 @@ class VideoFile : Identifiable, Codable {
             print("getVideoThumbnail, asset is null for localId : \(id)")
             return UIImage(systemName: "photo")!
         }
+    }
+    
+    func toggleSelection() {
+        selected.toggle()
     }
     
 }

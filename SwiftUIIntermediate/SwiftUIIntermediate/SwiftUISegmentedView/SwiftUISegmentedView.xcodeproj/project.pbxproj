@@ -44,6 +44,8 @@
 		59E74B1F2A0BF1430015538F /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E74B1E2A0BF1430015538F /* HomeScreen.swift */; };
 		59F024AB2A13CBE100855848 /* VideoLibraryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F024AA2A13CBE100855848 /* VideoLibraryService.swift */; };
 		59F451C12A2B94F0001AF8B0 /* VideoPickerItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F451C02A2B94F0001AF8B0 /* VideoPickerItemView.swift */; };
+		59F451C52A2BA373001AF8B0 /* VideoPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F451C42A2BA373001AF8B0 /* VideoPickerViewModel.swift */; };
+		59F451C82A2BA57D001AF8B0 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F451C72A2BA57D001AF8B0 /* Utils.swift */; };
 		59F78A4A2A0D443E00EBC0F1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F78A492A0D443E00EBC0F1 /* Extensions.swift */; };
 		59F78A4C2A0D45C800EBC0F1 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F78A4B2A0D45C800EBC0F1 /* AppColors.swift */; };
 		59F78A4F2A0D4F3B00EBC0F1 /* FastCompressionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F78A4E2A0D4F3B00EBC0F1 /* FastCompressionView.swift */; };
@@ -94,6 +96,8 @@
 		59E74B1E2A0BF1430015538F /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		59F024AA2A13CBE100855848 /* VideoLibraryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoLibraryService.swift; sourceTree = "<group>"; };
 		59F451C02A2B94F0001AF8B0 /* VideoPickerItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPickerItemView.swift; sourceTree = "<group>"; };
+		59F451C42A2BA373001AF8B0 /* VideoPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPickerViewModel.swift; sourceTree = "<group>"; };
+		59F451C72A2BA57D001AF8B0 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		59F78A492A0D443E00EBC0F1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		59F78A4B2A0D45C800EBC0F1 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		59F78A4E2A0D4F3B00EBC0F1 /* FastCompressionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastCompressionView.swift; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 		591C9A4B2A0A94E000420B24 /* SwiftUISegmentedView */ = {
 			isa = PBXGroup;
 			children = (
+				59F451C62A2BA570001AF8B0 /* helpers */,
 				5923A3742A16849F00023734 /* Info.plist */,
 				5923A36F2A16764900023734 /* constants */,
 				59975A442A152A870090F0A6 /* model */,
@@ -228,6 +233,7 @@
 			children = (
 				59DCA8F12A17CFB200160A28 /* VideoPickerScreen.swift */,
 				59F451C02A2B94F0001AF8B0 /* VideoPickerItemView.swift */,
+				59F451C42A2BA373001AF8B0 /* VideoPickerViewModel.swift */,
 			);
 			path = videoPicker;
 			sourceTree = "<group>";
@@ -260,6 +266,14 @@
 				59F024AA2A13CBE100855848 /* VideoLibraryService.swift */,
 			);
 			path = services;
+			sourceTree = "<group>";
+		};
+		59F451C62A2BA570001AF8B0 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				59F451C72A2BA57D001AF8B0 /* Utils.swift */,
+			);
+			path = helpers;
 			sourceTree = "<group>";
 		};
 		59F78A482A0D442F00EBC0F1 /* common */ = {
@@ -404,11 +418,13 @@
 				59F78A5D2A0D584300EBC0F1 /* HomeScreenNavbar.swift in Sources */,
 				59AC77722A127EAE00D612A5 /* HomeScreenComponents.swift in Sources */,
 				59B5C63C2A231DA40089A267 /* SpeedOptionScreen.swift in Sources */,
+				59F451C52A2BA373001AF8B0 /* VideoPickerViewModel.swift in Sources */,
 				59F78A582A0D4FB500EBC0F1 /* ResolutionCompressionView.swift in Sources */,
 				59F78A4F2A0D4F3B00EBC0F1 /* FastCompressionView.swift in Sources */,
 				59B5C6402A238F0D0089A267 /* FastCompressionTabView.swift in Sources */,
 				59975A412A151EEB0090F0A6 /* Styles.swift in Sources */,
 				59B5C63E2A237B4B0089A267 /* AdjustVolumeScreen.swift in Sources */,
+				59F451C82A2BA57D001AF8B0 /* Utils.swift in Sources */,
 				5923A36A2A166D8900023734 /* TrimVideoButtonView.swift in Sources */,
 				59B5C63A2A231D980089A267 /* CodecOptionScreen.swift in Sources */,
 				596082DA2A2B017B00052A58 /* FitToFileSizeView.swift in Sources */,
