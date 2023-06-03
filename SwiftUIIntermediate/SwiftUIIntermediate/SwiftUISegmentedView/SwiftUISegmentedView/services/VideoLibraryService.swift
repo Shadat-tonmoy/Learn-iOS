@@ -14,14 +14,15 @@ class VideoLibraryService : ObservableObject{
     
     var authorizationStatus : PHAuthorizationStatus = .notDetermined
     
-    @Published var results = PHFetchResultCollection(fetchResult: .init())
+    var results = PHFetchResultCollection(fetchResult: .init())
+    @Published var videoFiles : [VideoFile] = []
     
     var imageCachingManager = PHCachingImageManager()
     
     func requestAuthorization() {
         /// This is the code that does the permission requests
         PHPhotoLibrary.requestAuthorization { status in
-//            print("requestAuthorization : status : \(status)")
+            /// print("requestAuthorization : status : \(status)")
             self.authorizationStatus = status
             /// We can determine permission granted by the status
             switch status {
@@ -29,13 +30,13 @@ class VideoLibraryService : ObservableObject{
                 /// This won't be the photos themselves but the
                 /// references only.
             case .authorized, .limited:
-//                print("Will fetch all photos, self : \(self)")
-                self.fetchAllPhotos()
+                /// print("Will fetch all photos, self : \(self)")
+                self.fetchAllVideos()
                 
                 /// For denied response, we should show an error
             case .denied, .notDetermined, .restricted:
                 print("Authorization denied")
-                //                handleError?(.restrictedAccess)
+                /// handleError?(.restrictedAccess)
                 
             @unknown default:
                 break
@@ -44,8 +45,7 @@ class VideoLibraryService : ObservableObject{
     }
     
     
-    func fetchAllPhotos() {
-//        print("Fetch All Photos Called!")
+    func fetchAllVideos() {
         imageCachingManager.allowsCachingHighQualityImages = false
         let fetchOptions = PHFetchOptions()
         fetchOptions.includeHiddenAssets = false
@@ -55,20 +55,23 @@ class VideoLibraryService : ObservableObject{
         
         DispatchQueue.main.async {
             self.results.fetchResult = PHAsset.fetchAssets(with: .video, options: fetchOptions)
-//            let totalVideo = self.results.fetchResult.count
-//            for i in 0..<totalVideo {
-//                let video = self.results.fetchResult[i]
-//                print("Video : \(video)")
-//                self.getAssetFileSize(asset: video)
-//
-//            }
-//            print("Total found image : \(self.results.fetchResult.count)")
             
-            
+            let totalVideo = self.results.fetchResult.count
+            var list : [VideoFile] = []
+            for i in 0..<totalVideo {
+                let video = self.results.fetchResult[i]
+                let localId = video.localIdentifier
+                let fileSize = self.getAssetFileSize(asset: video)
+                let fileName = self.getAssetFileName(asset: video)
+                let videoFile = VideoFile(id: localId, title: fileName, width: video.pixelWidth, height: video.pixelHeight, duration: video.duration, createdAt: video.creationDate?.timeIntervalSince1970.magnitude ?? 0, modifiedAt: video.modificationDate?.timeIntervalSince1970.magnitude ?? 0, fileSize: fileSize)
+                list.append(videoFile)
+                
+            }
+            self.videoFiles = list
         }
     }
     
-    func getAssetFileSize(asset : PHAsset) -> String{
+    private func getAssetFileSize(asset : PHAsset) -> Int64{
         let resources = PHAssetResource.assetResources(for: asset) // your PHAsset
         
         var sizeOnDisk: Int64? = 0
@@ -76,30 +79,25 @@ class VideoLibraryService : ObservableObject{
         if let resource = resources.first {
             let unsignedInt64 = resource.value(forKey: "fileSize") as? CLong
             sizeOnDisk = Int64(bitPattern: UInt64(unsignedInt64!))
-            if let size = sizeOnDisk {
-                let humanReadableSize = converByteToHumanReadable(size)
-                return humanReadableSize
-            }
+            return sizeOnDisk ?? 0
             
         }
         
-        return ""
+        return 0
     }
     
-    func getVideoDurationString(asset : PHAsset) -> String{
+    private func getAssetFileName(asset : PHAsset) -> String {
+        let resources = PHAssetResource.assetResources(for: asset) // your PHAsset
+        return resources.first?.originalFilename ?? ""
+    }
+    
+    private func getVideoDurationString(asset : PHAsset) -> String{
         print(asset.duration)
         return "\(asset.pixelWidth)x\(asset.pixelHeight)"
     }
     
     
-    func converByteToHumanReadable(_ bytes:Int64) -> String {
-        let formatter:ByteCountFormatter = ByteCountFormatter()
-        formatter.countStyle = .binary
-        
-        return formatter.string(fromByteCount: Int64(bytes))
-    }
-    
-    func getAssetThumbnail(asset: PHAsset) -> UIImage {
+    private func getAssetThumbnail(asset: PHAsset) -> UIImage {
         let manager = PHImageManager.default()
         let option = PHImageRequestOptions()
         var thumbnail = UIImage()
@@ -107,9 +105,11 @@ class VideoLibraryService : ObservableObject{
         manager.requestImage(for: asset, targetSize: CGSize(width: 300, height: 300), contentMode: .aspectFit, options: option, resultHandler: {(result, info)->Void in
             thumbnail = result!
         })
-//        print("Returning thumb for : \(asset.localIdentifier)")
         return thumbnail
     }
+    
+    
+    
 }
 
 

@@ -6,4 +6,75 @@
 //
 
 import Foundation
+import SwiftUI
+import UIKit
+import Photos
 
+
+class VideoFile : Identifiable, Codable {
+    
+    let id : String
+    let title : String
+    let width : Int
+    let height : Int
+    let duration : Double
+    let createdAt : Double
+    let modifiedAt : Double
+    let fileSize : Int64
+    
+    init(id: String, title: String, width: Int, height: Int, duration: Double, createdAt: Double, modifiedAt: Double, fileSize: Int64) {
+        self.id = id
+        self.title = title
+        self.width = width
+        self.height = height
+        self.duration = duration
+        self.createdAt = createdAt
+        self.modifiedAt = modifiedAt
+        self.fileSize = fileSize
+    }
+    
+    
+    func json() -> String? {
+        do {
+            let jsonData = try JSONEncoder().encode(self)
+            let json = String(data: jsonData, encoding: String.Encoding.utf8)
+            return json
+        } catch let error {
+            print("Error encoding data. Error : \(error)")
+        }
+        return nil
+    }
+    
+    func getFileSize() -> String {
+        return converByteToHumanReadable(fileSize)
+    }
+    
+    func getFileResolution() -> String {
+        return "\(width)x\(height)"
+    }
+    
+    private func converByteToHumanReadable(_ bytes:Int64) -> String {
+        let formatter:ByteCountFormatter = ByteCountFormatter()
+        formatter.countStyle = .binary
+        
+        return formatter.string(fromByteCount: Int64(bytes))
+    }
+    
+    func getVideoThumbnail() -> UIImage {
+        let asset = PHAsset.fetchAssets(withLocalIdentifiers: [id], options: nil).firstObject
+        if let videoFile = asset {
+            let manager = PHImageManager.default()
+            let option = PHImageRequestOptions()
+            var thumbnail = UIImage()
+            option.isSynchronous = true
+            manager.requestImage(for: videoFile, targetSize: CGSize(width: 300, height: 300), contentMode: .aspectFit, options: option, resultHandler: {(result, info)->Void in
+                thumbnail = result!
+            })
+            return thumbnail
+        } else {
+            print("getVideoThumbnail, asset is null for localId : \(id)")
+            return UIImage(systemName: "photo")!
+        }
+    }
+    
+}
