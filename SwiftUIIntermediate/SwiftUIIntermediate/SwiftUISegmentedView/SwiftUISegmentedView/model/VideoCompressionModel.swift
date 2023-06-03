@@ -98,3 +98,17 @@ class ProcessingSpeedOption : Identifiable {
     }
     
 }
+
+class CommonFileSize : Identifiable {
+    var id : Int
+    var title : String
+    var valueInMB : Double
+    
+    init(id: Int, title: String, valueInMB: Double) {
+        self.id = id
+        self.title = title
+        self.valueInMB = valueInMB
+    }
+    
+    
+}

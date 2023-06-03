@@ -9,13 +9,13 @@ import SwiftUI
 
 struct FitToShareWithView: View {
     
-    @State var viewModel : FastCompressionViewModel
+    @StateObject var viewModel : FastCompressionViewModel
     
     var body: some View {
         VStack(alignment : .leading){
             Text("Fit To Share With")
                 .font(.headline)
-                .padding(.vertical)
+                .padding(.top)
                 .padding(.horizontal, 10)
             
             ScrollView(.horizontal, showsIndicators: false){
@@ -72,6 +72,6 @@ struct SocialMediaSingleItem: View {
                 .font(.subheadline)
                 .fontWeight(.semibold)
         }
-        .padding(.horizontal)
+        .padding()
     }
 }

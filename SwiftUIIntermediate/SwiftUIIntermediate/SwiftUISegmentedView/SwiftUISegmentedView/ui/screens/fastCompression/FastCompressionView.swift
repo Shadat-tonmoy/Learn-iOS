@@ -21,20 +21,24 @@ struct FastCompressionView: View {
             
             FastCompressionTabView(viewModel: viewModel)
                       
-            CompressionPropertyView(optionCallback: propertyOptionCallback)
-            
-            getSelectedTabView()
-                .transition(.move(edge: .trailing))
-            
-            TrimVideoButtonView()
-            
-            AdjustVolumeButtonView()
-                .onTapGesture {
-                    viewModel.showAdjustVolumeOption = true
+            ScrollView{
+                VStack(spacing : 0) {
+                    CompressionPropertyView(optionCallback: propertyOptionCallback)
+                    
+                    getSelectedTabView()
+                        .transition(.move(edge: .trailing))
+                    
+                    TrimVideoButtonView()
+                    
+                    AdjustVolumeButtonView()
+                        .onTapGesture {
+                            viewModel.showAdjustVolumeOption = true
+                        }
+                    
+                    
+                    Spacer()
                 }
-            
-            
-            Spacer()
+            }
             
         }
         .navigationBarBackButtonHidden(true)

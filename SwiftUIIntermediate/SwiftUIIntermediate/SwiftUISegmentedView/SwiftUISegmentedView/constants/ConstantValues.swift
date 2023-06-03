@@ -24,6 +24,11 @@ class IDs{
     static let SOCIAL_MEDIA_INSTAGRAM = 3
     static let SOCIAL_MEDIA_GMAIL = 4
     
+    static let COMMON_FILE_SIZE_WHATSAPP = 1
+    static let COMMON_FILE_SIZE_GMAIL = 2
+    static let COMMON_FILE_SIZE_HOTMAIL = 3
+    static let COMMON_FILE_SIZE_GMX = 4
+    
     
 }
 

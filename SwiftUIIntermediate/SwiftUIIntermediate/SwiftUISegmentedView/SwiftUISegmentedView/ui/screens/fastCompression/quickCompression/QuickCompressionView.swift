@@ -19,6 +19,9 @@ struct QuickCompressionView: View {
             FitToShareWithView(viewModel: viewModel)
             
         }
+        .sheet(isPresented: $viewModel.showFiteToFIleSizeOption, content: {
+            FitToFileSizeView(viewModel: viewModel)
+        })
     }
 }
 
@@ -46,6 +49,9 @@ struct QuickCompressionOptionView: View {
             CompressToFileSizeView()
                 .background(getCardBackground())
                 .padding(.horizontal,10)
+                .onTapGesture {
+                    viewModel.showFiteToFIleSizeOption.toggle()
+                }
         }
         
     }

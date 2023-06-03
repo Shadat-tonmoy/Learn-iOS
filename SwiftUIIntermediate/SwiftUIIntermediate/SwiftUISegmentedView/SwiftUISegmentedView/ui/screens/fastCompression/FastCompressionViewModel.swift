@@ -15,6 +15,7 @@ class FastCompressionViewModel : ObservableObject {
     @Published var showCodecOptions = false
     @Published var showSpeedOptions = false
     @Published var showAdjustVolumeOption = false
+    @Published var showFiteToFIleSizeOption = false
     
     @Published var videoPropertyOption = Values.NONE
     
@@ -33,6 +34,7 @@ class FastCompressionViewModel : ObservableObject {
     
     func updateQuickCompressionSelectedOption(selectedOption : QuickCompressOption) {
         QuickCompressionOptionRepo.updateSelectedOption(selectedOption: selectedOption)
+        SocialMediaOptionRepo.selectNone()
         objectWillChange.send()
     }
     
@@ -119,6 +121,10 @@ class FastCompressionViewModel : ObservableObject {
     
     func hideVolumeOptions() {
         showAdjustVolumeOption = false
+    }
+    
+    func hideFiteToFileSizeOptions() {
+        showFiteToFIleSizeOption = false
     }
     
 }
