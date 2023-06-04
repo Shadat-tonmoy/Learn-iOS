@@ -27,7 +27,7 @@ struct VideoPickerScreen: View {
                 LazyVGrid(columns: gridItems, content: {
                     ForEach(videoLibraryService.videoFiles, content: { videoFile in
                         
-                        VideoPickerItemView(videoFile: videoFile)
+                        VideoPickerItemView(videoFile: videoFile, clickCallback: videoFileClicked)
                             .onTapGesture {
                                 videoFileClicked(videoFile: videoFile)
                             }
@@ -62,6 +62,10 @@ struct VideoPickerScreen: View {
         return HStack {
             Image(systemName: "xmark")
                 .padding(.leading, 8)
+                .onTapGesture {
+                    clearSelectedVideoList()
+                    
+                }
             
             Text(viewModel.totalSelectionText)
             
@@ -70,6 +74,9 @@ struct VideoPickerScreen: View {
             HStack {
                 Text("Next")
                 Image(systemName: "arrow.right")
+            }
+            .onTapGesture {
+                moveToNextScreenWithSelectedVideos()
             }
             
         }
@@ -81,6 +88,15 @@ struct VideoPickerScreen: View {
             Rectangle()
                 .fill(Color.primaryColor)
         )
+    }
+    
+    private func moveToNextScreenWithSelectedVideos() {
+        print("moveToNextScreenWithSelectedVideos")
+        
+    }
+    
+    private func clearSelectedVideoList() {
+        viewModel.clearSelectedVideos()
     }
 }
 

@@ -10,27 +10,46 @@ import SwiftUI
 struct VideoPickerItemView: View {
     
     @StateObject var videoFile : VideoFile
+    @State private var image : UIImage?
+    let clickCallback : (_ videoFile : VideoFile) -> Void
     
     var body: some View {
         GeometryReader { proxy in
-            ZStack {
-                Image(uiImage: videoFile.getVideoThumbnail())
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(
-                        width: proxy.size.width,
-                        height: proxy.size.width
-                    )
-                    .clipped()
-                VStack(spacing : 0) {
-                    if videoFile.selected {
-                        SelectionOverlay
-                    } else {
-                        Spacer()
+            ZStack{
+                if let videoThumb = image {
+                    ZStack {
+                        Image(uiImage: videoThumb)
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(
+                                width: proxy.size.width,
+                                height: proxy.size.height
+                            )
+                            .clipped()
+                        VStack(spacing : 0) {
+                            if videoFile.selected {
+                                SelectionOverlay
+                            } else {
+                                Spacer()
+                            }
+                            
+                            VideoInfoView
+                        }
+                        
                     }
-                    
-                    VideoInfoView
+                } else {
+                    ProgressView()
+                        .frame(
+                            width: proxy.size.width,
+                            height: proxy.size.height)
                 }
+                
+            }
+            .task {
+                image = await videoFile.getVideoThumbnailAsync()
+            }
+            .onDisappear {
+                image = nil
             }
             
         }
@@ -52,17 +71,20 @@ struct VideoPickerItemView: View {
     private var VideoInfoView : some View {
         
         return HStack{
+            
             VStack(alignment: .trailing){
                 
                 Text(videoFile.getFileResolution())
-                    .font(.system(size: 10))
                 
                 Text(videoFile.getFileSize())
-                    .font(.system(size: 10))
+                
             }
         }
+        .font(.system(size: 10))
         .frame(maxWidth: .infinity, alignment: .trailing)
         .padding(5)
         .background(.black.opacity(0.75))
     }
+    
+    
 }

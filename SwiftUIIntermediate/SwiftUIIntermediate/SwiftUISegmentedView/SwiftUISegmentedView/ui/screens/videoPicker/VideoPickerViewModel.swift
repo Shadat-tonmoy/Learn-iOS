@@ -38,5 +38,12 @@ class VideoPickerViewModel : ObservableObject {
         return selectedVideos.count > 0
     }
     
+    func clearSelectedVideos() {
+        selectedVideos.forEach{ videoFile in
+            videoFile.selected  = false
+        }
+        selectedVideos = []
+    }
+    
     
 }

@@ -73,6 +73,10 @@ class VideoFile : Identifiable, ObservableObject {
         }
     }
     
+    func getVideoThumbnailAsync() async -> UIImage? {
+        return getVideoThumbnail()
+    }
+    
     func toggleSelection() {
         selected.toggle()
     }
