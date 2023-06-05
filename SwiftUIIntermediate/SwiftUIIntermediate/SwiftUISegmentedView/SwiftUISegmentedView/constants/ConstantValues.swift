@@ -43,6 +43,11 @@ class Values{
     static let FORMAT_OPTIONS = 1
     static let CODEC_OPTIONS = 2
     static let SPEED_OPTIONS = 3
+    static let FAST_COMPRESSION = 1
+    static let ADVANCE_COMPRESSION = 2
+    static let CONVERT_FORMAT = 3
+    static let VIDEO_TO_AUDIO = 4
+    static let TRIM_VIDEO = 5
 }
 
 class Formats{
@@ -80,4 +85,21 @@ class Codecs{
 class Speeds{
     static let SPEED_NORMAL = 1
     static let SPEED_FAST = 2
+}
+
+class Tags {
+    static let SELECTED_VIDEOS = "selected_videos"
+}
+
+
+class Navigation : ObservableObject {
+    @Published var paths : [Int] = []
+    
+    func addPath(pathValue : Int) {
+        paths.append(pathValue)
+    }
+    
+    func clearPath() {
+        paths = []
+    }
 }

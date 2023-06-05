@@ -7,7 +7,7 @@
 
 import Foundation
 
-class QuickCompressOption : Identifiable, ObservableObject {
+class QuickCompressOption : Identifiable {
     
     var id: Int
     var title: String

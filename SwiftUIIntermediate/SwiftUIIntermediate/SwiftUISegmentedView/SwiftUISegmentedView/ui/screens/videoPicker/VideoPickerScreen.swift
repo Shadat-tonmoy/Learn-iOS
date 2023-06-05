@@ -11,6 +11,9 @@ struct VideoPickerScreen: View {
     
     @StateObject private var videoLibraryService = VideoLibraryService()
     @StateObject private var viewModel = VideoPickerViewModel()
+    let purpose : Int
+    @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var navigation : Navigation
     
     let gridItems : [GridItem] = [
         GridItem(.flexible(),alignment: .leading),
@@ -71,13 +74,18 @@ struct VideoPickerScreen: View {
             
             Spacer()
             
-            HStack {
-                Text("Next")
-                Image(systemName: "arrow.right")
+            NavigationLink(destination : getNextScreenView()) {
+                HStack {
+                    Text("Next")
+                    Image(systemName: "arrow.right")
+                }
             }
-            .onTapGesture {
-                moveToNextScreenWithSelectedVideos()
-            }
+            .isDetailLink(true)
+            .simultaneousGesture(TapGesture().onEnded {
+                print("Leaving Screen")
+                viewModel.cacheSelectedVideoList()
+                navigation.clearPath()
+            })
             
         }
         .foregroundColor(.white)
@@ -88,6 +96,15 @@ struct VideoPickerScreen: View {
             Rectangle()
                 .fill(Color.primaryColor)
         )
+    }
+    
+    private func getNextScreenView() -> some View {
+        switch purpose {
+        case Values.FAST_COMPRESSION :
+            return FastCompressionView()
+        default:
+            return FastCompressionView()
+        }
     }
     
     private func moveToNextScreenWithSelectedVideos() {
@@ -102,6 +119,6 @@ struct VideoPickerScreen: View {
 
 struct VideoPickerScreen_Previews: PreviewProvider {
     static var previews: some View {
-        VideoPickerScreen()
+        VideoPickerScreen(purpose: Values.NONE)
     }
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct VideoPickerItemView: View {
     
-    @StateObject var videoFile : VideoFile
+    var videoFile : VideoFile
     @State private var image : UIImage?
     let clickCallback : (_ videoFile : VideoFile) -> Void
     

@@ -11,7 +11,7 @@ import UIKit
 import Photos
 
 
-class VideoFile : Identifiable, ObservableObject {
+class VideoFile : Identifiable, Codable {
     
     let id : String
     let title : String
@@ -21,7 +21,7 @@ class VideoFile : Identifiable, ObservableObject {
     let createdAt : Double
     let modifiedAt : Double
     let fileSize : Int64
-    @Published var selected : Bool = false
+    var selected : Bool = false
     
     init(id: String, title: String, width: Int, height: Int, duration: Double, createdAt: Double, modifiedAt: Double, fileSize: Int64, selected : Bool = false) {
         self.id = id
@@ -36,13 +36,13 @@ class VideoFile : Identifiable, ObservableObject {
     }
     
     func json() -> String? {
-//        do {
-//            let jsonData = try JSONEncoder().encode(self)
-//            let json = String(data: jsonData, encoding: String.Encoding.utf8)
-//            return json
-//        } catch let error {
-//            print("Error encoding data. Error : \(error)")
-//        }
+        do {
+            let jsonData = try JSONEncoder().encode(self)
+            let json = String(data: jsonData, encoding: String.Encoding.utf8)
+            return json
+        } catch let error {
+            print("Error encoding data. Error : \(error)")
+        }
         return nil
     }
     
@@ -79,6 +79,18 @@ class VideoFile : Identifiable, ObservableObject {
     
     func toggleSelection() {
         selected.toggle()
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case title = "title"
+        case width = "width"
+        case height = "height"
+        case duration = "duration"
+        case createdAt = "createdAt"
+        case modifiedAt = "modifiedAt"
+        case fileSize = "fileSize"
+        case selected = "selected"
     }
     
 }

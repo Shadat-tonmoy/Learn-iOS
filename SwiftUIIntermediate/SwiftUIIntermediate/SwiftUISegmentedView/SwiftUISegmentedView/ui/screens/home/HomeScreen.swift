@@ -11,14 +11,10 @@ import PhotosUI
 struct HomeScreen: View {
     
     @StateObject var viewModel : HomeScreenViewModel = HomeScreenViewModel()
-    @StateObject var videoLibrary : VideoLibraryService = VideoLibraryService()
-    
-    init(){
-        videoLibrary.requestAuthorization()
-    }
+    @StateObject var navigation : Navigation = Navigation()
     
     var body: some View {
-        NavigationStack {
+        NavigationStack(path : $navigation.paths) {
             VStack(alignment: .leading, spacing: 0) {
                 
                 HomeScreenNavbar()
@@ -29,20 +25,25 @@ struct HomeScreen: View {
                         HomeScreenSectionHeader(title: "Compress Video")
                         
                         HStack(spacing : 20){
-                            NavigationLink(destination : FastCompressionView()){
+                            
+                            NavigationLink(value : Values.FAST_COMPRESSION){
                                 HomeScreenIcon(
                                     iconName: "fastCompression",
                                     title: "Fast\nCompresion"
                                 )
                                 
+                            }.onTapGesture {
+                                navigateToVideoPicker(purpose: Values.FAST_COMPRESSION)
                             }
                             
-                            NavigationLink(destination : VideoPickerScreen()){
+                            NavigationLink(value : Values.ADVANCE_COMPRESSION){
                                 HomeScreenIcon(
                                     iconName: "advanceCompression",
                                     title: "Advance\nCompresion"
                                 )
                                 
+                            }.onTapGesture {
+                                navigateToVideoPicker(purpose: Values.ADVANCE_COMPRESSION)
                             }
                         }
                         .padding()
@@ -51,31 +52,39 @@ struct HomeScreen: View {
                         
                         HStack(spacing : 20){
                             
-                            HomeScreenVideoPickerItem(
-                                iconName: "convertFormat",
-                                title: "Convert Format",
-                                selectedVideos: $viewModel.selectedVideos,
-                                selectionCallback: viewModel.handleSelectedVideos
-                            )
+                            NavigationLink(value : Values.CONVERT_FORMAT){
+                                HomeScreenIcon(
+                                    iconName: "convertFormat",
+                                    title: "Convert Format"
+                                )
+                                
+                            }.onTapGesture {
+                                navigateToVideoPicker(purpose: Values.CONVERT_FORMAT)
+                            }
                             
-                            HomeScreenVideoPickerItem(
-                                iconName: "videoToAudio",
-                                title: "Video to Audio",
-                                selectedVideos: $viewModel.selectedVideos,
-                                selectionCallback: viewModel.handleSelectedVideos
-                            )
+                            NavigationLink(value : Values.VIDEO_TO_AUDIO){
+                                HomeScreenIcon(
+                                    iconName: "videoToAudio",
+                                    title: "Video to Audio"
+                                )
+                            }.onTapGesture {
+                                navigateToVideoPicker(purpose: Values.VIDEO_TO_AUDIO)
+                            }
                         }
                         .padding()
                         
                         HomeScreenSectionHeader(title: "Process Video")
                         
                         HStack(spacing : 20){
-                            HomeScreenVideoPickerItem(
-                                iconName: "trimVideo",
-                                title: "Trim Video",
-                                selectedVideos: $viewModel.selectedVideos,
-                                selectionCallback: viewModel.handleSelectedVideos
-                            )
+                            
+                            NavigationLink(value : Values.TRIM_VIDEO){
+                                HomeScreenIcon(
+                                    iconName: "trimVideo",
+                                    title: "Trim Video"
+                                )
+                            }.onTapGesture {
+                                navigateToVideoPicker(purpose: Values.TRIM_VIDEO)
+                            }
                         }
                         .padding()
                     }
@@ -83,11 +92,17 @@ struct HomeScreen: View {
                 
                 Spacer()
             }
-            
-            
-            
+            .navigationDestination(for: Int.self, destination: { value in
+                VideoPickerScreen(purpose: value)
+            })
         }
+        .environmentObject(navigation)
     }
+    
+    private func navigateToVideoPicker(purpose : Int){
+        navigation.addPath(pathValue: purpose)
+    }
+    
 }
 
 struct HomeScreen_Previews: PreviewProvider {

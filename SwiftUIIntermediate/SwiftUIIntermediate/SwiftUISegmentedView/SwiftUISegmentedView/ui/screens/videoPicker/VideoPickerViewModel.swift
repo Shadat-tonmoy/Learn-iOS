@@ -45,5 +45,14 @@ class VideoPickerViewModel : ObservableObject {
         selectedVideos = []
     }
     
+    func cacheSelectedVideoList() {
+        let encodedData = try? JSONEncoder().encode(selectedVideos)
+        if encodedData != nil {
+            UserDefaults.standard.set(encodedData, forKey: Tags.SELECTED_VIDEOS)
+            print("Saved To User Defaults!")
+            
+        }
+    }
+    
     
 }

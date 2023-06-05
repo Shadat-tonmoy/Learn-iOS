@@ -15,31 +15,42 @@ struct FastCompressionView: View {
     
     var body: some View {
         
-        VStack(spacing: 0) {
-            
-            NavbarWithBackButton(title: "Fast Compression")
-            
-            FastCompressionTabView(viewModel: viewModel)
-                      
-            ScrollView{
-                VStack(spacing : 0) {
-                    CompressionPropertyView(optionCallback: propertyOptionCallback)
-                    
-                    getSelectedTabView()
-                        .transition(.move(edge: .trailing))
-                    
-                    TrimVideoButtonView()
-                    
-                    AdjustVolumeButtonView()
-                        .onTapGesture {
-                            viewModel.showAdjustVolumeOption = true
-                        }
-                    
-                    
-                    Spacer()
+        ZStack(alignment : .bottomTrailing) {
+            VStack(spacing: 0) {
+                
+                NavbarWithBackButton(title: "Fast Compression")
+                
+                FastCompressionTabView(viewModel: viewModel)
+                          
+                ScrollView{
+                    VStack(spacing : 0) {
+                        CompressionPropertyView(optionCallback: propertyOptionCallback)
+                        
+                        getSelectedTabView()
+                            .transition(.move(edge: .trailing))
+                        
+                        TrimVideoButtonView()
+                        
+                        AdjustVolumeButtonView()
+                            .onTapGesture {
+                                viewModel.showAdjustVolumeOption = true
+                            }
+                        
+                        
+                        Spacer()
+                    }
                 }
+                
+                SelectedVideosListView(selectedVideoList: viewModel.selectedVideos)
+                    .frame(height: 80)
+                    .padding()
             }
-            
+            StartProcessingButton(title: "Compress")
+                .padding()
+                
+        }
+        .onAppear {
+            viewModel.getSelectedVideos()
         }
         .navigationBarBackButtonHidden(true)
         .sheet(isPresented: $viewModel.showFormatOptions, content: {

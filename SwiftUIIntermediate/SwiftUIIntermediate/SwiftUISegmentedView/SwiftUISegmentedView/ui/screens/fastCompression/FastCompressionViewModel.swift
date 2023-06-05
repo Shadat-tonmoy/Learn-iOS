@@ -27,6 +27,22 @@ class FastCompressionViewModel : ObservableObject {
     
     var tabs : [String] = ["Quick", "Resolution", "Quality"]
     
+    @Published var selectedVideos : [VideoFile] = []
+    
+    func getSelectedVideos() {
+        
+        guard
+            let data = UserDefaults.standard.data(forKey: Tags.SELECTED_VIDEOS),
+            let decodedData = try? JSONDecoder().decode([VideoFile].self, from: data)
+        else {
+            print("Error Fetching Selected Video List")
+            return
+        }
+        
+        print("Decoded Data : \(decodedData)")
+        self.selectedVideos = decodedData
+    }
+    
     
     func getQuickCompressionOptions() -> [QuickCompressOption] {
         return QuickCompressionOptionRepo.options

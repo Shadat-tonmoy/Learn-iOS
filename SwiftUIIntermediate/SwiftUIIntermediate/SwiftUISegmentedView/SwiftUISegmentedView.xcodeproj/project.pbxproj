@@ -21,6 +21,8 @@
 		59541ED72A18D2B5006439FB /* VideoCompressionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59541ED62A18D2B5006439FB /* VideoCompressionModel.swift */; };
 		59541ED92A18D31D006439FB /* QuickCompressionOptionRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59541ED82A18D31D006439FB /* QuickCompressionOptionRepo.swift */; };
 		59544CC42A129D37007CCFA3 /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59544CC32A129D37007CCFA3 /* HomeScreenViewModel.swift */; };
+		59590EDF2A2E4BFC00DF3F83 /* SelectedVideosListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59590EDE2A2E4BFC00DF3F83 /* SelectedVideosListView.swift */; };
+		59590EE12A2E539700DF3F83 /* StartProcessingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59590EE02A2E539700DF3F83 /* StartProcessingButton.swift */; };
 		595C94CA2A22758E00EE8EE7 /* FastCompressionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595C94C92A22758E00EE8EE7 /* FastCompressionViewModel.swift */; };
 		596082DA2A2B017B00052A58 /* FitToFileSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596082D92A2B017B00052A58 /* FitToFileSizeView.swift */; };
 		596082DC2A2B037600052A58 /* CommonFileSizeRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596082DB2A2B037600052A58 /* CommonFileSizeRepo.swift */; };
@@ -75,6 +77,8 @@
 		59541ED62A18D2B5006439FB /* VideoCompressionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCompressionModel.swift; sourceTree = "<group>"; };
 		59541ED82A18D31D006439FB /* QuickCompressionOptionRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickCompressionOptionRepo.swift; sourceTree = "<group>"; };
 		59544CC32A129D37007CCFA3 /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
+		59590EDE2A2E4BFC00DF3F83 /* SelectedVideosListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedVideosListView.swift; sourceTree = "<group>"; };
+		59590EE02A2E539700DF3F83 /* StartProcessingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartProcessingButton.swift; sourceTree = "<group>"; };
 		595C94C92A22758E00EE8EE7 /* FastCompressionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastCompressionViewModel.swift; sourceTree = "<group>"; };
 		596082D92A2B017B00052A58 /* FitToFileSizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitToFileSizeView.swift; sourceTree = "<group>"; };
 		596082DB2A2B037600052A58 /* CommonFileSizeRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFileSizeRepo.swift; sourceTree = "<group>"; };
@@ -228,6 +232,8 @@
 				59B5C63B2A231DA40089A267 /* SpeedOptionScreen.swift */,
 				59B5C63D2A237B4B0089A267 /* AdjustVolumeScreen.swift */,
 				59BEA6442A265FA2008EA104 /* VideoPropertyViews.swift */,
+				59590EDE2A2E4BFC00DF3F83 /* SelectedVideosListView.swift */,
+				59590EE02A2E539700DF3F83 /* StartProcessingButton.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -419,6 +425,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				59541ED52A18B5E8006439FB /* QualityCompressOptionView.swift in Sources */,
+				59590EDF2A2E4BFC00DF3F83 /* SelectedVideosListView.swift in Sources */,
 				59B5C6342A230FD50089A267 /* FormatOptionScreen.swift in Sources */,
 				59F78A4A2A0D443E00EBC0F1 /* Extensions.swift in Sources */,
 				59F78A5A2A0D54B000EBC0F1 /* Constants.swift in Sources */,
@@ -460,6 +467,7 @@
 				59975A462A152A9A0090F0A6 /* Others.swift in Sources */,
 				59F78A542A0D4F9D00EBC0F1 /* QuickCompressionView.swift in Sources */,
 				59541ED92A18D31D006439FB /* QuickCompressionOptionRepo.swift in Sources */,
+				59590EE12A2E539700DF3F83 /* StartProcessingButton.swift in Sources */,
 				5923A36C2A16709D00023734 /* AdjustVolumeButtonView.swift in Sources */,
 				59541ED72A18D2B5006439FB /* VideoCompressionModel.swift in Sources */,
 				59975A432A1527CC0090F0A6 /* FitToShareWithView.swift in Sources */,
