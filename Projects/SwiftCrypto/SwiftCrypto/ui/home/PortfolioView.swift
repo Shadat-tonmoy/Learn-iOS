@@ -70,6 +70,7 @@ struct PortfolioView: View {
         }
         
         homeViewModel.updatePortfolio(coinModel: coinToUpdate, amount: amount)
+        showManagePortfolioView.toggle()
     }
 }
 
@@ -92,10 +93,10 @@ extension PortfolioView {
     private var coinListView : some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHStack {
-                ForEach(homeViewModel.allCoins, content: { coin in
+                ForEach(homeViewModel.searchText.isEmpty ? homeViewModel.portfolioCoins : homeViewModel.allCoins, content: { coin in
                     PortfolioCoinLogoView(coin: coin)
                         .onTapGesture {
-                            selectedCoin = coin
+                            updateSelectedCoin(coin: coin)
                         }
                         .overlay{
                             if coin.id == selectedCoin?.id {
@@ -153,5 +154,23 @@ extension PortfolioView {
     
     private func removeSelectedCoin() {
         selectedCoin = nil
+    }
+    
+    private func updateSelectedCoin(coin : CoinModel) {
+        
+        selectedCoin = coin
+        
+        print("UpdateSelectedCoin : \(selectedCoin)")
+        
+        if let portfolioCoin = homeViewModel.portfolioCoins.first(where: { coinModel in
+            coinModel.id == coin.id
+        }),
+           let amount = portfolioCoin.currentHoldings {
+            quantityText = "\(amount)"
+            print("UpdateSelectedCoin : amount : \(amount)")
+        } else {
+            print("UpdateSelectedCoin : is null")
+            quantityText = ""
+        }
     }
 }

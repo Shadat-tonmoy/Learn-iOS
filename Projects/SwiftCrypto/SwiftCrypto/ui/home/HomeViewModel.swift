@@ -15,6 +15,7 @@ class HomeViewModel : ObservableObject {
     @Published var portfolioCoins : [CoinModel] = []
     @Published var searchText : String = ""
     @Published var marketData : MarketDataModel? = nil
+    @Published var isLoading : Bool = false
     private var cancellables : Set<AnyCancellable> = Set()
     
     @Published var statModelList : [StatisticModel] = [
@@ -48,35 +49,31 @@ class HomeViewModel : ObservableObject {
             })
             .store(in: &cancellables)
         
-        coinDataFetchingTask.$marketData
-            .map(convertMarketDataToStats)
-            .sink(receiveValue: { [weak self] statList in
-                self?.statModelList = statList
-                
-            })
-            .store(in: &cancellables)
         
         $allCoins
             .combineLatest(portfolioDataFetchingTask.$savedEntities)
-            .map{ (coinModels, portfolioEntities) -> [CoinModel] in
-                coinModels.compactMap { (coin) -> CoinModel? in
-                    guard let entity = portfolioEntities.first(where: { (portfolioEntity : PortfolioEntity) in
-                        coin.id == portfolioEntity.id
-                    }) else {
-                        return nil
-                    }
-                    return coin.updateHoldings(amount: entity.quantity)
-                }
-                
-            }
+            .map(convertPortfolioCoinsToCoinModel)
             .sink { [weak self] (coinModels : [CoinModel]) in
                 self?.portfolioCoins = coinModels
             }
             .store(in: &cancellables)
+        
+        
+        coinDataFetchingTask.$marketData
+            .combineLatest($portfolioCoins)
+            .map(convertMarketDataToStats)
+            .sink(receiveValue: { [weak self] statList in
+                self?.statModelList = statList
+                self?.isLoading = false
+                
+            })
+            .store(in: &cancellables)
+        
+        
             
     }
     
-    private func convertMarketDataToStats(marketData : MarketDataModel?) -> [StatisticModel] {
+    private func convertMarketDataToStats(marketData : MarketDataModel?, portfolioCoins : [CoinModel] ) -> [StatisticModel] {
         
         var stats : [StatisticModel] = []
         
@@ -84,13 +81,40 @@ class HomeViewModel : ObservableObject {
             return stats
         }
         
+        let portfolioValue = portfolioCoins.map { coinModel in
+            coinModel.currentHoldingsValue
+        }.reduce(0, +)
+        
+        let previousValue = portfolioCoins.map { (coinModel) -> Double in
+            let currentValue = coinModel.currentHoldingsValue
+            let percentChange = (coinModel.priceChangePercentage24H ?? 0) / 100
+            let previousValue = (currentValue) / (1+percentChange)
+            return previousValue
+        }
+            .reduce(0,+)
+        
+        let percentageChange = ((portfolioValue - previousValue) / previousValue) * 100
+        
         stats.append(StatisticModel(title: "Market Cap", value: data.marketCap, percentageChange: data.marketCapChangePercentage24HUsd))
         
         stats.append(StatisticModel(title: "24H Volume", value: data.volume))
         stats.append(StatisticModel(title: "BTC Dominant", value: data.btcDominant))
-        stats.append(StatisticModel(title: "Portfolio Value", value: "$0.0", percentageChange: 0.0))
+        stats.append(StatisticModel(title: "Portfolio Value", value: portfolioValue.asCurrencyWithDecimal(), percentageChange: percentageChange))
         
         return stats
+        
+    }
+    
+    private func convertPortfolioCoinsToCoinModel(coinModels : [CoinModel], portfolioEntities : [PortfolioEntity] ) -> [CoinModel] {
+        
+        coinModels.compactMap { (coin) -> CoinModel? in
+            guard let entity = portfolioEntities.first(where: { (portfolioEntity : PortfolioEntity) in
+                coin.id == portfolioEntity.id
+            }) else {
+                return nil
+            }
+            return coin.updateHoldings(amount: entity.quantity)
+        }
         
     }
     
@@ -113,5 +137,11 @@ class HomeViewModel : ObservableObject {
     
     func updatePortfolio(coinModel : CoinModel, amount : Double){
         portfolioDataFetchingTask.updatePortfolio(coin: coinModel, amount: amount)
+    }
+    
+    func refreshData(){
+        isLoading = true
+        coinDataFetchingTask.fetchAllCoins()
+        coinDataFetchingTask.fetchMarketData()
     }
 }
