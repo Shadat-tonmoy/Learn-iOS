@@ -10,7 +10,7 @@ import SwiftUI
 class QualityCompressViewModel : ObservableObject{
     
     
-    @Published var isPercentage = false
+    @Published var isPercentage = true
     @Published var isFixedValue = false
     
     @Published var frameRatePercentage = 100.0
@@ -39,6 +39,17 @@ class QualityCompressViewModel : ObservableObject{
     
     func resolutionValueText() -> String {
         return String(format: "%.2f", frameRatePercentage)
+        
+    }
+    
+    func enablePercentageOption() {
+        isPercentage = true
+        isFixedValue = false
+    }
+    
+    func enableFixedValueOption(){
+        isFixedValue = true
+        isPercentage = false
         
     }
     

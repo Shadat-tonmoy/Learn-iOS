@@ -22,6 +22,8 @@ class VideoFile : Identifiable, Codable {
     let modifiedAt : Double
     let fileSize : Int64
     var selected : Bool = false
+    var originalVideoInfo : VideoInfo? = nil
+    var outputVideoInfo : VideoInfo? = nil
     
     init(id: String, title: String, width: Int, height: Int, duration: Double, createdAt: Double, modifiedAt: Double, fileSize: Int64, selected : Bool = false) {
         self.id = id
@@ -80,17 +82,84 @@ class VideoFile : Identifiable, Codable {
     func toggleSelection() {
         selected.toggle()
     }
+}
+
+
+class VideoInfo : Identifiable, Codable {
+    let videoBitRate: Int
+    let videoFrameRate: Double
+    let audioBitrate: Int
+    let videoCodec: String
+    let audioCoded: String
+    let audioEncoding: Int
+    let audioQuality: Int
+    let outputFormat: String
+    let speedPreset: String
+    let width: Int
+    let height: Int
+    let videoDuration: Double
+    let startTime: Time
+    let endTime: Time
+    var trimOrCutStatus: Int = Constans.TRIM
+    var resolutionPercent: Int = 100
+    var videoBitRatePercent: Int = 100
+    var videoFrameRatePercent: Int = 100
+    var selectedResolution: Int = Constans.RESOLUTION_ORIGINAL
+    var quickCompressionType: Int = Constans.INVALID
+    var muteVideo: Bool = false
+    var volume: Int = 100
     
-    enum CodingKeys: String, CodingKey {
-        case id = "id"
-        case title = "title"
-        case width = "width"
-        case height = "height"
-        case duration = "duration"
-        case createdAt = "createdAt"
-        case modifiedAt = "modifiedAt"
-        case fileSize = "fileSize"
-        case selected = "selected"
+    init(videoBitRate: Int, videoFrameRate: Double, audioBitrate: Int, videoCodec: String, audioCoded: String, audioEncoding: Int, audioQuality: Int, outputFormat: String, speedPreset: String, width: Int, height: Int, videoDuration: Double, startTime: Time, endTime: Time, trimOrCut : Int = Constans.TRIM, resolutionPercent: Int = 100, videoBitRatePercent: Int = 100, videoFrameRatePercent: Int = 100, selectedResolution: Int = Constans.RESOLUTION_ORIGINAL, quickCompressionType: Int = Constans.INVALID, muteVideo: Bool = false, volume: Int = 100) {
+        self.videoBitRate = videoBitRate
+        self.videoFrameRate = videoFrameRate
+        self.audioBitrate = audioBitrate
+        self.videoCodec = videoCodec
+        self.audioCoded = audioCoded
+        self.audioEncoding = audioEncoding
+        self.audioQuality = audioQuality
+        self.outputFormat = outputFormat
+        self.speedPreset = speedPreset
+        self.width = width
+        self.height = height
+        self.videoDuration = videoDuration
+        self.startTime = startTime
+        self.endTime = endTime
+    }
+    
+    func getVolumeValue() -> Float{
+        return (1.0/100) * Float(volume)
+    }
+    
+    func needToUpdateVolume() -> Bool {
+        return !muteVideo && volume > 0
     }
     
 }
+
+
+class Time : Codable {
+    let hour: Int
+    let minute: Int
+    let second: Int
+    let milliSecond: Int
+    
+    init(hour: Int, minute: Int, second: Int, milliSecond: Int) {
+        self.hour = hour
+        self.minute = minute
+        self.second = second
+        self.milliSecond = milliSecond
+    }
+    
+    func isGreaterThan(anotherTime: Time) -> Bool {
+        return milliSecond > anotherTime.milliSecond || second > anotherTime.second || minute > anotherTime.minute || hour > anotherTime.hour
+    }
+    
+    func isLessThan(anotherTime: Time) -> Bool {
+        return milliSecond < anotherTime.milliSecond || second < anotherTime.second || minute < anotherTime.minute || hour < anotherTime.hour
+    }
+    
+    func isZero() -> Bool {
+        return milliSecond == 0 && second == 0 && minute == 0 && hour == 0
+    }
+}
+

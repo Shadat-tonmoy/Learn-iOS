@@ -109,6 +109,4 @@ class CommonFileSize : Identifiable {
         self.title = title
         self.valueInMB = valueInMB
     }
-    
-    
 }

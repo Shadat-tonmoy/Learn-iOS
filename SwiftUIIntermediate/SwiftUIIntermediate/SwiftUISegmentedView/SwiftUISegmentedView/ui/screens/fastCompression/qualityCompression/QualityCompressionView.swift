@@ -14,10 +14,12 @@ struct QualityCompressionView: View {
     var body: some View {
         VStack{
             VStack{
-                Toggle("Percentage", isOn: $viewModel.isPercentage)
-                    .fontWeight(.semibold)
-                    .padding(.bottom,10)
-                    .tint(.primaryColor)
+                HStack {
+                    Text("Percentage")
+                    Toggle("", isOn: $viewModel.isPercentage)
+                        .tint(.primaryColor)
+                }
+                .fontWeight(.semibold)
                 
                 if(viewModel.isPercentage){
                     CompressByPercentageItemView(title: "Frame Rate", sliderVlaue: $viewModel.frameRatePercentage)
@@ -29,24 +31,31 @@ struct QualityCompressionView: View {
             .padding()
             .background(getCardBackground())
             .padding(.horizontal,10)
+            .onTapGesture {
+                viewModel.enablePercentageOption()
+            }
+            
             
             VStack{
-                Toggle("Fixed Value", isOn: $viewModel.isFixedValue)
-                    .fontWeight(.semibold)
-                    .padding(.bottom,10)
-                    .tint(.primaryColor)
+                HStack{
+                    Text("Fixed Value")
+                    Toggle("", isOn: $viewModel.isFixedValue)
+                        .tint(.primaryColor)
+                }
+                .fontWeight(.semibold)
                 
                 if(viewModel.isFixedValue){
                     CompressByFixedValueItemView(title: "Frame Rate", selectedValue: $viewModel.frameRateValue, selectedValueText: "Original")
                     CompressByFixedValueItemView(title: "Bit Rate", selectedValue: $viewModel.bitRateValue, selectedValueText: "Original")
                     CompressByFixedValueItemView(title: "Resolution", selectedValue: $viewModel.resolutionRateValue, selectedValueText: "Original")
                 }
-                
-                
             }
             .padding()
             .background(getCardBackground())
             .padding(.horizontal,10)
+            .onTapGesture {
+                viewModel.enableFixedValueOption()
+            }
         }
     }
 }
