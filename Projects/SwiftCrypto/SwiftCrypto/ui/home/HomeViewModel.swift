@@ -25,6 +25,12 @@ class HomeViewModel : ObservableObject {
         
     ]
     
+    @Published var sortOption : SortOption = .rank
+    
+    enum SortOption {
+        case rank, rankReversed, price, priceReversed, holdings, holdingsReversed
+    }
+    
     
     var coinDataFetchingTask : CoinDataFetchingTask = CoinDataFetchingTask()
     var portfolioDataFetchingTask : PortfolioDataFetchingTask = PortfolioDataFetchingTask()
@@ -41,9 +47,9 @@ class HomeViewModel : ObservableObject {
         .store(in: &cancellables)
         
         $searchText
-            .combineLatest(coinDataFetchingTask.$allCoins)
+            .combineLatest(coinDataFetchingTask.$allCoins, $sortOption)
             .debounce(for: 0.5, scheduler: DispatchQueue.main)
-            .map(filterCoin)
+            .map(filterAndSortCoin)
             .sink(receiveValue: { [weak self] (filteredCoinList : [CoinModel]) in
                 self?.allCoins = filteredCoinList
             })
@@ -70,7 +76,7 @@ class HomeViewModel : ObservableObject {
             .store(in: &cancellables)
         
         
-            
+        
     }
     
     private func convertMarketDataToStats(marketData : MarketDataModel?, portfolioCoins : [CoinModel] ) -> [StatisticModel] {
@@ -118,6 +124,15 @@ class HomeViewModel : ObservableObject {
         
     }
     
+    private func filterAndSortCoin(searchText : String, initialCoinList : [CoinModel], sortOption : SortOption) -> [CoinModel]
+    {
+        let filteredCoin = filterCoin(searchText: searchText, initialCoinList: initialCoinList)
+        let sortedCoin = sortCoin(filteredCoins: filteredCoin, sortOption: sortOption)
+        
+        return sortedCoin
+        
+    }
+    
     private func filterCoin(searchText : String, initialCoinList : [CoinModel]) -> [CoinModel] {
         guard
             !searchText.isEmpty else {
@@ -132,6 +147,35 @@ class HomeViewModel : ObservableObject {
         }
         
         return filteredList
+    }
+    
+    private func sortCoin(filteredCoins : [CoinModel], sortOption : SortOption) -> [CoinModel] {
+        
+        switch sortOption {
+        case .rank : return filteredCoins.sorted { coin1, coin2 in
+            return coin1.rank < coin2.rank
+        }
+        case .rankReversed:
+            return filteredCoins.sorted { coin1, coin2 in
+                return coin1.rank > coin2.rank
+            }
+        case .price:
+            return filteredCoins.sorted { coin1, coin2 in
+                return coin1.currentPrice < coin2.currentPrice
+            }
+        case .priceReversed:
+            return filteredCoins.sorted { coin1, coin2 in
+                return coin1.currentPrice > coin2.currentPrice
+            }
+        case .holdings:
+            return filteredCoins.sorted { coin1, coin2 in
+                return coin1.currentHoldings ?? 0.0 < coin2.currentHoldings ?? 0.0
+            }
+        case .holdingsReversed:
+            return filteredCoins.sorted { coin1, coin2 in
+                return coin1.currentHoldings ?? 0.0 < coin2.currentHoldings ?? 0.0
+            }
+        }
         
     }
     
@@ -143,5 +187,41 @@ class HomeViewModel : ObservableObject {
         isLoading = true
         coinDataFetchingTask.fetchAllCoins()
         coinDataFetchingTask.fetchMarketData()
+    }
+    
+    func sortedByRank() -> Bool {
+        return sortOption == .rank || sortOption == .rankReversed
+    }
+    
+    func getRankIconRotation() -> Double {
+        return sortOption == .rank ? 0 : 180
+    }
+    
+    func updateRankSortOption() {
+        sortOption = sortOption == .rank ? .rankReversed : .rank
+    }
+    
+    func sortedByHoldings() -> Bool {
+        return sortOption == .holdings || sortOption == .holdingsReversed
+    }
+    
+    func getHoldingsIconRotation() -> Double {
+        return sortOption == .holdings ? 0 : 180
+    }
+    
+    func updateHoldingsSortOption() {
+        sortOption = sortOption == .holdings ? .holdingsReversed : .holdings
+    }
+    
+    func sortedByPrice () -> Bool {
+        return sortOption == .price || sortOption == .priceReversed
+    }
+    
+    func getPriceIconRotation() -> Double {
+        return sortOption == .price ? 0 : 180
+    }
+    
+    func updatePriceSortOption() {
+        sortOption = sortOption == .price ? .priceReversed : .price
     }
 }

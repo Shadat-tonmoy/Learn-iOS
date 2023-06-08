@@ -76,7 +76,7 @@ extension HomeView {
                         showManagePortfolio.toggle()
                     }
                 }
-                
+            
             Spacer()
             
             Text(showPortfolio ? "Portfolio" : "Live Prices")
@@ -121,17 +121,56 @@ extension HomeView {
     
     var columnTitle : some View{
         HStack{
-            Text("Coin")
-                
+            
+            
+            HStack(spacing:4) {
+                Text("Coin")
+                if homeViewModel.sortedByRank() {
+                    Image(systemName: "chevron.down")
+                        .rotationEffect(Angle(degrees: homeViewModel.getRankIconRotation()))
+                }
+            }
+            .onTapGesture {
+                withAnimation(.default) {
+                    homeViewModel.updateRankSortOption()
+                }
+            }
+            
             
             Spacer()
             
             if showPortfolio {
-                Text("Holdings")
+                
+                HStack(spacing:4) {
+                    Text("Holdings")
+                    if homeViewModel.sortedByHoldings() {
+                        Image(systemName: "chevron.down")
+                            .rotationEffect(Angle(degrees: homeViewModel.getHoldingsIconRotation()))
+                    }
+                }
+                .onTapGesture {
+                    withAnimation(.default) {
+                        homeViewModel.updateHoldingsSortOption()
+                    }
+                }
+                
             }
             
-            Text("Price")
-                .frame(width: UIScreen.main.bounds.width / 3, alignment: .trailing)
+            HStack(spacing:4) {
+                
+                Text("Price")
+                if homeViewModel.sortedByPrice() {
+                    Image(systemName: "chevron.down")
+                        .rotationEffect(Angle(degrees: homeViewModel.getPriceIconRotation()))
+                }
+                
+            }
+            .frame(width: UIScreen.main.bounds.width / 3, alignment: .trailing)
+            .onTapGesture {
+                withAnimation(.default) {
+                    homeViewModel.updatePriceSortOption()
+                }
+            }
             
             Button(action: {
                 withAnimation(.linear(duration: 2)) {
