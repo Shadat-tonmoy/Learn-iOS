@@ -11,14 +11,16 @@ import SwiftUI
 struct SwiftCryptoApp: App {
     
     @StateObject private var homeViewModel : HomeViewModel = HomeViewModel()
+    @StateObject private var navigationPaths : NavigationPaths = NavigationPaths()
     
     var body: some Scene {
         WindowGroup {
-            NavigationView{
+            NavigationStack(path : $navigationPaths.paths) {
                 HomeView()
                     .toolbar(.hidden)
             }
             .environmentObject(homeViewModel)
+            .environmentObject(navigationPaths)
         }
     }
 }

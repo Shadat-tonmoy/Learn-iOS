@@ -55,6 +55,7 @@ import Foundation
 
 
 struct CoinModel: Identifiable, Codable {
+    
     let id, symbol, name: String
     let image: String
     let currentPrice: Double

@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     
     @EnvironmentObject private var homeViewModel : HomeViewModel
+    @EnvironmentObject private var navigationPaths : NavigationPaths
     
     @State private var showPortfolio = false
     
@@ -99,14 +100,23 @@ extension HomeView {
     
     var allCoinList : some View{
         List{
-            ForEach(homeViewModel.allCoins, content: { coin in
+            ForEach(homeViewModel.allCoins.indices, id: \.self,  content: { coinIndex in
+                let coin = homeViewModel.allCoins[coinIndex]
                 CoinRowView(coin: coin, showHoldings: false)
                     .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
+                    .onTapGesture {
+                        navigationPaths.addCoinDetailsScreen(index: coinIndex)
+                    }
             })
         }
         .listStyle(PlainListStyle())
         .transition(.move(edge: .leading))
+        .navigationDestination(for: Int.self, destination: { index in
+            let coinAtIndex = homeViewModel.allCoins[index]
+            DetailsViewScreen(coin: coinAtIndex)
+        })
     }
+    
     
     var portfolioCoinList : some View{
         List{
