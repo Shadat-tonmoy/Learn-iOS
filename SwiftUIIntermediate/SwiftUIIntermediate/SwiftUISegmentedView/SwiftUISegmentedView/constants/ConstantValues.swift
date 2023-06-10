@@ -8,6 +8,7 @@
 import Foundation
 
 class IDs{
+    
     static let RESOLUTION_CUSTOM = 1
     static let RESOLUTION_240P = 2
     static let RESOLUTION_360P = 3
@@ -30,6 +31,25 @@ class IDs{
     static let COMMON_FILE_SIZE_GMX = 4
     
     
+    static let BIT_RATE_CUSTOM = -1
+    static let BIT_RATE_ORIGINAL = -2
+    static let BIT_RATE_LOW = 1
+    static let BIT_RATE_MEDIUM = 2
+    static let BIT_RATE_GOOD = 3
+    static let BIT_RATE_HIGH = 4
+    static let BIT_RATE_HD = 5
+    static let BIT_RATE_320 = 6
+    static let BIT_RATE_256 = 7
+    static let BIT_RATE_128 = 8
+    static let BIT_RATE_96 = 9
+    static let BIT_RATE_64 = 10
+    static let BIT_RATE_56 = 11
+    static let BIT_RATE_32 = 12
+    static let FRAME_RATE_CUSTOM = -1.0
+    static let FRAME_RATE_ORIGINAL = -2.0
+    
+    static let VIDEO_RESOLUTION_CUSTOM = -1
+    static let VIDEO_RESOLUTION_ORIGINAL = -2
 }
 
 class Values{

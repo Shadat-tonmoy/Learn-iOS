@@ -29,6 +29,23 @@ class FastCompressionViewModel : ObservableObject {
     
     @Published var selectedVideos : [VideoFile] = []
     
+    
+    @Published var isPercentage = true
+    @Published var isFixedValue = false
+    
+    @Published var frameRatePercentage = 100.0
+    @Published var resolutionRatePercentage = 100.0
+    @Published var bitRatePercentage = 100.0
+    
+    
+    @Published var frameRateValue = 100.0
+    @Published var resolutionRateValue = 100.0
+    @Published var bitRateValue = 100.0
+    
+    @Published var showFixedFrameRateOption = false
+    @Published var showFixedBitRateOption = false
+    @Published var showFixedResolutionOption = false
+    
     func getSelectedVideos() {
         
         guard
@@ -110,7 +127,7 @@ class FastCompressionViewModel : ObservableObject {
         } else if(selectedTab == Constans.resolutionCompression) {
             return AnyView(ResolutionCompressionView(viewModel: self))
         } else if(selectedTab == Constans.qualityCompression){
-            return AnyView(QualityCompressionView())
+            return AnyView(QualityCompressionView(viewModel: self))
         } else {
             return AnyView(EmptyView())
         }
@@ -141,6 +158,49 @@ class FastCompressionViewModel : ObservableObject {
     
     func hideFiteToFileSizeOptions() {
         showFiteToFIleSizeOption = false
+    }
+    
+    func getFixedValueFrameRateOptionList() -> [FrameRateOption] {
+        return VideoFrameRateOptionRepo.getOptions()
+    }
+    
+    func getFixedValueBitRateOptionList() -> [BitRateOption] {
+        return VideoBitRateOptionRepo.getOptions()
+    }
+    
+    func getFixedValueResolutionOptionList() -> [ResolutionOption] {
+        return VideoResolutionOptionRepo.getOptions()
+    }
+    
+    func frameRatePercentText() -> String {
+        return String(format: "%.0f", frameRatePercentage)
+        
+    }
+    
+    func frameRateValueText() -> String {
+        return String(format: "%.2f", frameRatePercentage)
+        
+    }
+    
+    func bitRateValueText() -> String {
+        return String(format: "%.2f", frameRatePercentage)
+        
+    }
+    
+    func resolutionValueText() -> String {
+        return String(format: "%.2f", frameRatePercentage)
+        
+    }
+    
+    func enablePercentageOption() {
+        isPercentage = true
+        isFixedValue = false
+    }
+    
+    func enableFixedValueOption(){
+        isFixedValue = true
+        isPercentage = false
+        
     }
     
 }

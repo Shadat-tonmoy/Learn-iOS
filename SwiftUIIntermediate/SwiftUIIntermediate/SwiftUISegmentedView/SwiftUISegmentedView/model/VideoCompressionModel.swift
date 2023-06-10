@@ -110,3 +110,48 @@ class CommonFileSize : Identifiable {
         self.valueInMB = valueInMB
     }
 }
+
+class FrameRateOption : Identifiable {
+    
+    var title: String
+    var value: Double
+    var isSelected: Bool = false
+    
+    init(title: String, value: Double, isSelected: Bool = false) {
+        self.title = title
+        self.value = value
+        self.isSelected = isSelected
+    }
+    
+    func isOriginal() -> Bool {
+        return value == Constans.FRAME_RATE_ORIGINAL
+    }
+}
+
+class ResolutionOption : Identifiable {
+    var title: String
+    var value: Int
+    var isSelected: Bool = false
+    
+    init(title: String, value: Int, isSelected: Bool = false) {
+        self.title = title
+        self.value = value
+        self.isSelected = isSelected
+    }
+}
+
+class BitRateOption : Identifiable {
+    var id: Int
+    var title: String
+    var range: String
+    var valueInKBPS: Int
+    var isSelected: Bool = false
+    
+    init(id: Int, title: String, range: String, valueInKBPS: Int, isSelected: Bool = false) {
+        self.id = id
+        self.title = title
+        self.range = range
+        self.valueInKBPS = valueInKBPS
+        self.isSelected = isSelected
+    }
+}

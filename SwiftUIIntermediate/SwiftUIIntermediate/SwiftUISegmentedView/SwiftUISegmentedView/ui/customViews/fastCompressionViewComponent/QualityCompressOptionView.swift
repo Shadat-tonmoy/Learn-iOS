@@ -27,6 +27,7 @@ struct CompressByPercentageItemView: View {
                 .frame(width: 50, alignment: .trailing)
             
         }
+        .padding(.vertical, 10)
     }
 }
 
@@ -39,11 +40,11 @@ struct CompressByFixedValueItemView: View {
     var body: some View {
         HStack{
             Text(title)
-                .font(.system(size: 14))
+                .font(.system(size: 15))
                 .frame(width: 120, alignment: .leading)
             
             Text(selectedValueText)
-                .font(.system(size: 14))
+                .font(.system(size: 15))
             
             Spacer()
             Image(systemName: "arrowtriangle.down.fill")
@@ -52,6 +53,7 @@ struct CompressByFixedValueItemView: View {
                 .frame(width: 8, height: 8)
             
         }
+        .padding(.vertical, 10)
     }
 }
 
