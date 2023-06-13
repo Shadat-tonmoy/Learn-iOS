@@ -12,9 +12,11 @@ class CoinDataFetchingTask {
     
     @Published var allCoins : [CoinModel] = []
     @Published var marketData : MarketDataModel? = nil
+    @Published var coinDetails : CoinDetailsModel? = nil
     
     var coinSubscription : AnyCancellable?
     var globalDataSubscription : AnyCancellable?
+    var coinDetailSubscription : AnyCancellable?
     
     init(){
         fetchAllCoins()
@@ -60,5 +62,30 @@ class CoinDataFetchingTask {
                 self?.globalDataSubscription?.cancel()
             })
             
+    }
+    
+    func fetchCoinDetails(coinId : String) {
+        print("Fetch coin details...")
+        
+        let apiUrl = "https://api.coingecko.com/api/v3/coins/\(coinId)?localization=false&tickers=false&market_data=false&community_data=false&developer_data=false&sparkline=false"
+        
+        guard
+            let url = URL(string: apiUrl) else {
+            print("Invalid URL")
+            return
+        }
+        
+        print("Fetch coin details api : \(apiUrl)")
+        
+        coinDetailSubscription = NetworkManager.download(url: url)
+            .decode(type: CoinDetailsModel.self, decoder: JSONDecoder())
+            .sink(receiveCompletion: { data in
+                print("Received Data Successfully as \(data)")
+            }, receiveValue: { [weak self] (coinDetailsModel : CoinDetailsModel) in
+                self?.coinDetails = coinDetailsModel
+                self?.coinDetailSubscription?.cancel()
+            })
+        
+        
     }
 }

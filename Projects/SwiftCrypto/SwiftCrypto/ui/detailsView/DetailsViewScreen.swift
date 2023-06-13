@@ -11,17 +11,21 @@ struct DetailsViewScreen: View {
     
     let coin : CoinModel
     
-//    @StateObject private var viewModel : DetailsViewModel = DetailsViewModel()
+    @StateObject private var viewModel : DetailsViewModel = DetailsViewModel()
     
     init(coin: CoinModel) {
         self.coin = coin
         print("Initialized with : \(coin.name)")
+        viewModel.fetchCoinDetails(coinId: coin.id)
 
     }
     
     var body: some View {
-        Text(coin.name)
+        VStack {
+            Text(coin.name)
+        }
     }
+    
 }
 
 struct DetailsViewScreen_Previews: PreviewProvider {
