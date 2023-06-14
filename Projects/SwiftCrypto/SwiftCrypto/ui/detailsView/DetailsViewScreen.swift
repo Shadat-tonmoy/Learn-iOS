@@ -16,13 +16,16 @@ struct DetailsViewScreen: View {
     init(coin: CoinModel) {
         self.coin = coin
         print("Initialized with : \(coin.name)")
-        viewModel.fetchCoinDetails(coinId: coin.id)
+//        viewModel.fetchCoinDetails(coinId: coin.id)
 
     }
     
     var body: some View {
         VStack {
             Text(coin.name)
+        }
+        .onAppear{
+            viewModel.fetchCoinDetails(coinId: coin.id)
         }
     }
     

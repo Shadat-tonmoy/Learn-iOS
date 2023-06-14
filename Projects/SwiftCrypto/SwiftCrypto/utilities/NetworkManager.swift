@@ -21,6 +21,13 @@ class NetworkManager{
                     print("Error response code : \(output.response)")
                     return output.data
                 }
+//                print("Downloaded data from : \(url)")
+                
+                let json = String(data: output.data, encoding: String.Encoding.utf8)
+//                let model = try? JSONDecoder().decode(CoinDetailsModel.self, from: output.data)
+//                print("Model is : \(model)")
+                
+//                print("Output data : \(json)")
                 return output.data
             }
             .receive(on: DispatchQueue.main)
@@ -33,7 +40,7 @@ class NetworkManager{
             print("Completion is finished")
             break
         case .failure(let error):
-            print(error.localizedDescription)
+            print("Error found! Error is : \(error.localizedDescription)")
             return
         }
         

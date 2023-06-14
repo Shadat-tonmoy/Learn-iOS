@@ -80,10 +80,11 @@ class CoinDataFetchingTask {
         coinDetailSubscription = NetworkManager.download(url: url)
             .decode(type: CoinDetailsModel.self, decoder: JSONDecoder())
             .sink(receiveCompletion: { data in
-                print("Received Data Successfully as \(data)")
-            }, receiveValue: { [weak self] (coinDetailsModel : CoinDetailsModel) in
-                self?.coinDetails = coinDetailsModel
+                
+            }, receiveValue: { [weak self] (coinDetailModel : CoinDetailsModel) in
+                self?.coinDetails = coinDetailModel
                 self?.coinDetailSubscription?.cancel()
+                print("Coin Details is : \(self?.coinDetails)")
             })
         
         
