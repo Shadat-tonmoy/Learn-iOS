@@ -9,30 +9,72 @@ import SwiftUI
 
 struct DetailsViewScreen: View {
     
-    let coin : CoinModel
+//    let coin : CoinModel
     
-    @StateObject private var viewModel : DetailsViewModel = DetailsViewModel()
+    @StateObject private var viewModel : DetailsViewModel
     
+    private var infoGrid : [GridItem] = [
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+    ]
     init(coin: CoinModel) {
-        self.coin = coin
+//        self.coin = coin
+        _viewModel = StateObject(wrappedValue: DetailsViewModel(coinModel: coin))
         print("Initialized with : \(coin.name)")
-//        viewModel.fetchCoinDetails(coinId: coin.id)
-
     }
     
     var body: some View {
-        VStack {
-            Text(coin.name)
+        ScrollView {
+            VStack {
+                Text("")
+                    .frame(height : 150)
+                
+                Text("Overview")
+                    .font(.title)
+                    .bold()
+                    .foregroundColor(.theme.accent)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                
+                Divider()
+                
+                LazyVGrid(columns: infoGrid, alignment: .leading, content: {
+                    ForEach(viewModel.overviewStats, content: { stat in
+                        StatisticItemView(statisticModel: stat)
+                    })
+                })
+                
+                
+                Text("Additional Info")
+                    .font(.title)
+                    .bold()
+                    .foregroundColor(.theme.accent)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                
+                Divider()
+                
+                LazyVGrid(columns: infoGrid, alignment: .leading, content: {
+                    ForEach(viewModel.additionalStats, content: { stat in
+                        StatisticItemView(statisticModel: stat)
+                        
+                    })
+                })
+                
+                
+            }
+            .padding()
         }
-        .onAppear{
-            viewModel.fetchCoinDetails(coinId: coin.id)
-        }
+//        .onAppear{
+//            viewModel.fetchCoinDetails(coinId: coin.id)
+//        }
+        .navigationTitle((viewModel.coinModel?.name) ?? "")
     }
     
 }
 
 struct DetailsViewScreen_Previews: PreviewProvider {
     static var previews: some View {
-        DetailsViewScreen(coin: DeveloperPreview.instance.coin)
+        NavigationView{
+            DetailsViewScreen(coin: DeveloperPreview.instance.coin)
+        }
     }
 }
