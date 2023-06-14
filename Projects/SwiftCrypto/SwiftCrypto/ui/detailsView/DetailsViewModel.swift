@@ -32,27 +32,24 @@ class DetailsViewModel : ObservableObject {
     private func initSubscribers(){
         coinDataFetchingTask.$coinDetails
             .combineLatest($coinModel)
-            .map({(coinDetailModel, coinModel) -> (overview : [StatisticModel], additional : [StatisticModel]) in
-                
-                print("coin model from map : \(coinModel)")
-                
-                let overviewArray : [StatisticModel] = self.getOverviewArray(coinModel: coinModel)
-                
-                let additionalArray : [StatisticModel] = self.getAdditionalInfoArray(coinModel: coinModel, coinDetailModel: coinDetailModel)
-                
-                
-                return (overviewArray,additionalArray)
-            })
+            .map(mapCoinToStatisticsModel)
             .sink { [weak self] (returnedArrays) in
                 self?.overviewStats = returnedArrays.overview
                 self?.additionalStats = returnedArrays.additional
-//                print("OverviewStats : \(self?.overviewStats), additionalStats : \(self?.additionalStats)")
             }
             .store(in: &cancellables)
     }
     
+    private func mapCoinToStatisticsModel(coinDetailModel : CoinDetailsModel?, coinModel : CoinModel?) -> (overview : [StatisticModel], additional : [StatisticModel]) {
+        
+        let overviewArray : [StatisticModel] = self.getOverviewArray(coinModel: coinModel)
+        
+        let additionalArray : [StatisticModel] = self.getAdditionalInfoArray(coinModel: coinModel, coinDetailModel: coinDetailModel)
+        
+        return (overviewArray,additionalArray)
+    }
     
-    func getOverviewArray(coinModel : CoinModel?) -> [StatisticModel] {
+    private func getOverviewArray(coinModel : CoinModel?) -> [StatisticModel] {
         
         let price = coinModel?.currentPrice.asCurrencyWithDecimal() ?? "N/A"
         let priceChange = coinModel?.priceChangePercentage24H
@@ -76,7 +73,7 @@ class DetailsViewModel : ObservableObject {
         
     }
     
-    func getAdditionalInfoArray(coinModel : CoinModel?, coinDetailModel : CoinDetailsModel?) -> [StatisticModel] {
+    private func getAdditionalInfoArray(coinModel : CoinModel?, coinDetailModel : CoinDetailsModel?) -> [StatisticModel] {
         
         let high = coinModel?.high24H?.asCurrencyWithDecimal() ?? "N/A"
         let highStat = StatisticModel(title: "24H High", value: high)
