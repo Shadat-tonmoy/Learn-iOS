@@ -9,8 +9,6 @@ import SwiftUI
 
 struct DetailsViewScreen: View {
     
-//    let coin : CoinModel
-    
     @StateObject private var viewModel : DetailsViewModel
     
     private var infoGrid : [GridItem] = [
@@ -18,7 +16,6 @@ struct DetailsViewScreen: View {
         GridItem(.flexible()),
     ]
     init(coin: CoinModel) {
-//        self.coin = coin
         _viewModel = StateObject(wrappedValue: DetailsViewModel(coinModel: coin))
         print("Initialized with : \(coin.name)")
     }
@@ -63,12 +60,25 @@ struct DetailsViewScreen: View {
             }
             .padding()
         }
-//        .onAppear{
-//            viewModel.fetchCoinDetails(coinId: coin.id)
-//        }
-        .navigationTitle((viewModel.coinModel?.name) ?? "")
+        .navigationTitle((viewModel.coinModel.name))
+        .toolbar{
+            ToolbarItem(placement: .navigationBarTrailing, content: {
+                toolbarTrailingIcon
+            })
+        }
     }
     
+}
+
+extension DetailsViewScreen {
+    
+    private var toolbarTrailingIcon : some View {
+        HStack {
+            Text(viewModel.coinModel.symbol.uppercased())
+            CoinImageView(coinModel: viewModel.coinModel)
+                .frame(width : 25, height: 25)
+        }
+    }
 }
 
 struct DetailsViewScreen_Previews: PreviewProvider {

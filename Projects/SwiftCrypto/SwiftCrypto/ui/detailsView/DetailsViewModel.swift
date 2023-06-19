@@ -15,7 +15,7 @@ class DetailsViewModel : ObservableObject {
     private var cancellables = Set<AnyCancellable>()
     
     @Published var coinDetails : CoinDetailsModel? = nil
-    @Published var coinModel : CoinModel? = nil
+    @Published var coinModel : CoinModel
     @Published var overviewStats : [StatisticModel] = []
     @Published var additionalStats : [StatisticModel] = []
     
