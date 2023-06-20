@@ -23,42 +23,15 @@ struct DetailsViewScreen: View {
     var body: some View {
         ScrollView {
             VStack {
-                Text("")
-                    .frame(height : 150)
-                
-                Text("Overview")
-                    .font(.title)
-                    .bold()
-                    .foregroundColor(.theme.accent)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                
-                Divider()
-                
-                LazyVGrid(columns: infoGrid, alignment: .leading, content: {
-                    ForEach(viewModel.overviewStats, content: { stat in
-                        StatisticItemView(statisticModel: stat)
-                    })
-                })
-                
-                
-                Text("Additional Info")
-                    .font(.title)
-                    .bold()
-                    .foregroundColor(.theme.accent)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                
-                Divider()
-                
-                LazyVGrid(columns: infoGrid, alignment: .leading, content: {
-                    ForEach(viewModel.additionalStats, content: { stat in
-                        StatisticItemView(statisticModel: stat)
-                        
-                    })
-                })
-                
-                
+                ChartView(coin: viewModel.coinModel)
+                VStack {
+                    overviewSection
+                    
+                    additionalInfoSection
+                }
+                .padding()
             }
-            .padding()
+            .padding(.vertical)
         }
         .navigationTitle((viewModel.coinModel.name))
         .toolbar{
@@ -77,6 +50,43 @@ extension DetailsViewScreen {
             Text(viewModel.coinModel.symbol.uppercased())
             CoinImageView(coinModel: viewModel.coinModel)
                 .frame(width : 25, height: 25)
+        }
+    }
+    
+    private var overviewSection : some View {
+        VStack{
+            Text("Overview")
+                .font(.title)
+                .bold()
+                .foregroundColor(.theme.accent)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            
+            Divider()
+            
+            LazyVGrid(columns: infoGrid, alignment: .leading, content: {
+                ForEach(viewModel.overviewStats, content: { stat in
+                    StatisticItemView(statisticModel: stat)
+                })
+            })
+        }
+    }
+    
+    private var additionalInfoSection : some View {
+        VStack {
+            Text("Additional Info")
+                .font(.title)
+                .bold()
+                .foregroundColor(.theme.accent)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            
+            Divider()
+            
+            LazyVGrid(columns: infoGrid, alignment: .leading, content: {
+                ForEach(viewModel.additionalStats, content: { stat in
+                    StatisticItemView(statisticModel: stat)
+                    
+                })
+            })
         }
     }
 }
