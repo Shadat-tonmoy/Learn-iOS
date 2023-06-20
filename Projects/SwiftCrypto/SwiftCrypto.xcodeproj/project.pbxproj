@@ -31,6 +31,7 @@
 		59C4CD8B2A32DA7800912A58 /* DetailsViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C4CD8A2A32DA7800912A58 /* DetailsViewScreen.swift */; };
 		59C4CD8D2A32DA8900912A58 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C4CD8C2A32DA8900912A58 /* DetailsViewModel.swift */; };
 		59C4CD902A32DD6A00912A58 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C4CD8F2A32DD6A00912A58 /* Constants.swift */; };
+		59D0B1A82A415F1000105C04 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D0B1A72A415F1000105C04 /* SettingsView.swift */; };
 		59EC67AE2A1D0EA800DD25FD /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EC67AD2A1D0EA800DD25FD /* CoinRowView.swift */; };
 		59F069E02A205E370051A5A1 /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F069DF2A205E370051A5A1 /* LocalFileManager.swift */; };
 		59F069E22A206CF70051A5A1 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F069E12A206CF70051A5A1 /* SearchBarView.swift */; };
@@ -65,6 +66,7 @@
 		59C4CD8A2A32DA7800912A58 /* DetailsViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewScreen.swift; sourceTree = "<group>"; };
 		59C4CD8C2A32DA8900912A58 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		59C4CD8F2A32DD6A00912A58 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		59D0B1A72A415F1000105C04 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		59EC67AD2A1D0EA800DD25FD /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
 		59F069DF2A205E370051A5A1 /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
 		59F069E12A206CF70051A5A1 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 		59C431EE2A1B91CD00705B1B /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				59D0B1A62A415EFC00105C04 /* settings */,
 				59C4CD892A32DA6700912A58 /* detailsView */,
 				59C431F42A1B93B600705B1B /* customView */,
 				59C431EF2A1B91D300705B1B /* home */,
@@ -210,6 +213,14 @@
 				59C4CD8F2A32DD6A00912A58 /* Constants.swift */,
 			);
 			path = constants;
+			sourceTree = "<group>";
+		};
+		59D0B1A62A415EFC00105C04 /* settings */ = {
+			isa = PBXGroup;
+			children = (
+				59D0B1A72A415F1000105C04 /* SettingsView.swift */,
+			);
+			path = settings;
 			sourceTree = "<group>";
 		};
 		59EC67AC2A1D0E9A00DD25FD /* components */ = {
@@ -313,6 +324,7 @@
 				59F942812A20FBEC00700798 /* HomeStatsView.swift in Sources */,
 				59F069E22A206CF70051A5A1 /* SearchBarView.swift in Sources */,
 				59C431F32A1B91EC00705B1B /* HomeViewModel.swift in Sources */,
+				59D0B1A82A415F1000105C04 /* SettingsView.swift in Sources */,
 				59C431DD2A1B171F00705B1B /* SwiftCryptoApp.swift in Sources */,
 				596082D82A299AFF00052A58 /* PortfolioDataFetchingTask.swift in Sources */,
 				599ED65A2A381D7300A8610E /* CoinDetailsModel.swift in Sources */,

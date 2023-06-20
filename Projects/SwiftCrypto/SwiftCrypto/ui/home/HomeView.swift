@@ -16,6 +16,8 @@ struct HomeView: View {
     
     @State private var showManagePortfolio = false
     
+    @State private var showSettingMenu = false
+    
     var body: some View {
         ZStack{
             
@@ -49,6 +51,9 @@ struct HomeView: View {
             PortfolioView(showManagePortfolioView: $showManagePortfolio)
                 .environmentObject(homeViewModel)
         })
+        .sheet(isPresented: $showSettingMenu, content: {
+            SettingsView(showSettings: $showSettingMenu)
+        })
     }
 }
 
@@ -75,6 +80,9 @@ extension HomeView {
                 .onTapGesture {
                     if showPortfolio {
                         showManagePortfolio.toggle()
+                    } else {
+                        showSettingMenu.toggle()
+                        
                     }
                 }
             
