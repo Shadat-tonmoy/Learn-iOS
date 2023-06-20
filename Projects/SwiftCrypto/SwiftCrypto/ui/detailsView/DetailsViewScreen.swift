@@ -10,6 +10,7 @@ import SwiftUI
 struct DetailsViewScreen: View {
     
     @StateObject private var viewModel : DetailsViewModel
+    @State private var showFullDescription = false
     
     private var infoGrid : [GridItem] = [
         GridItem(.flexible()),
@@ -28,6 +29,10 @@ struct DetailsViewScreen: View {
                     overviewSection
                     
                     additionalInfoSection
+                    
+                    linkSection
+                    
+                    
                 }
                 .padding()
             }
@@ -63,6 +68,30 @@ extension DetailsViewScreen {
             
             Divider()
             
+            if let description = viewModel.description {
+                if !description.isEmpty {
+                    VStack (alignment : .leading){
+                        Text(description.removingHTMLOccurances)
+                            .lineLimit(showFullDescription ? nil : 3)
+                            .font(.callout)
+                            .foregroundColor(Color.theme.secondaryText)
+                        
+                        let readMoreLabel = showFullDescription ? "Less" : "Read More..."
+                        
+                        Text(readMoreLabel)
+                            .font(.callout)
+                            .foregroundColor(.blue)
+                            .bold()
+                            .padding(.vertical, 4)
+                            .onTapGesture {
+                                withAnimation(.easeInOut) {
+                                    showFullDescription.toggle()
+                                }
+                            }
+                    }
+                }
+            }
+            
             LazyVGrid(columns: infoGrid, alignment: .leading, content: {
                 ForEach(viewModel.overviewStats, content: { stat in
                     StatisticItemView(statisticModel: stat)
@@ -88,6 +117,24 @@ extension DetailsViewScreen {
                 })
             })
         }
+    }
+    
+    private var linkSection : some View {
+        VStack(alignment : .leading, spacing : 20) {
+            if let websiteString = viewModel.websiteUrl,
+               let url = URL(string: websiteString) {
+                Link("Website", destination: url)
+            }
+            
+            if let redditString = viewModel.redditUrl,
+               let redditUrl = URL(string: redditString) {
+                Link("Reddit", destination: redditUrl)
+            }
+        }
+        .padding(.vertical)
+        .foregroundColor(.blue)
+        .font(.headline)
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
 

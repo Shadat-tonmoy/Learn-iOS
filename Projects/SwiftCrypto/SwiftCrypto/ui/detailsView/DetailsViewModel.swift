@@ -19,6 +19,10 @@ class DetailsViewModel : ObservableObject {
     @Published var overviewStats : [StatisticModel] = []
     @Published var additionalStats : [StatisticModel] = []
     
+    @Published var description : String? = nil
+    @Published var websiteUrl : String? = nil
+    @Published var redditUrl : String? = nil
+    
     
     
     
@@ -36,6 +40,14 @@ class DetailsViewModel : ObservableObject {
             .sink { [weak self] (returnedArrays) in
                 self?.overviewStats = returnedArrays.overview
                 self?.additionalStats = returnedArrays.additional
+            }
+            .store(in: &cancellables)
+        
+        coinDataFetchingTask.$coinDetails
+            .sink { [weak self] returnedCoinDetails in
+                self?.description = returnedCoinDetails?.description?.en
+                self?.websiteUrl = returnedCoinDetails?.links?.homepage?.first
+                self?.redditUrl = returnedCoinDetails?.links?.subredditURL
             }
             .store(in: &cancellables)
     }
