@@ -127,14 +127,31 @@ extension HomeView {
     
     
     var portfolioCoinList : some View{
-        List{
-            ForEach(homeViewModel.portfolioCoins, content: { coin in
-                CoinRowView(coin: coin, showHoldings: true)
-                    .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
-            })
+        
+        if( homeViewModel.hasNoPortfolioCoin() && homeViewModel.searchText.isEmpty){
+            return VStack(alignment : .center) {
+                Spacer()
+                Text("No Portfolio Coin Found.\nTap the Plus (+) icon to add a coin to your portfolio")
+                    .multilineTextAlignment(.center)
+                    
+                Spacer()
+            }
+            .font(.headline)
+            .transition(.move(edge: .trailing))
+            
+            
+        } else {
+            return List{
+                ForEach(homeViewModel.portfolioCoins, content: { coin in
+                    CoinRowView(coin: coin, showHoldings: true)
+                        .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
+                })
+            }
+            .listStyle(PlainListStyle())
+            .transition(.move(edge: .trailing))
         }
-        .listStyle(PlainListStyle())
-        .transition(.move(edge: .trailing))
+        
+        
     }
     
     var columnTitle : some View{

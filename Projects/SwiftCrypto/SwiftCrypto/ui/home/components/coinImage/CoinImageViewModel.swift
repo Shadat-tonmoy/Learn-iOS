@@ -44,6 +44,7 @@ class CoinImageViewModel : ObservableObject{
             .tryMap { data in
                 UIImage(data: data)
             }
+            .receive(on: DispatchQueue.main) // switch to main thread to receive data 
             .sink(receiveCompletion: NetworkManager.completionHandler, receiveValue: { [weak self] image in
                 guard let uiImage = image else {
                     return

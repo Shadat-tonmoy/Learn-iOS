@@ -19,7 +19,8 @@ class NetworkManager{
                 guard let response = output.response as? HTTPURLResponse,
                       response.statusCode >= 200 && response.statusCode < 300 else {
                     print("Error response code : \(output.response)")
-                    return output.data
+//                    return output.data
+                    throw NetworkError.BadURLResponse(url: url)
                 }
 //                print("Downloaded data from : \(url)")
                 
@@ -30,6 +31,7 @@ class NetworkManager{
 //                print("Output data : \(json)")
                 return output.data
             }
+            .retry(3)
 //            .receive(on: DispatchQueue.main) // here app will switch to main thread instead of background thread
             .eraseToAnyPublisher()
     }
@@ -44,6 +46,21 @@ class NetworkManager{
             return
         }
         
+    }
+    
+    enum NetworkError : LocalizedError {
+        
+        case BadURLResponse(url : URL)
+        case Unknown
+        
+        var errorDescription: String {
+            switch self {
+            case .BadURLResponse(url: let url) : return "Bad URL Response from url : \(url)"
+            case .Unknown : return "Unknown error occurred!"
+                
+            }
+            
+        }
     }
     
 }

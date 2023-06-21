@@ -224,4 +224,8 @@ class HomeViewModel : ObservableObject {
     func updatePriceSortOption() {
         sortOption = sortOption == .price ? .priceReversed : .price
     }
+    
+    func hasNoPortfolioCoin() -> Bool {
+        return portfolioCoins.isEmpty
+    }
 }
