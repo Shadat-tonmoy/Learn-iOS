@@ -35,7 +35,8 @@ class CoinDataFetchingTask {
         }
         
         coinSubscription = NetworkManager.download(url: url)
-            .decode(type: [CoinModel].self, decoder: JSONDecoder())
+            .decode(type: [CoinModel].self, decoder: JSONDecoder()) // decoding in background thread
+            .receive(on: DispatchQueue.main) // switch to main thread
             .sink(receiveCompletion: NetworkManager.completionHandler,
                   receiveValue: { [weak self] (coins) in
                 self?.allCoins = coins
@@ -55,6 +56,7 @@ class CoinDataFetchingTask {
         
         globalDataSubscription = NetworkManager.download(url: url)
             .decode(type: GlobalData.self, decoder: JSONDecoder())
+            .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { data in
                 print("Received Data Successfully as \(data)")
             }, receiveValue: { [weak self] (globalData : GlobalData) in
@@ -79,6 +81,7 @@ class CoinDataFetchingTask {
         
         coinDetailSubscription = NetworkManager.download(url: url)
             .decode(type: CoinDetailsModel.self, decoder: JSONDecoder())
+            .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { data in
                 
             }, receiveValue: { [weak self] (coinDetailModel : CoinDetailsModel) in

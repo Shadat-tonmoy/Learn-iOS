@@ -30,7 +30,7 @@ class NetworkManager{
 //                print("Output data : \(json)")
                 return output.data
             }
-            .receive(on: DispatchQueue.main)
+//            .receive(on: DispatchQueue.main) // here app will switch to main thread instead of background thread
             .eraseToAnyPublisher()
     }
     
