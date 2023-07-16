@@ -128,7 +128,7 @@ extension HomeView {
     
     var portfolioCoinList : some View{
         
-        if( homeViewModel.hasNoPortfolioCoin() && homeViewModel.searchText.isEmpty){
+        if( homeViewModel.hasNoPortfolioCoin() && homeViewModel.searchText.isEmpty) {
             return VStack(alignment : .center) {
                 Spacer()
                 Text("No Portfolio Coin Found.\nTap the Plus (+) icon to add a coin to your portfolio")

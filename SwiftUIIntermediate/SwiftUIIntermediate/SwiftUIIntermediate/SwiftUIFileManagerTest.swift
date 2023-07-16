@@ -31,7 +31,7 @@ class LocalFileManager : NSObject {
         print("Temp : \(tempDirectory)")
         
         guard
-            let pathUrl = pictureDirectory?.appendingPathComponent(name, conformingTo: .image).appendingPathExtension("png") else {
+            let pathUrl = documentDirectory?.appendingPathComponent(name, conformingTo: .image).appendingPathExtension("png") else {
             print("Invalid image path")
             return
         }
@@ -136,7 +136,7 @@ struct SwiftUIFileManagerTest: View {
                 )
                 .font(.headline)
                 .onTapGesture {
-                    viewModel.saveImageToGallery()
+                    viewModel.saveImageToFileManager()
                     
                 }
             
