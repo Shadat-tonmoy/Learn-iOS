@@ -50,6 +50,24 @@ class DownloadImageAsyncLoader {
         
     }
     
+    func fetchImageWithAsync() async throws -> UIImage? {
+        do {
+            let (data, response) = try await URLSession.shared.data(from: url)
+            let httpResponse = response as? HTTPURLResponse
+            if let httpResponse = httpResponse {
+                if httpResponse.statusCode >= 200 && httpResponse.statusCode < 300 {
+                    return UIImage(data: data)
+                }
+            }
+            
+            
+        } catch let error {
+            throw error
+        }
+        return nil
+        
+    }
+    
 }
 
 
@@ -89,6 +107,14 @@ class DownloadImageAsyncViewModel : ObservableObject {
             }
             .store(in: &cancellables)
     }
+    
+    func fetchImageWithAsync() async {
+        let image = try? await imageDownloadManager.fetchImageWithAsync()
+        
+        if let downloadedImage = image {
+            self.image = downloadedImage
+        }
+    }
 }
 
 struct DownloadImageAsync: View {
@@ -107,7 +133,10 @@ struct DownloadImageAsync: View {
             }
         }
         .onAppear{
-            viewModel.fetchImageWithCombine()
+//            viewModel.fetchImageWithCombine()
+        }
+        .task {
+            await viewModel.fetchImageWithAsync()
         }
     }
 }
