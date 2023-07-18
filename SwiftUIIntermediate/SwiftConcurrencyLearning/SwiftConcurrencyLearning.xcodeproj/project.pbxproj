@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		594A87DD2A64112C00683652 /* DownloadImageAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A87DC2A64112C00683652 /* DownloadImageAsync.swift */; };
 		59AF082E2A639D80008D262E /* SwiftConcurrencyLearningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AF082D2A639D80008D262E /* SwiftConcurrencyLearningApp.swift */; };
 		59AF08302A639D80008D262E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AF082F2A639D80008D262E /* ContentView.swift */; };
 		59AF08322A639D81008D262E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59AF08312A639D81008D262E /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		594A87DC2A64112C00683652 /* DownloadImageAsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageAsync.swift; sourceTree = "<group>"; };
 		59AF082A2A639D80008D262E /* SwiftConcurrencyLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftConcurrencyLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59AF082D2A639D80008D262E /* SwiftConcurrencyLearningApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftConcurrencyLearningApp.swift; sourceTree = "<group>"; };
 		59AF082F2A639D80008D262E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				59AF08312A639D81008D262E /* Assets.xcassets */,
 				59AF08332A639D81008D262E /* Preview Content */,
 				59AF083B2A639DCE008D262E /* DoCatchTryThrow.swift */,
+				594A87DC2A64112C00683652 /* DownloadImageAsync.swift */,
 			);
 			path = SwiftConcurrencyLearning;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				594A87DD2A64112C00683652 /* DownloadImageAsync.swift in Sources */,
 				59AF08302A639D80008D262E /* ContentView.swift in Sources */,
 				59AF082E2A639D80008D262E /* SwiftConcurrencyLearningApp.swift in Sources */,
 				59AF083C2A639DCE008D262E /* DoCatchTryThrow.swift in Sources */,
