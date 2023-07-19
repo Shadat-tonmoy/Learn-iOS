@@ -112,7 +112,10 @@ class DownloadImageAsyncViewModel : ObservableObject {
         let image = try? await imageDownloadManager.fetchImageWithAsync()
         
         if let downloadedImage = image {
-            self.image = downloadedImage
+            await MainActor.run{
+                self.image = downloadedImage
+            }
+            
         }
     }
 }
