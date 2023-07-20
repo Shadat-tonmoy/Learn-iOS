@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		593EAF6C2A6793C6008241FD /* TaskTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593EAF6B2A6793C6008241FD /* TaskTest.swift */; };
 		594A87DD2A64112C00683652 /* DownloadImageAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A87DC2A64112C00683652 /* DownloadImageAsync.swift */; };
 		5963C1482A66B7C7003D1A63 /* AsyncAwaitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5963C1472A66B7C7003D1A63 /* AsyncAwaitTest.swift */; };
 		59AF082E2A639D80008D262E /* SwiftConcurrencyLearningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AF082D2A639D80008D262E /* SwiftConcurrencyLearningApp.swift */; };
@@ -14,9 +15,11 @@
 		59AF08322A639D81008D262E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59AF08312A639D81008D262E /* Assets.xcassets */; };
 		59AF08352A639D81008D262E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59AF08342A639D81008D262E /* Preview Assets.xcassets */; };
 		59AF083C2A639DCE008D262E /* DoCatchTryThrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AF083B2A639DCE008D262E /* DoCatchTryThrow.swift */; };
+		59D966432A68DFF4002FF717 /* AsyncLetTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D966422A68DFF4002FF717 /* AsyncLetTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		593EAF6B2A6793C6008241FD /* TaskTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTest.swift; sourceTree = "<group>"; };
 		594A87DC2A64112C00683652 /* DownloadImageAsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageAsync.swift; sourceTree = "<group>"; };
 		5963C1472A66B7C7003D1A63 /* AsyncAwaitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitTest.swift; sourceTree = "<group>"; };
 		59AF082A2A639D80008D262E /* SwiftConcurrencyLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftConcurrencyLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -25,6 +28,7 @@
 		59AF08312A639D81008D262E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59AF08342A639D81008D262E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		59AF083B2A639DCE008D262E /* DoCatchTryThrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoCatchTryThrow.swift; sourceTree = "<group>"; };
+		59D966422A68DFF4002FF717 /* AsyncLetTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncLetTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				59AF083B2A639DCE008D262E /* DoCatchTryThrow.swift */,
 				594A87DC2A64112C00683652 /* DownloadImageAsync.swift */,
 				5963C1472A66B7C7003D1A63 /* AsyncAwaitTest.swift */,
+				593EAF6B2A6793C6008241FD /* TaskTest.swift */,
+				59D966422A68DFF4002FF717 /* AsyncLetTest.swift */,
 			);
 			path = SwiftConcurrencyLearning;
 			sourceTree = "<group>";
@@ -150,6 +156,8 @@
 				59AF08302A639D80008D262E /* ContentView.swift in Sources */,
 				59AF082E2A639D80008D262E /* SwiftConcurrencyLearningApp.swift in Sources */,
 				59AF083C2A639DCE008D262E /* DoCatchTryThrow.swift in Sources */,
+				59D966432A68DFF4002FF717 /* AsyncLetTest.swift in Sources */,
+				593EAF6C2A6793C6008241FD /* TaskTest.swift in Sources */,
 				5963C1482A66B7C7003D1A63 /* AsyncAwaitTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
