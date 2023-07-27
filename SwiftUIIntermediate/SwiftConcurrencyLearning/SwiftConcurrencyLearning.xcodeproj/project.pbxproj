@@ -10,6 +10,7 @@
 		593EAF6C2A6793C6008241FD /* TaskTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593EAF6B2A6793C6008241FD /* TaskTest.swift */; };
 		594A87DD2A64112C00683652 /* DownloadImageAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A87DC2A64112C00683652 /* DownloadImageAsync.swift */; };
 		5963C1482A66B7C7003D1A63 /* AsyncAwaitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5963C1472A66B7C7003D1A63 /* AsyncAwaitTest.swift */; };
+		597687A52A721F8D00F4E3C5 /* SwiftUIActorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597687A42A721F8D00F4E3C5 /* SwiftUIActorTest.swift */; };
 		59ACF6622A6E26380097F752 /* CheckedContinuationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ACF6612A6E26380097F752 /* CheckedContinuationTest.swift */; };
 		59AF082E2A639D80008D262E /* SwiftConcurrencyLearningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AF082D2A639D80008D262E /* SwiftConcurrencyLearningApp.swift */; };
 		59AF08302A639D80008D262E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AF082F2A639D80008D262E /* ContentView.swift */; };
@@ -23,6 +24,7 @@
 		593EAF6B2A6793C6008241FD /* TaskTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTest.swift; sourceTree = "<group>"; };
 		594A87DC2A64112C00683652 /* DownloadImageAsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageAsync.swift; sourceTree = "<group>"; };
 		5963C1472A66B7C7003D1A63 /* AsyncAwaitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitTest.swift; sourceTree = "<group>"; };
+		597687A42A721F8D00F4E3C5 /* SwiftUIActorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIActorTest.swift; sourceTree = "<group>"; };
 		59ACF6612A6E26380097F752 /* CheckedContinuationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckedContinuationTest.swift; sourceTree = "<group>"; };
 		59AF082A2A639D80008D262E /* SwiftConcurrencyLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftConcurrencyLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59AF082D2A639D80008D262E /* SwiftConcurrencyLearningApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftConcurrencyLearningApp.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				593EAF6B2A6793C6008241FD /* TaskTest.swift */,
 				59D966422A68DFF4002FF717 /* AsyncLetTest.swift */,
 				59ACF6612A6E26380097F752 /* CheckedContinuationTest.swift */,
+				597687A42A721F8D00F4E3C5 /* SwiftUIActorTest.swift */,
 			);
 			path = SwiftConcurrencyLearning;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				597687A52A721F8D00F4E3C5 /* SwiftUIActorTest.swift in Sources */,
 				594A87DD2A64112C00683652 /* DownloadImageAsync.swift in Sources */,
 				59AF08302A639D80008D262E /* ContentView.swift in Sources */,
 				59ACF6622A6E26380097F752 /* CheckedContinuationTest.swift in Sources */,
