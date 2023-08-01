@@ -13,6 +13,7 @@
 		597687A52A721F8D00F4E3C5 /* SwiftUIActorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597687A42A721F8D00F4E3C5 /* SwiftUIActorTest.swift */; };
 		598A874E2A78B07C001CB947 /* StrongSelfTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598A874D2A78B07C001CB947 /* StrongSelfTest.swift */; };
 		598A87502A78B445001CB947 /* MVVMSwiftUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598A874F2A78B445001CB947 /* MVVMSwiftUITest.swift */; };
+		598A87522A78B93F001CB947 /* RefreshableTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598A87512A78B93F001CB947 /* RefreshableTest.swift */; };
 		59A6DBEF2A7365A200855828 /* SendableProtocolTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A6DBEE2A7365A200855828 /* SendableProtocolTest.swift */; };
 		59ACF6622A6E26380097F752 /* CheckedContinuationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ACF6612A6E26380097F752 /* CheckedContinuationTest.swift */; };
 		59AF082E2A639D80008D262E /* SwiftConcurrencyLearningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AF082D2A639D80008D262E /* SwiftConcurrencyLearningApp.swift */; };
@@ -30,6 +31,7 @@
 		597687A42A721F8D00F4E3C5 /* SwiftUIActorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIActorTest.swift; sourceTree = "<group>"; };
 		598A874D2A78B07C001CB947 /* StrongSelfTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrongSelfTest.swift; sourceTree = "<group>"; };
 		598A874F2A78B445001CB947 /* MVVMSwiftUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMSwiftUITest.swift; sourceTree = "<group>"; };
+		598A87512A78B93F001CB947 /* RefreshableTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshableTest.swift; sourceTree = "<group>"; };
 		59A6DBEE2A7365A200855828 /* SendableProtocolTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendableProtocolTest.swift; sourceTree = "<group>"; };
 		59ACF6612A6E26380097F752 /* CheckedContinuationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckedContinuationTest.swift; sourceTree = "<group>"; };
 		59AF082A2A639D80008D262E /* SwiftConcurrencyLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftConcurrencyLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +87,7 @@
 				59A6DBEE2A7365A200855828 /* SendableProtocolTest.swift */,
 				598A874D2A78B07C001CB947 /* StrongSelfTest.swift */,
 				598A874F2A78B445001CB947 /* MVVMSwiftUITest.swift */,
+				598A87512A78B93F001CB947 /* RefreshableTest.swift */,
 			);
 			path = SwiftConcurrencyLearning;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				59AF08302A639D80008D262E /* ContentView.swift in Sources */,
 				59ACF6622A6E26380097F752 /* CheckedContinuationTest.swift in Sources */,
 				598A87502A78B445001CB947 /* MVVMSwiftUITest.swift in Sources */,
+				598A87522A78B93F001CB947 /* RefreshableTest.swift in Sources */,
 				59AF082E2A639D80008D262E /* SwiftConcurrencyLearningApp.swift in Sources */,
 				59AF083C2A639DCE008D262E /* DoCatchTryThrow.swift in Sources */,
 				59D966432A68DFF4002FF717 /* AsyncLetTest.swift in Sources */,
