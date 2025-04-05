@@ -1,0 +1,574 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		591A9D6C2DA150A9000DA9FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 591A9D4D2DA150A8000DA9FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 591A9D542DA150A8000DA9FD;
+			remoteInfo = SimpleLoginPage;
+		};
+		591A9D762DA150A9000DA9FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 591A9D4D2DA150A8000DA9FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 591A9D542DA150A8000DA9FD;
+			remoteInfo = SimpleLoginPage;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		591A9D552DA150A8000DA9FD /* SimpleLoginPage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleLoginPage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		591A9D6B2DA150A9000DA9FD /* SimpleLoginPageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleLoginPageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		591A9D752DA150A9000DA9FD /* SimpleLoginPageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleLoginPageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		591A9D7D2DA150A9000DA9FD /* Exceptions for "SimpleLoginPage" folder in "SimpleLoginPage" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 591A9D542DA150A8000DA9FD /* SimpleLoginPage */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		591A9D572DA150A8000DA9FD /* SimpleLoginPage */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				591A9D7D2DA150A9000DA9FD /* Exceptions for "SimpleLoginPage" folder in "SimpleLoginPage" target */,
+			);
+			path = SimpleLoginPage;
+			sourceTree = "<group>";
+		};
+		591A9D6E2DA150A9000DA9FD /* SimpleLoginPageTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SimpleLoginPageTests;
+			sourceTree = "<group>";
+		};
+		591A9D782DA150A9000DA9FD /* SimpleLoginPageUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SimpleLoginPageUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		591A9D522DA150A8000DA9FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		591A9D682DA150A9000DA9FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		591A9D722DA150A9000DA9FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		591A9D4C2DA150A8000DA9FD = {
+			isa = PBXGroup;
+			children = (
+				591A9D572DA150A8000DA9FD /* SimpleLoginPage */,
+				591A9D6E2DA150A9000DA9FD /* SimpleLoginPageTests */,
+				591A9D782DA150A9000DA9FD /* SimpleLoginPageUITests */,
+				591A9D562DA150A8000DA9FD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		591A9D562DA150A8000DA9FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				591A9D552DA150A8000DA9FD /* SimpleLoginPage.app */,
+				591A9D6B2DA150A9000DA9FD /* SimpleLoginPageTests.xctest */,
+				591A9D752DA150A9000DA9FD /* SimpleLoginPageUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		591A9D542DA150A8000DA9FD /* SimpleLoginPage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 591A9D7E2DA150A9000DA9FD /* Build configuration list for PBXNativeTarget "SimpleLoginPage" */;
+			buildPhases = (
+				591A9D512DA150A8000DA9FD /* Sources */,
+				591A9D522DA150A8000DA9FD /* Frameworks */,
+				591A9D532DA150A8000DA9FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				591A9D572DA150A8000DA9FD /* SimpleLoginPage */,
+			);
+			name = SimpleLoginPage;
+			packageProductDependencies = (
+			);
+			productName = SimpleLoginPage;
+			productReference = 591A9D552DA150A8000DA9FD /* SimpleLoginPage.app */;
+			productType = "com.apple.product-type.application";
+		};
+		591A9D6A2DA150A9000DA9FD /* SimpleLoginPageTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 591A9D832DA150A9000DA9FD /* Build configuration list for PBXNativeTarget "SimpleLoginPageTests" */;
+			buildPhases = (
+				591A9D672DA150A9000DA9FD /* Sources */,
+				591A9D682DA150A9000DA9FD /* Frameworks */,
+				591A9D692DA150A9000DA9FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				591A9D6D2DA150A9000DA9FD /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				591A9D6E2DA150A9000DA9FD /* SimpleLoginPageTests */,
+			);
+			name = SimpleLoginPageTests;
+			packageProductDependencies = (
+			);
+			productName = SimpleLoginPageTests;
+			productReference = 591A9D6B2DA150A9000DA9FD /* SimpleLoginPageTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		591A9D742DA150A9000DA9FD /* SimpleLoginPageUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 591A9D862DA150A9000DA9FD /* Build configuration list for PBXNativeTarget "SimpleLoginPageUITests" */;
+			buildPhases = (
+				591A9D712DA150A9000DA9FD /* Sources */,
+				591A9D722DA150A9000DA9FD /* Frameworks */,
+				591A9D732DA150A9000DA9FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				591A9D772DA150A9000DA9FD /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				591A9D782DA150A9000DA9FD /* SimpleLoginPageUITests */,
+			);
+			name = SimpleLoginPageUITests;
+			packageProductDependencies = (
+			);
+			productName = SimpleLoginPageUITests;
+			productReference = 591A9D752DA150A9000DA9FD /* SimpleLoginPageUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		591A9D4D2DA150A8000DA9FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					591A9D542DA150A8000DA9FD = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					591A9D6A2DA150A9000DA9FD = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 591A9D542DA150A8000DA9FD;
+					};
+					591A9D742DA150A9000DA9FD = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 591A9D542DA150A8000DA9FD;
+					};
+				};
+			};
+			buildConfigurationList = 591A9D502DA150A8000DA9FD /* Build configuration list for PBXProject "SimpleLoginPage" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 591A9D4C2DA150A8000DA9FD;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 591A9D562DA150A8000DA9FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				591A9D542DA150A8000DA9FD /* SimpleLoginPage */,
+				591A9D6A2DA150A9000DA9FD /* SimpleLoginPageTests */,
+				591A9D742DA150A9000DA9FD /* SimpleLoginPageUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		591A9D532DA150A8000DA9FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		591A9D692DA150A9000DA9FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		591A9D732DA150A9000DA9FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		591A9D512DA150A8000DA9FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		591A9D672DA150A9000DA9FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		591A9D712DA150A9000DA9FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		591A9D6D2DA150A9000DA9FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 591A9D542DA150A8000DA9FD /* SimpleLoginPage */;
+			targetProxy = 591A9D6C2DA150A9000DA9FD /* PBXContainerItemProxy */;
+		};
+		591A9D772DA150A9000DA9FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 591A9D542DA150A8000DA9FD /* SimpleLoginPage */;
+			targetProxy = 591A9D762DA150A9000DA9FD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		591A9D7F2DA150A9000DA9FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8H99G6VBDV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SimpleLoginPage/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stcodesapp.loginpage.SimpleLoginPage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		591A9D802DA150A9000DA9FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8H99G6VBDV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SimpleLoginPage/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stcodesapp.loginpage.SimpleLoginPage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		591A9D812DA150A9000DA9FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		591A9D822DA150A9000DA9FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		591A9D842DA150A9000DA9FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8H99G6VBDV;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stcodesapp.loginpage.SimpleLoginPageTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleLoginPage.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SimpleLoginPage";
+			};
+			name = Debug;
+		};
+		591A9D852DA150A9000DA9FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8H99G6VBDV;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stcodesapp.loginpage.SimpleLoginPageTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleLoginPage.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SimpleLoginPage";
+			};
+			name = Release;
+		};
+		591A9D872DA150A9000DA9FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8H99G6VBDV;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stcodesapp.loginpage.SimpleLoginPageUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SimpleLoginPage;
+			};
+			name = Debug;
+		};
+		591A9D882DA150A9000DA9FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8H99G6VBDV;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stcodesapp.loginpage.SimpleLoginPageUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SimpleLoginPage;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		591A9D502DA150A8000DA9FD /* Build configuration list for PBXProject "SimpleLoginPage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				591A9D812DA150A9000DA9FD /* Debug */,
+				591A9D822DA150A9000DA9FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		591A9D7E2DA150A9000DA9FD /* Build configuration list for PBXNativeTarget "SimpleLoginPage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				591A9D7F2DA150A9000DA9FD /* Debug */,
+				591A9D802DA150A9000DA9FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		591A9D832DA150A9000DA9FD /* Build configuration list for PBXNativeTarget "SimpleLoginPageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				591A9D842DA150A9000DA9FD /* Debug */,
+				591A9D852DA150A9000DA9FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		591A9D862DA150A9000DA9FD /* Build configuration list for PBXNativeTarget "SimpleLoginPageUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				591A9D872DA150A9000DA9FD /* Debug */,
+				591A9D882DA150A9000DA9FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 591A9D4D2DA150A8000DA9FD /* Project object */;
+}
