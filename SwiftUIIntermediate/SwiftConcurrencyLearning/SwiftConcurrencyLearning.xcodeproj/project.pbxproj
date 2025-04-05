@@ -21,6 +21,7 @@
 		59AF08322A639D81008D262E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59AF08312A639D81008D262E /* Assets.xcassets */; };
 		59AF08352A639D81008D262E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59AF08342A639D81008D262E /* Preview Assets.xcassets */; };
 		59AF083C2A639DCE008D262E /* DoCatchTryThrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AF083B2A639DCE008D262E /* DoCatchTryThrow.swift */; };
+		59CA944F2A7CA6A3001A7B18 /* SearchableTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CA944E2A7CA6A3001A7B18 /* SearchableTest.swift */; };
 		59D966432A68DFF4002FF717 /* AsyncLetTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D966422A68DFF4002FF717 /* AsyncLetTest.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		59AF08312A639D81008D262E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59AF08342A639D81008D262E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		59AF083B2A639DCE008D262E /* DoCatchTryThrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoCatchTryThrow.swift; sourceTree = "<group>"; };
+		59CA944E2A7CA6A3001A7B18 /* SearchableTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableTest.swift; sourceTree = "<group>"; };
 		59D966422A68DFF4002FF717 /* AsyncLetTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncLetTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +90,7 @@
 				598A874D2A78B07C001CB947 /* StrongSelfTest.swift */,
 				598A874F2A78B445001CB947 /* MVVMSwiftUITest.swift */,
 				598A87512A78B93F001CB947 /* RefreshableTest.swift */,
+				59CA944E2A7CA6A3001A7B18 /* SearchableTest.swift */,
 			);
 			path = SwiftConcurrencyLearning;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				597687A52A721F8D00F4E3C5 /* SwiftUIActorTest.swift in Sources */,
 				59A6DBEF2A7365A200855828 /* SendableProtocolTest.swift in Sources */,
 				594A87DD2A64112C00683652 /* DownloadImageAsync.swift in Sources */,
+				59CA944F2A7CA6A3001A7B18 /* SearchableTest.swift in Sources */,
 				59AF08302A639D80008D262E /* ContentView.swift in Sources */,
 				59ACF6622A6E26380097F752 /* CheckedContinuationTest.swift in Sources */,
 				598A87502A78B445001CB947 /* MVVMSwiftUITest.swift in Sources */,
